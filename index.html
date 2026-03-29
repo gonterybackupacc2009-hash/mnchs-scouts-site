@@ -232,118 +232,197 @@
         opacity: 0.9;
     }
 
-.hero-section {
-    text-align: center;
-    padding: 80px 40px;
-    background: linear-gradient(135deg, #1976D2, #0D47A1);
-    color: white;
-    border-radius: 20px;
-    margin-bottom: 60px;
-}
+    /* IMAGE CAROUSEL - SCALED DOWN */
+    .main-content {
+        flex: 1;
+        padding: 40px 40px;
+        max-width: 1700px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
 
-.hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
+    .carousel-wrapper {
+        width: 100%;
+        max-width: 1200px;
+    }
 
-.hero-subtitle {
-    font-size: 20px;
-    opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 2px;
+    }
 
-.about-container {
-    display: flex;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto 60px;
-    flex-wrap: wrap;
-}
+    .carousel-images {
+        display: flex;
+        transition: transform 0.6s ease-in-out;
+        width: 200%; /* 2 images */
+    }
 
-.about-card {
-    flex: 1;
-    min-width: 300px;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px);
-}
+    .carousel-image {
+        width: 50%;
+        height: auto;
+        flex-shrink: 0;
+        display: block;
+    }
 
-.mission-card {
-    background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
-    border: 1px solid rgba(25, 118, 210, 0.2);
-}
+    .carousel-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-.values-card {
-    background: linear-gradient(135deg, #fff8f8, #ffe8e8);
-    border: 1px solid rgba(25, 118, 210, 0.2);
-}
+    /* Navigation dots */
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
 
-.about-card h2 {
-    color: #1976D2;
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-.about-card p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #555;
-}
+    .dot.active {
+        background-color: #1976D2;
+        transform: scale(1.2);
+    }
 
-.values-card ul {
-    list-style: none;
-    padding: 0;
-}
+    /* COUNTER SECTIONS CONTAINER */
+    .counter-container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 900px;
+        width: 100%;
+    }
 
-.values-card li {
-    font-size: 18px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(25, 118, 210, 0.1);
-}
+    /* SCOUTS COUNTER SECTION */
+    .scouts-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        padding: 40px 30px;
+        border-radius: 12px;
+        max-width: 400px;
+        width: 100%;
+    }
 
-.history-highlight {
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    .scouts-image {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+    }
 
-.history-content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    .scouts-count {
+        color: #1976D2;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1;
+        text-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+    }
 
-.history-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-}
+    .scouts-label {
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
 
-.history-text {
-    flex: 1;
-    min-width: 300px;
-}
+    /* JOIN SECTION */
+    .join-section {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 2px;
+        text-align: left;
+        padding: 40px 30px;
+        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        color: white;
+        max-width: 400px;
+        width: 100%;
+    }
 
-.history-text h3 {
-    color: #1976D2;
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-weight: 800;
-}
+    .join-title {
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
 
-.history-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #444;
-}
+    .join-text {
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 0.95;
+        font-weight: 500;
+    }
+
+    /* OUR DUTIES SECTION */
+    .duties-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        padding: 40px 20px;
+        max-width: 1500px;
+        background: linear-gradient(135deg, #00193d, #004b96, #00193d);
+        width: 100%;
+    }
+
+    .duties-title {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 800;
+        text-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
+        letter-spacing: 2px;
+    }
+
+    .duties-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .duty-image {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .duty-image:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+    }
+
+    /* Footer - FIXED */
+    .footer {
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px;
+        color: #666;
+        border-top: 1px solid #eee;
+        margin-top: auto;
+        width: 100%;
+    }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -495,7 +574,7 @@
             </div>
             
             <!-- CENTER: Navigation buttons (DESKTOP ONLY) -->
-            <nav class="nav-buttons">
+<nav class="nav-buttons">
     <a href="index.html" class="nav-btn">Home</a>
     <a href="about.html" class="nav-btn">About Us</a>
     <a href="resources.html" class="nav-btn">Resources</a>
@@ -531,47 +610,55 @@
     </header>
 
     <!-- MAIN CONTENT -->
-<main class="main-content">
-    <!-- ABOUT HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">About MNCHS Senior Scouts</h1>
-            <p class="hero-subtitle">Masbate National Comprehensive High School Senior Scouting Outfit 002 - Building character, citizenship, and skills since [year].</p>
-        </div>
-    </section>
-
-    <!-- TWO COLUMN CONTENT -->
-    <div class="about-container">
-        <!-- LEFT: Mission/Vision -->
-        <div class="about-card mission-card">
-            <h2>Our Mission</h2>
-            <p>To develop responsible citizens equipped with leadership skills, moral values, and practical knowledge through the Scouting program.</p>
-        </div>
-
-        <!-- RIGHT: Values -->
-        <div class="about-card values-card">
-            <h2>Our Values</h2>
-            <ul>
-                <li>🦅 Integrity</li>
-                <li>🤝 Service</li>
-                <li>⚡ Leadership</li>
-                <li>🌱 Growth</li>
-                <li>👥 Teamwork</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- HISTORY HIGHLIGHT -->
-    <section class="history-highlight">
-        <div class="history-content">
-            <img src="https://i.imgur.com/placeholder.jpg" alt="Scouts History" class="history-image">
-            <div class="history-text">
-                <h3>25+ Years of Excellence</h3>
-                <p>Established in [year], Outfit 002 has produced countless leaders, community servants, and achievers. Our legacy continues with the Class of 2026!</p>
+    <main class="main-content">
+        <!-- SCALED DOWN IMAGE CAROUSEL -->
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-images" id="carouselImages">
+                    <div class="carousel-image">
+                        <img src="https://i.imgur.com/w8CNLqr.png" alt="Scouting Image 1">
+                    </div>
+                    <div class="carousel-image">
+                        <img src="https://i.imgur.com/mUmjEFy.png" alt="Scouting Image 2">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dots -->
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
-    </section>
-</main>
+
+        <!-- COUNTER SECTIONS -->
+        <div class="counter-container">
+                        <!-- SCOUTS COUNTER SECTION -->
+            <section class="scouts-section">
+                <img src="https://i.imgur.com/SVw9xv4.png" alt="Scouts Icon" class="scouts-image">
+                <div class="scouts-count">66</div>
+                <div class="scouts-label">Registered Scouts</div>
+            </section>
+
+            <!-- WANT TO JOIN SECTION -->
+            <section class="join-section">
+                <div class="join-title">WANT TO JOIN?</div>
+                <div class="join-text">
+                    Contact any Outfit Officer or head over to your campus recruitment booth for to acquire your organization membership form, medical history form, and medical certificate form!
+                </div>
+            </section>
+        </div>
+
+        <!-- OUR DUTIES SECTION -->
+        <section class="duties-section">
+            <div class="duties-title">OUR DUTIES</div>
+            <div class="duties-grid">
+                <img src="https://i.imgur.com/jFA2Pgf.png" alt="Duty 1" class="duty-image">
+                <img src="https://i.imgur.com/SPw1UMz.png" alt="Duty 2" class="duty-image">
+                <img src="https://i.imgur.com/GhMIF0U.png" alt="Duty 3" class="duty-image">
+            </div>
+        </section>
+    </main>
 
     <!-- Footer - FIXED POSITION -->
     <footer class="footer">
