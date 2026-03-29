@@ -1,1 +1,0 @@
-# mnchs-scouts-site
