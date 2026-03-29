@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <title>✦ 》 Outfit 002 - Resources</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/py7CNki.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/py7CNki.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
@@ -306,12 +309,12 @@
         display: block;
     }
 
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-    }
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
 
     .clickable-item {
         background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
@@ -327,6 +330,17 @@
         position: relative;
         overflow: hidden;
     }
+
+    .skill-letter {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0D47A1;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    align-items: center;
+}
 
     .clickable-item::before {
         content: '';
@@ -441,20 +455,22 @@
         overflow-y: auto;
     }
 
-    .rank-insignia {
-        width: 120px;
-        height: 120px;
-        background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-        border-radius: 15px;
-        margin: 0 auto 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
-        font-weight: bold;
-        color: #1976D2;
-        border: 4px solid #e3f2fd;
-    }
+.rank-insignia {
+    width: 180px;
+    height: 120px;
+    background: transparent;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rank-insignia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
     .rank-name {
         font-size: 28px;
@@ -630,13 +646,13 @@
             <!-- Tab Buttons -->
             <div class="tab-buttons">
                 <button class="tab-btn active" data-tab="advancement">Advancement Information</button>
-                <button class="tab-btn" data-tab="skills">Necessary Skills</button>
+                <button class="tab-btn" data-tab="skills">Merit Badges</button>
             </div>
 
             <!-- Tab 1: Advancement Information -->
             <div class="tab-content active" id="advancement">
                 <div style="text-align: center; margin-bottom: 30px;">
-                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">Scout Rank Progression</h2>
+                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">SENIOR SCOUTING ADVANCEMENT</h2>
                     <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Click on each rank to view detailed requirements and advancement criteria.</p>
                 </div>
                 
@@ -653,15 +669,165 @@
             <!-- Tab 2: Necessary Skills -->
             <div class="tab-content" id="skills">
                 <div style="text-align: center; margin-bottom: 30px;">
-                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">Essential Scouting Skills</h2>
+                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">LIST OF MERIT BADGES</h2>
                     <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Master these fundamental skills required for all senior scouts.</p>
+                    <p style="color: #e00707; font-size: 16px; max-width: 600px; margin: 0 auto;">*Visit the Merit Badge Center for more detailed information about merit badges.</p>
                 </div>
                 
-                <div class="skills-grid">
-                    <div class="clickable-item" data-modal="ropework">Ropework</div>
-                    <div class="clickable-item" data-modal="firstaid">First Aid</div>
-                    <div class="clickable-item" data-modal="signalling">Signalling</div>
-                </div>
+<div class="skills-grid">
+
+<!-- A -->
+<div class="skill-letter">A</div>
+<div class="clickable-item" data-modal="agriculture">Agriculture</div>
+<div class="clickable-item" data-modal="animalstudy">Animal Study</div>
+<div class="clickable-item" data-modal="archery">Archery</div>
+<div class="clickable-item" data-modal="architecture">Architecture</div>
+<div class="clickable-item" data-modal="art">Art</div>
+<div class="clickable-item" data-modal="astronomy">Astronomy</div>
+<div class="clickable-item" data-modal="athletics">Athletics</div>
+<div class="clickable-item" data-modal="automobiling">Automobiling</div>
+<div class="clickable-item" data-modal="aviation">Aviation</div>
+
+<!-- B -->
+<div class="skill-letter">B</div>
+<div class="clickable-item" data-modal="barbering">Barbering</div>
+<div class="clickable-item" data-modal="basketry">Basketry</div>
+<div class="clickable-item" data-modal="beekeeping">Beekeeping</div>
+<div class="clickable-item" data-modal="birdstudy">Bird Study</div>
+<div class="clickable-item" data-modal="blacksmithing">Blacksmithing</div>
+<div class="clickable-item" data-modal="botany">Botany</div>
+<div class="clickable-item" data-modal="bookbinding">Bookbinding</div>
+<div class="clickable-item" data-modal="boating">Boating</div>
+<div class="clickable-item" data-modal="business">Business</div>
+
+<!-- C -->
+<div class="skill-letter">C</div>
+<div class="clickable-item" data-modal="camping">Camping</div>
+<div class="clickable-item" data-modal="carpentry">Carpentry</div>
+<div class="clickable-item" data-modal="chemistry">Chemistry</div>
+<div class="clickable-item" data-modal="citizenship">Citizenship</div>
+<div class="clickable-item" data-modal="citizenshipinthecommunity">Citizenship in the Community</div>
+<div class="clickable-item" data-modal="citizenshipinthehome">Citizenship in the Home</div>
+<div class="clickable-item" data-modal="citizenshipinthenation">Citizenship in the Nation</div>
+<div class="clickable-item" data-modal="coconutgrowing">Coconut Growing</div>
+<div class="clickable-item" data-modal="computers">Computers</div>
+<div class="clickable-item" data-modal="cooking">Cooking</div>
+<div class="clickable-item" data-modal="cropproduction">Crop Production</div>
+<div class="clickable-item" data-modal="cycling">Cycling</div>
+
+<div class="skill-letter">D</div>
+<div class="clickable-item" data-modal="dairying">Dairying</div>
+<div class="clickable-item" data-modal="drafting">Drafting</div>
+<div class="clickable-item" data-modal="dramatics">Dramatics</div>
+<div class="clickable-item" data-modal="duckraising">Duck Raising</div>
+
+<div class="skill-letter">E</div>
+<div class="clickable-item" data-modal="earngreen">Earn Green</div>
+<div class="clickable-item" data-modal="ecology">Ecology</div>
+<div class="clickable-item" data-modal="electricity">Electricity</div>
+<div class="clickable-item" data-modal="electronics">Electronics</div>
+<div class="clickable-item" data-modal="engineering">Engineering</div>
+<div class="clickable-item" data-modal="environment">Environment</div>
+<div class="clickable-item" data-modal="emergencypreparedness">Emergency Preparedness</div>
+
+<div class="skill-letter">F</div>
+<div class="clickable-item" data-modal="farmmanagement">Farm Management</div>
+<div class="clickable-item" data-modal="filipinoheritage">Filipino Heritage</div>
+<div class="clickable-item" data-modal="firemanship">Firemanship</div>
+<div class="clickable-item" data-modal="fishculture">Fish Culture</div>
+<div class="clickable-item" data-modal="fishing">Fishing</div>
+<div class="clickable-item" data-modal="firstaid">First Aid</div>
+<div class="clickable-item" data-modal="foodprocessing">Food Processing</div>
+<div class="clickable-item" data-modal="forestry">Forestry</div>
+<div class="clickable-item" data-modal="fruitcultivation">Fruit Cultivation</div>
+
+<div class="skill-letter">G</div>
+<div class="clickable-item" data-modal="gardening">Gardening</div>
+<div class="clickable-item" data-modal="globalcitizenship">Global Citizenship</div>
+<div class="clickable-item" data-modal="gogreen">Go Green</div>
+<div class="clickable-item" data-modal="growgreen">Grow Green</div>
+
+<div class="skill-letter">H</div>
+<div class="clickable-item" data-modal="handicraft">Handicraft</div>
+<div class="clickable-item" data-modal="hiking">Hiking</div>
+<div class="clickable-item" data-modal="hobbiesandcollection">Hobbies and Collection</div>
+<div class="clickable-item" data-modal="hograising">Hog Raising</div>
+<div class="clickable-item" data-modal="homerepairs">Home Repairs</div>
+<div class="clickable-item" data-modal="horsemanship">Horsemanship</div>
+
+<div class="skill-letter">I</div>
+<div class="clickable-item" data-modal="insectstudy">Insect Study</div>
+<div class="clickable-item" data-modal="interpreting">Interpreting</div>
+
+<div class="skill-letter">J</div>
+<div class="clickable-item" data-modal="journalism">Journalism</div>
+
+<div class="skill-letter">L</div>
+<div class="clickable-item" data-modal="leathercraft">Leathercraft</div>
+<div class="clickable-item" data-modal="lifesaving">Lifesaving</div>
+<div class="clickable-item" data-modal="livestockraising">Livestock Raising</div>
+
+<div class="skill-letter">M</div>
+<div class="clickable-item" data-modal="machineshoppractice">Machine Shop Practice</div>
+<div class="clickable-item" data-modal="marksmanship">Marksmanship</div>
+<div class="clickable-item" data-modal="masonry">Masonry</div>
+<div class="clickable-item" data-modal="metalwork">Metal Work</div>
+<div class="clickable-item" data-modal="music">Music</div>
+
+<div class="skill-letter">N</div>
+<div class="clickable-item" data-modal="naturelore">Nature Lore</div>
+<div class="clickable-item" data-modal="navigation">Navigation</div>
+
+<div class="skill-letter">P</div>
+<div class="clickable-item" data-modal="painting">Painting</div>
+<div class="clickable-item" data-modal="pathfinding">Pathfinding</div>
+<div class="clickable-item" data-modal="personalhealth">Personal Health</div>
+<div class="clickable-item" data-modal="petcare">Pet Care</div>
+<div class="clickable-item" data-modal="photography">Photography</div>
+<div class="clickable-item" data-modal="physicalfitness">Physical Fitness</div>
+<div class="clickable-item" data-modal="pigeonraising">Pigeon Raising</div>
+<div class="clickable-item" data-modal="pioneering">Pioneering</div>
+<div class="clickable-item" data-modal="plumbing">Plumbing</div>
+<div class="clickable-item" data-modal="pottery">Pottery</div>
+<div class="clickable-item" data-modal="poultryraising">Poultry Raising</div>
+<div class="clickable-item" data-modal="printing">Printing</div>
+<div class="clickable-item" data-modal="publichealth">Public Health</div>
+<div class="clickable-item" data-modal="publicspeaking">Public Speaking</div>
+
+<div class="skill-letter">R</div>
+<div class="clickable-item" data-modal="rabbitraising">Rabbit Raising</div>
+<div class="clickable-item" data-modal="radio">Radio</div>
+<div class="clickable-item" data-modal="reading">Reading</div>
+<div class="clickable-item" data-modal="reptileandamphibianstudy">Reptile and Amphibian Study</div>
+<div class="clickable-item" data-modal="rizallore">Rizal Lore</div>
+<div class="clickable-item" data-modal="ropework">Ropework</div>
+
+<div class="skill-letter">S</div>
+<div class="clickable-item" data-modal="safety">Safety</div>
+<div class="clickable-item" data-modal="salesmanship">Salesmanship</div>
+<div class="clickable-item" data-modal="scholarship">Scholarship</div>
+<div class="clickable-item" data-modal="sculpture">Sculpture</div>
+<div class="clickable-item" data-modal="seamanship">Seamanship</div>
+<div class="clickable-item" data-modal="signalling">Signalling</div>
+<div class="clickable-item" data-modal="snorkeling">Snorkeling</div>
+<div class="clickable-item" data-modal="soilandwaterconservation">Soil and Water Conservation</div>
+<div class="clickable-item" data-modal="surveying">Surveying</div>
+<div class="clickable-item" data-modal="swimming">Swimming</div>
+
+<div class="skill-letter">T</div>
+<div class="clickable-item" data-modal="tailoring">Tailoring</div>
+<div class="clickable-item" data-modal="teamsports">Team Sports</div>
+<div class="clickable-item" data-modal="treefarming">Tree Farming</div>
+
+<div class="skill-letter">W</div>
+<div class="clickable-item" data-modal="weather">Weather</div>
+<div class="clickable-item" data-modal="wildlifeconservation">Wildlife Conservation</div>
+<div class="clickable-item" data-modal="woodcarving">Wood Carving</div>
+<div class="clickable-item" data-modal="woodwork">Wood Work</div>
+
+<!-- Continue same pattern for D–W -->
+
+</div>
             </div>
         </div>
     </main>
@@ -753,61 +919,706 @@
         const rankDescription = document.getElementById('rank-description');
 
         // Modal content data
-        const modalData = {
-            membership: {
-                title: "Membership Rank",
-                insignia: "M",
-                name: "Membership",
-                description: "• Complete the Boy Scouts of the Philippines membership application<br>• Demonstrate knowledge of the Scout Oath, Law, Motto, and Slogan<br>• Participate in at least one troop meeting and one troop outing<br>• Learn the Scout Salute, Handshake, and basic flag courtesy<br>• Understand the structure of the Boy Scouts organization"
-            },
+const modalData = {
+    membership: {
+        title: "Membership Rank",
+        insignia: "https://www.mbcenter.org/mbimages/pp-membership.jpg",
+        name: "Membership",
+        description: `Sing the Philippine National Anthem - Lupang Hinirang and recite the Panunumpa ng Katapatan sa Watawat and the Panatang Makabayan.<br><br>
+        Recite the Scout Oath and Law, Scout Motto, the Senior Scout Slogan, and the Senior Scout Code.<br><br>
+        Demonstrate how to execute the Scout Sign, the Scout Salute, and the Scout Handshake.<br><br>
+        Describe the World Scout Emblem, the BSP Scout Badge and the Senior Scout Emblem.`
+    },
             explorer: {
                 title: "Explorer Rank",
-                insignia: "E",
-                name: "Explorer",
-                description: "• Demonstrate proficiency in basic ropework (knots and hitches)<br>• Complete First Aid training for common outdoor injuries<br>• Participate in 3 troop meetings and 2 troop outings<br>• Plan and conduct a simple patrol activity<br>• Demonstrate basic map reading and compass skills<br>• Earn the Explorer badge"
+                insignia: "https://www.mbcenter.org/mbimages/pp-explorer.jpg",
+                name: "Advancement Information",
+                description: "<strong>Senior Scout Ideals</strong><br>Recite and explain why Scouts must live up to the Scout Oath and Law, the Senior Scout Code, the Scout Motto, and the Senior Scout Slogan.<br><br>Show how to properly execute a Scout Sign, Scout Salute and a Scout Handshake and explain when and where you to use it.<br><br>Discuss with your fellow Scouts, the significant meaning of the World Scout Emblem, the BSP Scout Badge and the Senior Scout Emblem.<br><br>Attend regular religious services with the members of your family.<br><br>Explain the symbolism of the Evolution of the Philippine Flag and demonstrate how to hoist, lower, display, fold, and show respect for the Philippine Flag.<br><br><strong>Social Activities</strong><br>Get to know your Crew members and fellow Scouts in the Outfit, discuss with them the traditions and practices that you have observed and explain to them your commitment as Scout in the Outfit.<br><br>Identify and explain the different functions and positions of Scouts and Adult Leaders in the Crew and Outfit respectively.<br><br>Demonstrate an appropraite table manner and etiquette to your fellow Scout and the Outfit Advisor.<br><br>Explain to your fellow Scouts and Leaders the duties and responsibilities in taking care of the Crew and Outfit tools, properties and equipment.<br><br>Undertake activities with your Crew and Outfit that will help promote an active and healthy lifestyle.<br><br>Demonstrate proper conduct in boarding and alighting from a public conveyance with a lady and/or an elderly person, and the proper decorum when you meet someone you know on the street.<br><br>Explain and demonstrate appropriate manners for online communication and include respectful communication practices when interacting with peers, elders, and others in virtual settings, as well as the respect and caution required when engaging with sensitive information.<br><br><strong>Vocational Activities</strong><br>Do some basic home repairs and improvement (e.g. home furniture, simple electricity wiring, cleaning of appliances, faucet, water tube system, etc.) to the satisfaction of your parents / guardians.<br><br>Save at least a minimum of one peso a day and use it to open a savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Togther with your Crew members, plan, organize and conduct 'Scout's Good Turn' habit through a School or Community Service Project.<br><br><strong>Outdoor and Indoor Activities</strong><br>Plan, organize and conduct a 2-5 kilometers exploration activity (e.g. Rural, Urban, Historical, Ecological, Day, etc.). Explore and share your learning experiences while doing this activity.<br><br> Earn the following merit badges:<br>• Safety<br>• Citizenship<br>• Physical Fitness<br>• Ropework<br>• Cooking"
             },
             pathfinder: {
                 title: "Pathfinder Rank",
-                insignia: "P",
-                name: "Pathfinder",
-                description: "• Master 8 basic knots and 3 hitches<br>• Complete advanced First Aid training<br>• Lead a patrol hike of at least 5km<br>• Demonstrate signaling with flags and whistle<br>• Complete Firemanship and Cooking merit badges<br>• Plan and execute a patrol campout"
+                insignia: "https://www.mbcenter.org/mbimages/pp-pathfinder.jpg",
+                name: "Advancement Information",
+                description: "<strong>Senior Scout Ideals</strong><br>Narrate your life experience wherein you were able to show examples of living up to the Scout Oath and Law, the Senior Scout Code, the Scout Motto, Senior Scout Slogan, and Mission and Vision.<br><br>Show proof of your spiritual growth and demonstrate faithfulness to your religious obligations.<br><br>Together with your Crew members in your school, volunteer to lead in at least three (3) flag-raising and flag-lowering ceremonies during Philippine Flag Day and/or Scouting Month.<br><br><strong>Social Activities</strong><br>Identify and explain with your Crew members the different functions of the Outfit Program Committees and how they help the Crew in accomplishing their advancement requirements.<br><br>Discuss with your friends, peers, and fellow Scouts the harmful effects of illegal drugs and substance abuse, including alcoholism and smoking. Explain why young people engage in these activities and how you can help avoid and prevent them.<br><br>Discuss with your peers, friends, and fellow Scouts how teenagers must behave in social parties at home, school, and communities, especially when interacting with members of the opposite sex.<br><br>Explain how to show courtesy and respect for the rights and properties of others.<br><br>Show proof that you are actively participating in sports activities with your Crew and Outfit that promote a healthy lifestyle.<br><br><strong>Vocational Activities</strong><br>Engage in simple and basic vocational and entrepreneurial activities that will help you earn and save money to support your parents.<br><br>Show proof of an increase in your 'Scout is Thrifty' savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Together with your Crew members, plan, organize, and conduct 'Scout's Good Turn' habits through school or community service projects related to environment, development, and peace.<br><br><strong>Outdoor and Indoor Activities</strong><br>Plan, organize, and conduct a 5–6 kilometers exploration with your Outfit. Explain to your fellow Scouts how to find directions with and without a compass, describe and predict weather and environmental conditions, and demonstrate safe exploration procedures.<br><br>Earn the following merit badges:<br>• Environment<br>• Weather<br>• First Aid<br>• Signalling<br>• Navigation<br>"
             },
             outdoor: {
                 title: "Outdoor Scout Rank",
-                insignia: "OS",
-                name: "Outdoor Scout",
-                description: "• Complete 5 nights of camping experience<br>• Demonstrate advanced outdoor skills (fire building, shelter construction)<br>• Earn 3 outdoor-related merit badges<br>• Lead a patrol on a 10km hike<br>• Complete Pioneering merit badge<br>• Demonstrate Leave No Trace principles"
+                insignia: "https://www.mbcenter.org/mbimages/pp-outdoor.jpg",
+                name: "Advancement Information",
+                description: "<strong>Senior Scout Ideals</strong><br>During your Crew and Outfit Meeting, explain in your own words the significance of the values you learned from the Scout Oath and Law, the Senior Scout Code, the Scout Motto, and the Senior Scout Slogan and how you relate it to your daily life.<br><br>In your Crew/Outfit Meeting, explain and discuss with your fellow Scouts how to show respect for Scouts and friends with other faiths or religious beliefs.<br><br>Participate in activities that will show your citizenship, civic-consciousness, and patriotism.<br><br><strong>Social Activities</strong><br>Identify and explain to your parents, teachers, and Scout Leaders the importance of the Rights of the Child and Safeguarding Policy of the BSP.<br><br>In a Crew and Outfit Meeting, under the guidance of your Outfit Advisor, identify and explain to your fellow Scouts the physical characteristics and changes of adolescents and young people in the teenage group, including sexual maturity and reproductive health.<br><br>Explain and demonstrate how to properly introduce two or more persons of different age groups and of the opposite sex; cordially send and reply to formal and informal invitations and attend one formal affair with a person of the opposite sex or with a member of your Crew and demonstrate proper social graces and etiquette.<br><br>Satisfy your parents and Scout Leaders that you are in good physical condition to undertake outdoor high adventure activities and are continuously living a healthy lifestyle.<br><br><strong>Vocational Activities</strong><br>Earn at least three (3) Elective Merit Badges of your personal choice and interest.<br><br>Read at least 2–3 journals, books, or magazines featuring livelihood, vocational, and entrepreneurial articles of your own choice and interests. Write an essay about what you have learned from the readings.<br><br>Show proof of increase in your 'Scout is Thrifty' savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Identify local environmental issues and propose potential solutions. Plan and execute an environmental project, understanding its connections from local to global levels. Evaluate the project's impact on the Scouts, the community, and the environment. Collaborate with your Crew members to plan, organize, lead, initiate, and/or actively participate in at least one environmental service project (e.g., Earth Day, Coastal Clean-Up, Earth Hour, recycling initiative, solid waste management programs, tree planting, etc.).<br><br><strong>Outdoor and Indoor Activities</strong><br>Identify different types of environmental hazards and natural disasters and explain their causes. Demonstrate how to help others prepare for and respond to environmental hazards (e.g., fires, earthquakes, landslides, flash floods, vehicular accidents) and natural disasters prevalent in the local area. Explain how environmental changes can influence the occurrence and severity of these hazards and disasters.<br><br>Actively participate in an emergency preparedness drill in your school and community or barangay on a regular basis.<br><br>Earn the following merit badges:<br>• Camping<br>• Swimming<br>• Emergency Preparedness<br>"
             },
             venturer: {
                 title: "Venturer Rank",
-                insignia: "V",
-                name: "Venturer",
-                description: "• Complete 10 nights of camping including one long-term camp<br>• Earn 5 merit badges including leadership<br>• Plan and lead a major patrol expedition<br>• Demonstrate advanced leadership skills<br>• Complete advanced First Aid certification<br>• Serve in a leadership position for 6 months"
+                insignia: "https://www.mbcenter.org/mbimages/pp-venturer.jpg",
+                name: "Advancement Information",
+                description: "<strong>Senior Scout Ideals</strong><br>Satisfy your parents, teachers, Scout Leaders, and peers that you are living up to the Scout Oath and Law, the Scout Motto, and the Senior Scout Slogan.<br><br>Show to your fellow Scouts and Leaders that you have abided by the Senior Scout Code in all your dealings.<br><br>Take active participation in church activities with a friend or fellow Scout of the same faith.<br><br>Discuss ways and means to develop nationalism with younger Scouts and lower ranks.<br><br><strong>Social Activities</strong><br>Make a survey of values, beliefs, and practices in your community. Examine their importance to the life of the people in the community. Analyze these values and beliefs in relation to the Scout Oath and Law and determine which values or beliefs need to be changed, improved, or modified to make a better community. Present this to your Crew.<br><br>Together with your Crew and Outfit Members, plan, organize, and conduct your Annual Outfit Scout Youth Forum. Invite members of your school student government council (SSG) or Sangguniang Kabataan (SK) to discuss issues and challenges affecting the lives of young people in the community.<br><br><strong>Vocational Activities</strong><br>Consult with your Outfit Advisor and a Merit Badge Counselor to arrange an interview with a lawyer, doctor, engineer, police officer, or another licensed professional of your choice. Write an essay reflecting on your insights gained from the interview.<br><br>Earn five (5) Elective Merit Badges that align with your chosen Advancement Track (Land, Air, or Sea Scouting).<br><br>Land: Hiking, Nature Lore, Wildlife Conservation, Forestry, Pioneering<br>Air: Astronomy, Aviation, Electricity, Electronics, Radio<br>Sea: Seamanship, Boating, Snorkeling, Fishing, Radio<br><br>Show proof of increasing your 'Scout is Thrifty' savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Working with your Crew, plan, organize, and conduct a community service project. Document the project and its impact, ensuring it aligns with one of the key areas of service: Environment, Development, or Peace Education.<br><br><strong>Outdoor and Indoor Activities</strong><br>Together with your Crew and Outfit, actively join, train, and participate in your School and Community or Barangay Disaster Risk Reduction Management (DRRM) Group or Patrol in coordination with School Officials and Local Government Units.<br><br>Actively join and participate in training courses on Emergency Preparedness, Safety, and Life Saving with the BSP's Emergency Service Training Course (ESTC), LGU's DRRM Offices, the Philippine Red Cross, and other agencies, and organize your Outfit Emergency Service Corps.<br>"
             },
             eagle: {
                 title: "Eagle Scout Rank",
-                insignia: "🦅",
-                name: "Eagle Scout",
-                description: "• Be at least 14 years old<br>• Earn 12 Eagle-required merit badges<br>• Hold leadership position for 6 months<br>• Plan, develop, and give leadership to a service project<br>• Demonstrate Scout Spirit throughout advancement<br>• Complete Eagle Scout application and board of review"
+                insignia: "https://www.mbcenter.org/mbimages/pp-eagle.jpg",
+                name: "Advancement Information",
+                description: "<strong>Senior Scout Ideals</strong><br>Create a post or series of posts on your social media account(s) that demonstrate how you are living by the Scout Promise, Scout Law, Scout Motto, and Senior Scout Slogan. Use your posts to showcase acts of kindness, responsibility, helpfulness, and community service that align with these values.<br><br>Prove to your fellow Scouts and Leaders that you are living up to the Senior Scout Code as your personal code of conduct in your daily lives.<br><br>Create a series of social media posts that show how you're fulfilling your 'Duty to God' through religious activities. Share experiences like attending services, volunteering, or helping in your community, with captions that reflect the values you're embracing.<br><br>Together with your fellow Scouts in the Crew and Outfit, plan, organize, and conduct a 'Worn-Out Flag Disposal Ceremony'.<br><br><strong>Social Activities</strong><br>Under the supervision of your Outfit Advisors, together with the members of your Crew and Outfit, plan, organize, and conduct a cultural or social activity, either indoors or outdoors, involving members of the opposite sex.<br><br><strong>Vocational Activities</strong><br>Attend and actively participate in a Career Orientation Forum, Seminar, or Symposium for Students conducted by your school and/or organized by any of your preferred colleges or universities and write your reflection about this activity.<br><br>Discuss with your Outfit Advisor, teacher, or guidance counselor about your strengths, hobbies, and interests. Explain to them your 3-Year Vocational or Career Path Plan and seek advice for career path planning.<br><br>Show proof that your 'Scout is Thrifty' savings account is in good standing and discuss with your parents and teachers how you intend to increase your savings for the future.<br><br><strong>Service Activities</strong><br>Together with your Crew members, plan, organize, and conduct an Eagle Scout Service Project. Document the project and its impact, ensuring it contributes meaningfully to the community.<br><br><strong>Outdoor and Indoor Activities</strong><br>Together with your Crew and Outfit, volunteer to plan, organize, and lead an emergency preparedness drill in your school and/or community and demonstrate how to transport an injured person and give first aid to simple and complex fractures and severe bleeding.<br><br>In consultation with your Outfit Advisor, plan, organize, and go for a 3-day and 2-night survival expedition camp in any of the BSP campsite or government-accredited natural parks and wildlife areas and show proof that you have managed to keep yourself dry, safe, healthy, and in good condition. Make an essay about this experience.<br><br>Participate in at least one (Council, Regional, or National) Jamboree and document your experience by creating a series of social media posts and reflect.<br><br>Earn the following merit badges:<br>• Life Saving<br>• Global Citizenship<br><br>In addition, earn three (3) Career Elective Merit Badges<br>"
             },
-            ropework: {
-                title: "Ropework Skills",
-                insignia: "🪢",
-                name: "Ropework",
-                description: "• Square Knot<br>• Two Half-Hitches<br>• Taut-line Hitch<br>• Sheet Bend<br>• Clove Hitch<br>• Timber Hitch<br>• Bowline<br>• Figure-8 Knot<br>• Practice lashing techniques for pioneering projects"
+            agriculture: {
+                title: "Merit Badge Information",
+                insignia: "https://www.mbcenter.org/mbimagespng/agriculture.png",
+                name: "Agriculture Merit Badge",
+                description: "Explain the nature of soil, its texture, its need of water, of air, and of plant and animal life; what the soil does for the plant, and how soil may be improved and conserved.<br><br>Do the following:<br>a. Prepare a seedbed and test the germination of three (3) chosen varieties of 100 seeds of each variety.<br>b. Identify and describe ten (10) common weeds in the locality and tell how best to eliminate them.<br>c.Identify six (6) common insect pests; tell what plants they usually infest and how best to control them.<br><br>Have a practical knowledge of hoeing, plowing, harrowing, the use of a rake and a roller, irrigating and raining, planting and harvesting and the purposes of each. Describe the implements used in each case.<br><br>Tell how plants are propagated by seeds, roots, cuttings, and grafts. Explain where plants get their food and how they grow.<br><br>Name and identify ten (10) common birds in the locality, and state their value to the farmer.<br><br>Tell what part the carabao plays in present-day farming.<br><br>Explain how farming may be modernized and what steps are now being taken by the government to attain this end. Tell the advantages of modernized farming."
             },
-            firstaid: {
-                title: "First Aid Skills",
-                insignia: "🩹",
-                name: "First Aid",
-                description: "• Assess scene safety<br>• Check responsiveness and breathing<br>• Control bleeding<br>• Treat burns, sprains, fractures<br>• Recognize shock and heat-related illnesses<br>• Use AED and CPR procedures<br>• Build first aid kit for outdoor activities"
-            },
-            signalling: {
-                title: "Signalling Skills",
-                insignia: "📡",
-                name: "Signalling",
-                description: "• Semaphore flag signaling<br>• Morse code with whistle/flashlight<br>• International ground-to-air signals<br>• Smoke signals<br>• Panel signaling<br>• Heliograph signaling<br>• Practice message transmission exercises"
-            }
+            animalstudy: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/animalstudy.png",
+        name: "Animal Study Merit Badge",
+        description: "(Animals, in the zoological sense, include all living organisms other than plants life - from amoeba up through man. However - since birds, reptiles, amphibians, and insects are covered in other Merit Badge subjects - choose other examples of animal life for these requirements).<br><br>Make five (5) field trips of at least two hours each (preferably on different months of the year) to observe wild animal life. Keep records of such trips, listing all animals seen, with date, place, nature of locality, and observations of animals and their habits. (Photographs, sketches, track casts, etc. will add interest to this record).<br><br>Using the \"keys\" of the modern system of classifying animal life, classify at least five (5) animals of different phyla which you yourself select.<br><br>Find out the life processes that are common to all animal life (birth, self-protection, feeding, breathing, etc.). Keep a record of personal observation of the life cycle and habits of at least two (2) animals of different phyla.<br><br>On a map of your locality (showing such things as forests, plains, streams, marshes, and areas, etc.), indicate animals found in each habitat. Know what is being done in the country to protect wild animal life.<br><br>Carry out one of the following projects:<br>1. Keep a young animal (completely weaned from its mother) such as a rabbit or a guinea pig for at least three (3) months. Keep a record of its life cycle and habits.<br>2. Maintain an aquarium or \"toad pan\" for at least three (3) months. Stock from local ponds, streams, or marshes. Watch development from egg on - of frogs, toads, turtles, fish, or whatever animal you have chosen for special observation. Keep a record of its life cycle and habits.<br>3. Submit at least ten (10) photographs or sketches (based on your own observation) of microscopic life in the field for at least three (3) months."
+    },
+    archery: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/archery.png",
+        name: "Archery Merit Badge",
+        description: "Name and explain the archery safety rules.<br><br>Do all of the following:<br>a. Name the parts of an arrow.<br>b. Name the parts of a bow.<br>c. Describe the following accessories: arm guard, shooting glove, finger tab, and quiver.<br><br>Do all of the following:<br>a. Explain proper care and how to store the bow, bowstrings, and arrows.<br>b. Make a bowstring.<br>c. Fletch six arrows.<br><br>Explain the following terms: cast, weight of bow, fistmele, methods of aiming, spine, target arrow, field arrow, and hunting arrows.<br><br>Shoot with bow and arrow one of the following:<br>a. A field round for 14 targets, and make a score of 60 points.<br>b. A Boy Scout field archery round for 14 targets (56 shots), and make a score of 75 points.<br>c. A junior American round on a standard 48-inch target, and make a score of 250 points.<br>d. A national indoor round for 10 targets, and make a score of 30 points.<br>e. A Chicago round on a standard 16-inch target, and make a score of 250 points.<br><br>Explain the following:<br>a. The difference between field archery and target archery.<br>b. Field round, hunter's round, animal round, Boy Scout field archery round, American and junior American rounds, national indoor round, and Chicago round."
+    },
+    architecture: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/architecture.png",
+        name: "Architecture Merit Badge",
+        description: "Present a freehand drawing of geometric objects grouped together, decorative pattern, or architectural motif.<br><br>Draw without accurate measurements, the five (5) orders of classical architectures - the drawings being of the character of sketches, but preserving the properties.<br><br>Write an outline of the important periods of architectural development, giving the name of each style and the architects identified with it.<br><br>Write a brief historical outline of the development of architecture in the Philippines, and name important architects identified with each period.<br><br>Submit an original design of a two-story house - with a list of materials necessary for its construction, giving an outline of specifications, the design to consist of working drawings at scale drawn in ink or pencil on tracing paper suitable for printing.<br><br>Present clippings of at least five (5) examples of the following styles of architecture, giving the name of their architects and country identified with each:<br>a. Classical<br>b. Romanesque<br>c. Gothic<br>d. Renaissance<br>e. Contemporary International<br><br>Submit sketches of typical Malay, Indian (Hindu), Japanese, Chinese, Muslim, or any oriental style of architectural motifs and decorations.<br><br>Present a miniature model of an ideal and well-planned town-site or campsite."
+    },
+    art: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/art.png",
+        name: "Art Merit Badge",
+        description: "Tell a story with a picture or pictures. This story may be told in the form of a cartoon, cartoon strip, mural, or tapestry design rendered in any medium.<br><br>Promote a product or an idea with a picture or pictures. This may take the form of an advertisement layout for a magazine, a display card, a package, a poster, an industrial design, an architectural structure, or an interior decoration.<br><br>Record in an art medium something you have done or seen.<br><br>Decorate something with an original design - derived either from nature or an impressionistic or geometric pattern.<br><br>Design something useful - a book, furniture, house, rooms, vehicle, clothing, costume, etc.<br><br>Render a subject of your choice in four of these six methods:<br>a. Pen and ink<br>b. Watercolor<br>c. Pencil<br>d. Pastel<br>e. Oil<br>f. Tempera"
+    },
+    astronomy: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/astronomy.png",
+        name: "Astronomy Merit Badge",
+        description: "Identify in the sky:<br>a. Ten (10) conspicuous constellations, including at least four (4) in the Zodiac.<br>b. At least eight (8) stars of the first magnitude.<br><br>Chart the position of Venus and Mars among the stars over a period of at least four (4) weeks, and state the exact period of his observations.<br><br>Sketch the position of the Big Dipper in relation to the North Star and the horizon early some evening and again six (6) hours later the same night. Record the hour and the date of making each sketch.<br><br>Indicate in the sky the limits of the group of stars which, as seen from your latitude, never set. By your own observations, determine whether the Big Dipper or Cassiopeia ever sets.<br><br>Draw a diagram showing the relative positions of the sun, moon, and earth at new moon, first quarter, full moon, and last quarter. Draw a diagram showing the positions of the sun, moon, and earth during an eclipse of the sun and another during an eclipse of the moon.<br><br>Explain the principal cause of tides. Draw a diagram showing the relative positions of the sun, moon and earth during high and low tides.<br><br>Explain the principal difference between a reflecting and a refracting telescope. Show these by a simple diagram."
+    },
+    athletics: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/athletics.png",
+        name: "Athletics Merit Badge",
+        description: "Write a 300-word article on how to train for an athletic event.<br><br>Give the rules for two track and two field events. Tell what an amateur athlete is.<br><br>Prepare plans for the holding of an athletic meet, specifying duties of each official.<br><br>Demonstrate the proper form in running, high jump, overhand throw, and shotput.<br><br>Do the following:<br>a. Prepare a daily drill of ten (10) exercises for Scouts - giving proper exercise for the whole body, presenting evidence of having taught the same for two or more boys for a period of three months.<br>b. Demonstrate reasonable skill in at least two outdoor games requiring physical development.<br>c. Walk ten (10) kilometers in two hours without appreciable exhaustion.<br>d. Qualify (according to your weight) in each of the groups on the previous page."
+    },
+    automobiling: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/automobiling.png",
+        name: "Automobiling Merit Badge",
+        description: "Carefully examine and check conditions of the following features of an automobile:<br>a. Windshield wiper<br>b. Adjustment of rear-view mirror<br>c. Headlights for all headlight switch positions; reflector surfaces; cleanliness of lenses and that bulbs are free from blackening<br>d. Elevation and focus of headlight beams<br>e. Tail and stop lights<br>f. Windshield and rear window visibility<br>g. \"Play\" in steering wheel<br>h. Adjustment of brakes<br>i. Tires<br><br>Do the following:<br>a. List ten (10) important motor vehicle regulations in your province or city.<br>b. Give the necessary qualifications (including age) before a person can legally drive a vehicle in the Philippines.<br>c. Explain how drinking intoxicating liquor increases vehicular accidents as, for example, its effects on the driver's vision, judgment, and coordination.<br>d. Tell how many meters a driver on a dry road with brakes in good condition who sees danger ahead, is required to stop his car running 30 kilometers an hour; 50 kilometers; 70 kilometers.<br><br>Do the following:<br>a. Name at least six (6) sound driving practices which make for safety and courtesy on the road.<br>b. Name at least four (4) important characteristics of a good driver.<br>c. Demonstrate hand signals, using both single hand position, and three position systems; give the meaning of each.<br><br>Explain:<br>a. The purpose of clutch, gear shift, accelerator, choke, and brakes; describe briefly how each works.<br>b. How to stop a car on a wet or muddy road.<br>c. What to do when end skids to the right; to the left.<br>d. What to do when stop lights of a car ahead blinks.<br>e. What to do when a blow-out occurs at high speed.<br><br>Interpret readings of different gauges and meters on panel board. Change a tire. Start a motor; put car in gear; shift gears. Come smoothly to full stop from speed of thirty (30) kilometers an hour.<br><br>Make right and left turns from proper traffic lanes, giving proper signals at proper time. Park in a space of eight (8) meters. Start a car after stopping on an upgrade (away from curb); park on an upgrade and on a downgrade. Show how to get off sand and mud. Turn around in order to go in opposite direction between lines or marker nine (9) meters apart. Back up a car parallel to a curb.<br><br>Demonstrate ability to stop a car going at a speed of 30 kilometers per hour so that nose of car fits into a chalk-marked U-shaped box two (2) meters wide. Bumpers would be over front line of the box and tires inside sidelines."
+    },
+    aviation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/aviation.png",
+        name: "Aviation Merit Badge",
+        description: "Know what aviation means, its importance, how it affects the world, and how aviation has progressed in the Philippines.<br><br>Define aircraft. Describe some kinds of aircraft in use today.<br><br>Outline at least five (5) uses of aircraft.<br><br>Identify and explain the purpose of the following aircraft instruments:<br>a. Altimeter<br>b. Airspeed indicator<br>c. Compass<br>d. Turn and bank indicator<br>e. Tachometer<br>f. Oil pressure gauge<br>g. Temperature gauge<br><br>Show a knowledge of the International Civil Aviation Organization (ICAO) Phonetic Alphabet.<br><br>Do the following:<br>a. Point out on a model plane the forces which act on an airplane in flight.<br>b. Show one other principle basic to flight.<br>c. Build a wing section, and show the principles of lift.<br><br>Tell six (6) rules of safety to follow around airplanes and airports. Tell safety rules for building and flying model airplanes. Tell safety rules for glue, paint dope, and plastics.<br><br>Visit an airport or any local airbase near your home. After the visit, tell how the facilities were used.<br><br>Find out what job opportunities there are in aviation. Tell the qualifications and working conditions of one job in which he is interested in. Tell what it offers for reaching his goal in life."
+    },
+    barbering: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/barbering.png",
+        name: "Barbering Merit Badge",
+        description: "Visit a barbershop. Talk to the barber and request him to give some pointers about barbering.<br><br>Show the proper way of using a barber's scissors and razor.<br><br>With the help of a barber - learn how to cut hair properly, demonstrate the proper technique of cutting hair, and demonstrate how to use a whetstone and a stropping belt for sharpening scissors and razor.<br><br>Cut the hair of three (3) of your friends to their satisfaction."
+    },
+    basketry: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/basketry.png",
+        name: "Basketry Merit Badge",
+        description: "Name at least ten (10) different native materials used in basketry, and the various places in the Philippines where each of these materials can be found.<br><br>Name at least four (4) different hand tools used in basketry. Give their uses and explain how they are sharpened.<br><br>Do the following:<br>a. Describe the steps in bleaching buri leaves and bamboo.<br>b. Name the dye-stuff used in coloring buri leaves and bamboo.<br><br>Submit an album or a collection containing:<br>a. labeled samples of at least ten (10) basketry materials<br>b. samples of at least six (6) weave designs<br>c. three (3) basket finishing trimmings.<br><br>Show how to prepare at least two (2) of the following Philippine raw materials used for making baskets: buri, nito, ticug, bamboo, rattan, bamban, and coconut midribs.<br><br>Submit one working drawing of a basket made of any of the following: bamboo, bamboo-rattan, bamboo-bamban, bamboo-rattan-nito, or plywood-bamboo-buri.<br><br>Make at least one (1) basket using materials mentioned in #6."
+    },
+    beekeeping: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/beekeeping.png",
+        name: "Beekeeping Merit Badge",
+        description: "Look for and make a study of a beehive. Remove the combs. Find the queen. Calculate the amount of the brood, and number of queen cells. Calculate the amount of honey in the hive.<br><br>Show the difference among the drones, workers, eggs, larvae, and pupae at different stages. Tell the difference between honey, wax, pollen, and propolis. Tell where wax comes from. Explain the part played in the life of the hive by the queen, the drones, and the workers. Tell how bees make honey.<br><br>Hive a swarm or divide at least one colony. Explain how a hive is made.<br><br>Prepare the honey for marketing.<br><br>Write a 200-word essay on how and why the honeybee is used in pollinating farm crops. Name five (5) cops in your area pollinated by honeybees."
+    },
+    birdstudy: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/birdstudy.png",
+        name: "Bird Study Merit Badge",
+        description: "Tell how you have acquired your knowledge of birds, whether through books or through actual field study.<br><br>From actual observations, tell about the following:<br>a. How many species of birds you have observed in your neighborhood, or in a farm nearest to your home.<br>b. What species disappear during certain seasons of the year, and when they disappear.<br>c. Give the common names in English (or your native dialect) ten (10) birds you have personally observed.<br>d. Tell where you observed them.<br>e. Tell something about the size, coloring, habits, nesting, and general movements of each bird.<br><br>Give reasons why birds need protection, especially the endangered Philippine Eagle. Tell how birds are protected in the Philippines. Tell how bird protection is enforced in this country.<br><br>Tell why schools and similar entities should help disseminate information on bird protection.<br><br>Tell what you have done to persuade others not to destroy bird life. Show evidence of some constructive piece of work done to extend protection to bird life in the Philippines."
+    },
+    blacksmithing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/blacksmithing.png",
+        name: "Blacksmithing Merit Badge",
+        description: "Show how to build fire in a forge using either charcoal, coal, or wood.<br><br>List the operations in forging, and the corresponding tools to be used.<br><br>Make a tent hook, stock 3/8\" in diameter.<br><br>Make a simple hunting knife, or a small bolo.<br><br>Make a lap welded ring of 1/4\" stock (5\" in diameter).<br><br>Make a color scale for tempering different tools. For example: tool, color, temperature, bath, uses.<br><br>Demonstrate how to temper the following tools according to the temperature scale: knife, bolo, ax, iron bar, hatchet, cold chisel."
+    },
+    botany: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/botany.png",
+        name: "Botany Merit Badge",
+        description: "Make five field trips of at least two hours each to observe wild plant life. Keep a record based on field notes of varieties of flowers found - with date, place, nature of locality (swamp, roadside, woods, meadow, etc.) and other observations such as seeds, seed pods, leaf arrangements, insect attraction.<br><br>Identify from living specimens at least fifty (50) plant specimens.<br><br>Identify in three or more specimens, all parts of a perfect and complete flower. Explain how plants are pollenized, and how ferns differ from flowering plants.<br><br>Identify specimens of at least ten families of flowering plants (other than trees); or submit properly labeled specimens of such families.<br><br>Know what plants are rare in your vicinity, and what is being done or should be done to protect them.<br><br>Explain how plants use light, heat, water, oxygen, and carbon dioxide; and how they manufacture their own food.<br><br>Submit or identify in the field one specimen each of fungi, algae, lichen, and moss.<br><br>Carry out one of the following projects:<br>1. Submit a seed collection, properly labeled, or at least 20 different kinds of seeds gathered by yourself. Germinate at least five species.<br>2. Submit specimens of at least thirty (30) species of flowering plants. Include leaf, stem, flower, and root. Mount neatly and label with common and scientific names.<br>3. Make a study of plant life in an area of not less than two square meters for at least two months.<br>4. Raise a wild flower or fern garden, including at least five different species of plants."
+    },
+    bookbinding: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/bookbinding.png",
+        name: "Bookbinding Merit Badge",
+        description: "Name the different parts of a book.<br><br>Do the following:<br>a. Name the different materials used in bookbinding.<br>b. Name some substitute materials used in bookbinding.<br>c. Describe the proper steps in preparing paste, and explain their uses.<br><br>Name the tools and equipment used in bookbinding, and explain their uses.<br><br>Describe at least four (4) different stitches used in bookbinding.<br><br>Bind or rebind any of the following:<br>a. Sheets of papers<br>b. Volume of loose magazines or newspapers<br>c. A damaged book"
+    },
+    boating: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/boating.png",
+        name: "Boating Merit Badge",
+        description: "Before doing the other requirements, swim 100 yards using any stroke; then rest by floating as still as you can for one (1) minute.<br><br>Show that you know safety rules for boating or sailing.<br><br>Secure a permit to operate a motorboat, if needed. Explain the laws affecting pleasure boating in your area.<br><br>Identify the features or hazards of the body of water before going on a boat.<br><br>Explain the rules of the sea lanes. Describe the navigation aids used where you cruised.<br><br>Examine the condition and demonstrate proper use of safety equipment: Lifesaving devices, fire extinguisher, oars, lights, tool kit, horn/whistle, compass, anchor, safety chain, first aid kit, and bilge pump."
+    },
+    business: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/business.png",
+        name: "Business Merit Badge",
+        description: "Write a satisfactory business letter and a personal letter.<br><br>Know simple bookkeeping, shorthand, or typing.<br><br>Make a budget of your expenses, including those for clothes and incidentals. Keep a complete and actual account of personal receipts and expenditures for three months.<br><br>Be prepared to answer questions and problems on interest, percentages, and discounts.<br><br>Obtain and hold a job in a company or business organization for at least one month; or render one year successful service as a Troop or Outfit Scribe."
+    },
+    camping: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/camping.png",
+        name: "Camping Merit Badge",
+        description: "Show your Counselor and Troop Leader/Outfit Advisor the following:<br>a. Preparing for camp: clothes and equipment and how to pack them<br>b. Camp shelter and sanitation, including tent pitching<br>c. Safety precautions for a Patrol/Crew or Troop/Outfit camp<br><br>Make a camp lay-out and prepare a plan for a weekend camp including a schedule of activities. Carry out the camp plan.<br><br>While in camp, do the following:<br>a. Make a comfortable ground bed and sleep on it.<br>b. Make a camp table, a tripod for suspending camp supplies, or other camp conveniences using proper lashing techniques.<br>c. Show the proper method of storing and protecting food against animals and wet weather.<br><br>Camp a total of at least twenty (20) days and twenty (20) nights outdoors."
+    },
+    carpentry: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/carpentry.png",
+        name: "Carpentry Merit Badge",
+        description: "Show how to sharpen an edge-cutting tool and a tooth-cutting tool.<br><br>Demonstrate the use of the ruler, square, level, plumb line, meter, chalk line, and bevel.<br><br>Demonstrate the proper way to drive, set, and clinch a nail; draw a spike with a claw hammer; join two pieces of wood with screws.<br><br>Show the correct use of the cross-cut saw and the rip-saw.<br><br>Demonstrate how to use a chisel by making a mortise, a lap joint, and a tenon joint.<br><br>Without assistance, make a simple article of furniture for practical use in the home or yard."
+    },
+    chemistry: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/chemistry.png",
+        name: "Chemistry Merit Badge",
+        description: "Explain the meaning of chemistry and its branches.<br><br>Do the following:<br>a. Show that a candle flame uses oxygen.<br>b. Demonstrate that heating wood chips produces a gas that burns.<br>c. Sketch the carbon dioxide - oxygen cycle.<br><br>Explain industrial production of oxygen, hydrogen, chlorine, and ammonia.<br><br>Differentiate between carbonates, sulfides, chlorides, acids, and gases.<br><br>Describe chemical changes in cooking and baking. Carry out an experiment to show ways of protecting iron from rusting.<br><br>Visit a chemical plant or laboratory and explain the differences between chemical technicians, chemists, and chemical engineers."
+    },
+    citizenship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/citizenship.png",
+        name: "Citizenship Merit Badge",
+        description: "Participate in a community service project for at least four (4) hours.<br><br>Identify core personal values and write an essay on how they relate to the Scout Oath and Law.<br><br>Study the 1987 Philippine Constitution, focusing on the Bill of Rights and government structure.<br><br>Identify key Filipino Values (bayanihan, pakikasama, hospitality) and reflect on global perceptions.<br><br>Participate in a spiritual retreat or reflection activity and share how it contributes to well-being."
+    },
+    citizenshipinthecommunity: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/citizenshipinthecommunity.png",
+        name: "Citizenship in the Community Merit Badge",
+        description: "Prepare a written outline of the history of your community.<br><br>Mark key locations on a map: government buildings, fire/police stations, hospitals, schools, and chief industries.<br><br>Draw a diagram of the organizational structure of your provincial or city government.<br><br>Know how to report emergencies (fire, accident, crime) and obtain local permits.<br><br>Plan and carry out 10 hours of community service."
+    },
+    citizenshipinthehome: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/citizenshipinthehome.png",
+        name: "Citizenship in the Home Merit Badge",
+        description: "Discuss the meaning of citizenship and the importance of the home in training.<br><br>Submit evidence of practicing good citizenship at home (courtesy, helpfulness).<br><br>Prepare a list of regular home duties for one month and keep a record.<br><br>Perform a health and safety check-up of your home and prepare a fire escape plan.<br><br>Make a budget and keep a record of income and expenses for two months."
+    },
+    citizenshipinthenation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/citizenshipinthenation.png",
+        name: "Citizenship in the Nation Merit Badge",
+        description: "Read the Constitution of the Philippines and explain the Preamble and the three branches of government.<br><br>Describe the system of checks and balances.<br><br>Identify how privileges in the Bill of Rights are protected in our country.<br><br>Visit a National or Provincial Capital or a historical site.<br><br>Identify the current high-ranking officials of the Philippine government (President, VP, etc.) and know how to address letters to them."
+    },
+    coconutgrowing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/coconutgrowing.png",
+        name: "Coconut Growing Merit Badge",
+        description: "Tell the value of coconut as food and the uses of various parts of the tree.<br><br>Discuss soil and climate requirements and seedling preparation.<br><br>Describe how to establish and care for a one-hectare coconut plantation.<br><br>Explain harvesting methods in your locality.<br><br>Identify destructive pests/diseases and how to control them."
+    },
+    computers: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/computers.png",
+        name: "Computers Merit Badge",
+        description: "Describe the history of computers and data processing.<br><br>Name major components of a system and build a model of storage (core, drum, or disk).<br><br>Explain binary conversion and flow-charting.<br><br>Convert your name to Hollerith and binary-coded decimal.<br><br>Visit a local data-processing installation or write a report on occupations in the field."
+    },
+    cooking: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/cooking.png",
+        name: "Cooking Merit Badge",
+        description: "Make a food list and balanced menu for three days of camping.<br><br>Show proper handling, storage, and sanitary washing of utensils in camp.<br><br>Serve as cook for at least three meals using a prepared menu.<br><br>Build a fireplace and fire; prepare a full meal for four persons including rice, soup, meat/fish, vegetables, and dessert.<br><br>Practice environment-friendly garbage disposal."
+    },
+    cropproduction: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/cropproduction.png",
+        name: "Crop Production Merit Badge",
+        description: "Identify where corn, rice, sorghum, and soybeans are grown in the Philippines.<br><br>Grow one of these crops in an area of at least 200 square meters.<br><br>Keep an accurate record of costs, labor, and yield.<br><br>Submit samples of your yield and describe modern ways of crop farming."
+    },
+    cycling: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/cycling.png",
+        name: "Cycling Merit Badge",
+        description: "Ride fifteen (15) consecutive kilometers each month for three months.<br><br>Complete a thirty (30) kilometer ride in ten hours.<br><br>Learn bicycle maintenance: repair a puncture, clean, and reassemble a bicycle.<br><br>Demonstrate safety precautions on the road.<br><br>Go on a cycling expedition and follow a course laid out on a map."
+    },
+    dairying: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/dairying.png",
+        name: "Dairying Merit Badge",
+        description: "Know and understand the relative nutritional values of milk from cow, carabaos, and goats.<br><br>Milk a cow, carabao, or goat.<br><br>Understand and demonstrate the pasteurization of milk, and the care of dairy utensils and appliances.<br><br>Understand the care and management of dairy animals.<br><br>Visit a milk or dairy plant. Make a report on your visit."
+    },
+    drafting: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/drafting.png",
+        name: "Drafting Merit Badge",
+        description: "Make a rough sketch of your Troop meeting room or a room in your church, school, or home. From it, submit a finished scale floor plan.<br><br>Submit a scale drawing of some piece of craftwork for use in home, school, Troop meeting place or camp, clear enough for someone else to use as a working basis. Include a bill of materials and cost estimate.<br><br>Submit drawings of the following:<br>a. Orthographic and isometric projections of an object.<br>b. A reduced or enlarged simple scale drawing.<br><br>Make an ink tracing of your craftwork and submit the cost of reproduction.<br><br>Submit a hand-lettered poster (approx. 60 x 70 cm) or a hand-lettered personal greeting card."
+    },
+    dramatics: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/dramatics.png",
+        name: "Dramatics Merit Badge",
+        description: "Show familiarity with outstanding periods in the history of drama, including Greek and Philippine drama.<br><br>Submit evidence of taking part in a play presented to an audience of at least fifty persons.<br><br>Submit an original one-act play of at least twenty (20) minutes duration, preferably with a Scouting theme and Philippine setting. Include a sketch of the set.<br><br>Demonstrate knowledge of fundamental elements: plot (conflict, climax, etc.), characterization, and dialogue.<br><br>Show ability to apply make-up to appear as an old man.<br><br>Present a list of five entertainment features for campfires or meetings and perform two selected by the Counselor."
+    },
+    duckraising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/duckraising.png",
+        name: "Duck Raising Merit Badge",
+        description: "Raise and take care of five (5) ducks. Properly house them and provide proper food.<br><br>Keep a record of food consumption, mortality, medication, and vaccination.<br><br>Keep a complete record of eggs laid, squabs hatched, sicknesses, and deaths.<br><br>Describe breeds of ducks used for squabbing.<br><br>Visit a duck-raising farm near your place.<br><br>List the basic requirements for successful duck raising."
+    },
+    earngreen: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/earngreen.png",
+        name: "Earn Green Merit Badge",
+        description: "Take at least 10 saplings grown during the Grow Green MB to an official BSP sanctioned tree planting activity.<br><br>Sell your saplings to the authorized BSP buyer at the planting area.<br><br>Bring and plant your saplings to the designated planting site.<br><br>Record the following: (a) date; (b) venue; (c) number of trees sold/planted; (e) signature of activity officer.<br><br>Successfully sell and plant 10 or more saplings to have your MB card signed."
+    },
+    ecology: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/ecology.png",
+        name: "Ecology Merit Badge",
+        description: "Explain the meaning of: ecology, biosphere, ecosystem, plant succession, and limiting factor.<br><br>Pick an area of 3 hectares for study and visit it four times for 2 hours each. Record temperature, rain, wind, and observed plants/animals.<br><br>Write a 500-word study on how climate, topography, and geology influence the ecosystem.<br><br>Plan and carry out a project regarding soil water-holding capacity or the influence of land plant life on environment.<br><br>Discuss causes of water, land, and air pollution and describe the duties of three positions in environmental science."
+    },
+    electricity: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/electricity.png",
+        name: "Electricity Merit Badge",
+        description: "Know the sources and ways of producing electricity.<br><br>Make a simple electromagnet and explain the relationship between electricity and magnetism.<br><br>Understand the difference between DC and AC current.<br><br>Demonstrate knowledge of cells, batteries, switches, bells, and transformers.<br><br>Demonstrate how to replace fuses and properly splice/solder wires.<br><br>Submit a diagram of your house's electrical outlets and switches controlled by each fuse.<br><br>Read an electric meter and compute a sample bill."
+    },
+    electronics: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/electronics.png",
+        name: "Electronics Merit Badge",
+        description: "Explain the theory of the transistor and its use with resistors, capacitors, and coils.<br><br>Draw, label, and wire a simple circuit; demonstrate proper soldering techniques.<br><br>Explain remote-control devices and build a representative circuit.<br><br>Explain the 'electronic brain' (binary system) and build a simple flip-flop circuit.<br><br>Discuss job opportunities in the field of electronics."
+    },
+    engineering: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/engineering.png",
+        name: "Engineering Merit Badge",
+        description: "Know high school preparation required for engineering college.<br><br>Describe various branches of engineering (Aeronautical, Civil, Mechanical, etc.) and their societal benefits.<br><br>Make an inspection trip to a manufacturing plant or engineering project and prepare a report.<br><br>Complete three technical tasks, such as designing a mechanical device, building an electronic device, or calculating the cost of pumping water to a reservoir.<br><br>Demonstrate the use of engineering measurement devices like a transit, micrometer, or oscilloscope."
+    },
+    environment: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/environment.png",
+        name: "Environment Merit Badge",
+        description: "Explain ecology terms and pick an area of four hectares for a one-month field study.<br><br>Record environmental data (temperature, rain, wind) and biological observations.<br><br>Write a 300-word report on the interrelation of living and non-living elements.<br><br>Carry out a project regarding plant cover, runoff, or oxygen cycles.<br><br>Discuss the causes and effects of water, land, and air pollution, and propose solutions for local environmental problems."
+    },
+    emergencypreparedness: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/emergencypreparedness.png",
+        name: "Emergency Preparedness Merit Badge",
+        description: "Earn the First Aid Merit Badge.<br><br>Explain life-saving actions for scenarios including fire, car accidents, floods, typhoons, and nuclear fallout.<br><br>Demonstrate rescues from live electric wires, smoke-filled rooms, and drowning.<br><br>Describe Scout training for crowd control, messenger service, and group feeding.<br><br>Demonstrate rescue communication (3 ways) and the proper use of ropes/lines.<br><br>Prepare a written mobilization plan and an emergency kit for your family or unit."
+    },
+    farmmanagement: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/farmmanagement.png",
+        name: "Farm Management Merit Badge",
+        description: "Make a plan of an ideal farm with correct layout of structures, sewage disposal, and garden layout.<br><br>Visit a nearby farm, observe operations, and submit a recommendation for improvement to the management.<br><br>Discuss the development of your proposals with your Counselor.<br><br>Report on farm equipment (seeders, tractors, etc.) and their specific uses.<br><br>Discuss methods for keeping farm records and research recent farming innovations."
+    },
+    filipinoheritage: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/filipinoheritage.png",
+        name: "Filipino Heritage Merit Badge",
+        description: "Write biographies of five Filipino heroes and explain their virtues to your Outfit.<br><br>Cite five literary works by Filipino heroes and select relevant passages from each.<br><br>Compile ten Filipino traditions and twenty proverbs, explaining their significance.<br><br>Recite a poem by a Filipino hero in a meeting.<br><br>Participate in an activity honoring heroes and visit a historical shrine/place."
+    },
+    firemanship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/firemanship.png",
+        name: "Firemanship Merit Badge",
+        description: "Explain three common causes of home fires and how to guard against them.<br><br>Inspect your home for fire hazards and create an escape plan for everyone at night.<br><br>Understand spontaneous combustion and the proper storage of flammable liquids (gasoline, alcohol, etc.).<br><br>Show how to save a person whose clothes are on fire and how to move through smoke.<br><br>Demonstrate how to build and safely extinguish a fire in the open; conduct a fire drill."
+    },
+    fishculture: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/fishculture.png",
+        name: "Fish Culture Merit Badge",
+        description: "Tell the history of fish conservation and management in the Philippines.<br><br>Describe methods used to increase fish numbers and identify three local plants used as fish food.<br><br>Name the agencies responsible for fish culture and explain how fishing laws are set.<br><br>Visit a fish pond, hatchery, or go out with a commercial fisherman and write a report/essay on your findings."
+    },
+    fishing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/fishing.png",
+        name: "Fishing Merit Badge",
+        description: "Catch three different kinds of fish legally (one using an artificial lure) and clean them properly.<br><br>Identify parts of a fishing rod and reel, or demonstrate proper tackle care.<br><br>Catch and identify three kinds of live bait.<br><br>Explain game fish seasons and local conservation measures being implemented."
+    },
+    firstaid: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/firstaid.png",
+        name: "First Aid Merit Badge",
+        description: "Show correct transport methods for fractures, head injuries, and spinal injuries.<br><br>Demonstrate how to stop bleeding from veins and arteries in various body parts.<br><br>Perform First Aid for choking, drowning, electric shock, and shallow water diving accidents.<br><br>Identify germs in puncture/gunshot wounds and explain the need for a physician.<br><br>Demonstrate external cardiac massage and how to sterilize improvised bandages."
+    },
+    foodprocessing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/foodprocessing.png",
+        name: "Food Processing Merit Badge",
+        description: "Explain the national system for producing and distributing food.<br><br>Create charts showing the movement of a livestock item and a crop item from farm to table.<br><br>Demonstrate native preservation methods like daing, tinapa, or jellies for later consumption.<br><br>Visit a food processing or repacking plant and discuss the operations with the owner."
+    },
+    forestry: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/forestry.png",
+        name: "Forestry Merit Badge",
+        description: "Identify ten timber trees/shrubs and collect ten different types of tree seeds.<br><br>Name minor forest products and the major enemies of the forest.<br><br>Explain the effects of 'kaingin' and the laws penalizing it.<br><br>Describe the work of the Forest Management Bureau.<br><br>Write a 300-word essay on the importance of forests to wildlife and the community."
+    },
+    fruitcultivation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/fruitcultivation.png",
+        name: "Fruit Cultivation Merit Badge",
+        description: "Identify regions in the Philippines where ten different fruit varieties are grown.<br><br>Plan and plant a fruit or nut orchard in your backyard.<br><br>Care for your orchard for one year, keeping records of costs and yield.<br><br>Identify harmful pests and diseases and explain how to control them safely."
+    },
+    gardening: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/gardening.png",
+        name: "Gardening Merit Badge",
+        description: "Grow at least five (5) different kinds of vegetables in a family garden.<br><br>Explain the process from soil preparation to harvesting.<br><br>Identify local insects/diseases and control methods.<br><br>Plan and carry out a community gardening project in your barangay."
+    },
+    globalcitizenship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/globalcitizenship.png",
+        name: "Global Citizenship Merit Badge",
+        description: "Correspond with a foreign Scout for six months.<br><br>Identify 30 countries with Scouting and explain the World Scout Movement structure.<br><br>Study the UN Charter and Universal Declaration of Human Rights.<br><br>Camp with foreign Scouts or keep a scrapbook of another country's activities."
+    },
+    gogreen: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/gogreen.png",
+        name: "Go Green Merit Badge",
+        description: "Participate in a BSP sanctioned nursery or tree planting activity.<br><br>Demonstrate seed sowing, pricking, and potting into seedling bags.<br><br>Show appropriate re-bagging of seedlings into sapling bags and explain maintenance."
+    },
+    growgreen: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/growgreen.png",
+        name: "Grow Green Merit Badge",
+        description: "Document the growth of 12-20 seeds into saplings (4-6 feet tall) via a photo scrapbook.<br><br>Plant at least one sapling in a designated community area.<br><br>Note: Earning this automatically grants the 'Go Green' merit badge."
+    },
+    handicraft: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/handicraft.png",
+        name: "Handicraft Merit Badge",
+        description: "Complete two projects using materials like abaca, shells, bamboo, or rattan.<br><br>Identify species used and tools required for your chosen materials.<br><br>Discuss livelihood opportunities in the handicraft industry."
+    },
+    hiking: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/hiking.png",
+        name: "Hiking Merit Badge",
+        description: "Plan and complete a 10km hike and five separate hikes totaling 50km.<br><br>Complete a final 20km hike in one day.<br><br>Submit detailed reports for all six hikes covering routes, weather, and observations."
+    },
+    hobbiesandcollection: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/hobbiesandcollection.png",
+        name: "Hobbies and Collection Merit Badge",
+        description: "Curate a collection of at least 100 pieces (stamps, coins, shells, etc.).<br><br>Exhibit your collection and explain its importance.<br><br>Visit a museum or art gallery and report on professional curation methods."
+    },
+    hograising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/hograising.png",
+        name: "Hog Raising Merit Badge",
+        description: "Identify two breeds of hogs and explain the commercial uses of hog products.<br><br>Develop balanced fattening rations.<br><br>Describe symptoms and prevention of hog cholera."
+    },
+    homerepairs: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/homerepairs.png",
+        name: "Home Repairs Merit Badge",
+        description: "Complete twelve home repair tasks such as fixing leaky faucets, repairing electric cords, painting walls, or replacing door knobs.<br><br>Demonstrate proper tool maintenance and safety."
+    },
+    horsemanship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/horsemanship.png",
+        name: "Horsemanship Merit Badge",
+        description: "Name parts of the horse, saddle, and bridle.<br><br>Demonstrate grooming and emergency fire rescue from a stall.<br><br>Identify symptoms of colic and other diseases.<br><br>Ride a horse for a distance of 10 kilometers."
+    },
+    insectstudy: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/insectstudy.png",
+        name: "Insect Study Merit Badge",
+        description: "Collect and mount 15 species with scientific names.<br><br>Identify helpful and harmful species to humans.<br><br>Raise a butterfly from a caterpillar and compare life cycles of various insects."
+    },
+    interpreting: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/interpreting.png",
+        name: "Interpreting Merit Badge",
+        description: "Carry on a 5-minute conversation in a modern foreign language.<br><br>Translate a 2-minute native address and a 200-word written passage.<br><br>Write a simple letter in the target language."
+    },
+    journalism: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/journalism.png",
+        name: "Journalism Merit Badge",
+        description: "Write news incidents, editorials, and reviews.<br><br>Prepare a dummy for an 8-page newspaper including ads.<br><br>Serve as a reporter/editor for at least four issues of a publication.<br><br>Explain freedom of the press, libel, and copyright laws."
+    },
+    leathercraft: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/leathercraft.png",
+        name: "Leathercraft Merit Badge",
+        description: "Identify five types of leather and demonstrate lacing/braiding.<br><br>Design and make three hand-carved articles (wallets, belts, etc.).<br><br>Explain curing and tanning processes."
+    },
+    lifesaving: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/lifesaving.png",
+        name: "Lifesaving Merit Badge",
+        description: "Earn Swimming MB.<br><br>Demonstrate approach, tow (hair, cross-chest, tired swimmer), and release techniques.<br><br>Perform surface dives and reel-in rescues.<br><br>Demonstrate CPR (mouth-to-mouth) and external cardiac massage."
+    },
+    livestockraising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/livestockraising.png",
+        name: "Livestock Raising Merit Badge",
+        description: "Research and outline the proper feeding and breeding of backyard livestock.<br><br>Describe two breeds and visit a commercial farm or stockyard.<br><br>Explain the production of meat and its importance in the national diet."
+    },
+    machineshoppractice: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/machineshoppractice.png",
+        name: "Machine Shop Practice Merit Badge",
+        description: "Identify uses of lathes, planers, and drill presses.<br><br>Demonstrate reading a vernier and micrometer caliper.<br><br>Operate a machine while following ten essential safety rules."
+    },
+    marksmanship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/marksmanship.png",
+        name: "Marksmanship Merit Badge",
+        description: "Achieve qualifying scores in standing and prone positions (50 feet).<br><br>Demonstrate gun cleaning, safety rules, and sight adjustment.<br><br>All shooting must be witnessed by an approved Counselor."
+    },
+    masonry: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/masonry.png",
+        name: "Masonry Merit Badge",
+        description: "Prepare plans for a masonry structure and mix concrete for the foundation.<br><br>Demonstrate use of mason tools and build a dry masonry structure.<br><br>Visit a rock quarry or hollow block factory."
+    },
+    metalwork: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/metalwork.png",
+        name: "Metal Work Merit Badge",
+        description: "Create two useful items from tin cans involving cutting and edging.<br><br>Demonstrate use of soldering coppers, blow torches, and tinner's snips.<br><br>Make patterns and craft articles like wire hangers or garden trowels."
+    },
+    music: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/music.png",
+        name: "Music Merit Badge",
+        description: "Play an orchestral instrument or demonstrate proficiency in solo/group singing.<br><br>Read simple sheet music at sight.<br><br>Write a 500-word essay on the history of Philippine music."
+    },
+    naturelore: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/naturelore.png",
+        name: "Nature Lore Merit Badge",
+        description: "Study a wildlife community (forest, marsh, etc.) and list common flora and fauna.<br><br>Complete requirements in two specialized fields (Birds, Mammals, Reptiles, etc.).<br><br>Write a life history of one observed species."
+    },
+    navigation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/navigation.png",
+        name: "Navigation Merit Badge",
+        description: "Identify parts of a compass and demonstrate its use.<br><br>Read topographic maps and identify 10 symbols.<br><br>Conduct a 1-km navigation walk practicing mindfulness and 'Leave No Trace' principles."
+    },
+    painting: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/painting.png",
+        name: "Painting Merit Badge",
+        description: "Demonstrate mixing pigments to produce various shades and tints.<br><br>Show how to mix oils and turpentine to the correct consistency.<br><br>Paint a surface evenly without laps and use putty for uneven surfaces.<br><br>Present a panel with three coats of paint featuring a body and molding in different colors."
+    },
+    pathfinding: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/pathfinding.png",
+        name: "Pathfinding Merit Badge",
+        description: "Guide people within a 3km radius of your home/Scout office.<br><br>Know the location, population, and transport routes for five neighboring barangays.<br><br>Locate essential services: police, hospitals, and terminals.<br><br>Submit a scaled map indicating community points of interest and public buildings."
+    },
+    personalhealth: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/personalhealth.png",
+        name: "Personal Health Merit Badge",
+        description: "Submit evidence of recent medical and dental exams.<br><br>Explain the importance of hygiene (handwashing, daily bath) and proper sleep ventilation.<br><br>Identify how diseases spread via water and personal contact.<br><br>Pass tests for posture and create a 10-exercise daily drill for Scouts."
+    },
+    petcare: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/petcare.png",
+        name: "Pet Care Merit Badge",
+        description: "Care for a pet for four months and create a management plan for a farm animal.<br><br>Identify symptoms of rabies, anthrax, and cholera in various animals.<br><br>Demonstrate first aid for animals, including treating broken bones and sores.<br><br>Volunteer with local groups for animal welfare or disease prevention."
+    },
+    photography: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/photography.png",
+        name: "Photography Merit Badge",
+        description: "Explain parts of a camera: range finder, lens, shutter, and diaphragm.<br><br>Understand composition and light handling.<br><br>Identify chemicals in developing and fixing solutions.<br><br>Submit six self-developed photos covering landscapes, groups, and architecture."
+    },
+    physicalfitness: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/physicalfitness.png",
+        name: "Physical Fitness Merit Badge",
+        description: "Submit medical/dental exam results and record 30 days of daily exercise.<br><br>Complete PFTs in swimming, arm strength (pull-ups/push-ups), abdominal power, and running/jumping.<br><br>Earn at least 200 points across five events and discuss how fitness enables service to others."
+    },
+    pigeonraising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/pigeonraising.png",
+        name: "Pigeon Raising Merit Badge",
+        description: "House and raise at least two pairs of pigeons to maturity.<br><br>Submit a scaled sketch of your loft/coop and an itemized feeding schedule.<br><br>Keep detailed financial records of all expenditures and flock increases."
+    },
+    pioneering: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/pioneering.png",
+        name: "Pioneering Merit Badge",
+        description: "Make a 20-foot rope using local materials and demonstrate 12 knots and hitches.<br><br>Show square, diagonal, and shear lashings.<br><br>Construct a large project such as a bamboo bridge, signal tower, or raft.<br><br>Make a Turk's Head neckerchief slide and scale models of pioneering projects."
+    },
+    plumbing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/plumbing.png",
+        name: "Plumbing Merit Badge",
+        description: "Identify ten plumbing parts and six tools.<br><br>Demonstrate cutting, threading, and connecting water pipes.<br><br>Repair a leaking faucet and a water closet.<br><br>Explain the mechanics of a septic tank or home sewerage system with a sketch."
+    },
+    pottery: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/pottery.png",
+        name: "Pottery Merit Badge",
+        description: "Describe the preparation of clay and design two pottery forms.<br><br>Mold five forms by hand (e.g., jar, bowl, mug).<br><br>Explain firing and glazing methods and research historical pottery from places like Ilocos or Pasig."
+    },
+    poultryraising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/poultryraising.png",
+        name: "Poultry Raising Merit Badge",
+        description: "Construct sanitary laying houses and runs.<br><br>Experience rearing, feeding, and dressing birds for the table.<br><br>Demonstrate egg candling and grading; distinguish fertile from infertile eggs.<br><br>Raise a breed of at least ten selected pullets."
+    },
+    printing: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/printing.png",
+        name: "Printing Merit Badge",
+        description: "Use letterpress, silk-screen, or offset printing to produce posters or publicity materials.<br><br>Set type by hand, read proof, and run at least 50-100 copies.<br><br>Demonstrate correct inking and press maintenance."
+    },
+    publichealth: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/publichealth.png",
+        name: "Public Health Merit Badge",
+        description: "Explain causes/prevention of diseases like TB, Malaria, and Rabies.<br><br>Demonstrate sanitation: destroy garbage, set traps, and filter/purify water.<br><br>Dig straddle trench and 'cat-hole' latrines.<br><br>Discuss local community health regulations and immunization processes."
+    },
+    publicspeaking: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/publicspeaking.png",
+        name: "Public Speaking Merit Badge",
+        description: "Deliver a 5-minute original talk on Scouting to at least 25 people.<br><br>Demonstrate sight-reading ability with a 500-word selection.<br><br>Explain a technical process or game clearly and give a 5-minute extemporaneous talk."
+    },
+    rabbitraising: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/rabbitraising.png",
+        name: "Rabbit Raising Merit Badge",
+        description: "House a litter of rabbits from mating to marketing.<br><br>Identify breeds used for meat, fur, and wool.<br><br>Maintain strict breeding, feeding, and financial records for your project."
+    },
+    radio: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/radio.png",
+        name: "Radio Merit Badge",
+        description: "Demonstrate radio soldering techniques and explain schematic symbols.<br><br>Build a working piece of electronic equipment (e.g., transmitter or amplifier).<br><br>Send/receive Morse Code at 5 wpm.<br><br>Explain 'Q' codes and emergency radio procedures for disasters."
+    },
+    reading: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/reading.png",
+        name: "Reading Merit Badge",
+        description: "Read twelve approved books across different genres (fiction, technical, biography, etc.).<br><br>Develop a bibliography for a hobby and show evidence of using a library.<br><br>Perform a service such as delivering reading materials to shut-ins."
+    },
+    reptileandamphibianstudy: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/reptileandamphibianstudy.png",
+        name: "Reptile and Amphibian Study Merit Badge",
+        description: "Sketch markings of local species and identify five poisonous snakes in the Philippines.<br><br>Explain reproduction and movemenet (ribs/muscles) of reptiles.<br><br>Maintain a non-poisonous specimen in a terrarium for one month, recording its habits."
+    },
+    rizallore: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/rizallore.png",
+        name: "Rizal Lore Merit Badge",
+        description: "Write a biography of Dr. Jose Rizal and identify twelve character traits to emulate.<br><br>Discuss the significance of Noli Me Tangere or El Filibusterismo.<br><br>Recite a Rizal poem from memory and visit a designated Rizal shrine (Fort Santiago, Calamba, or Dapitan)."
+    },
+    ropework: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/ropework.png",
+        name: "Ropework Merit Badge",
+        description: "Tie and explain the uses of 15 essential knots (e.g., Bowline, Tautline, Timber Hitch).<br><br>Submit a knot board and demonstrate rope care.<br><br>Apply knots to practical tasks like repairing furniture or making a 20-foot rope ladder."
+    },
+    safety: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/safety.png",
+        name: "Safety Merit Badge",
+        description: "Perform a home safety inspection and list ten rules to remove hazards.<br><br>Demonstrate road safety, fire extinguisher use, and knowledge of traffic regulations.<br><br>Comment on recent local accident reports and discuss safety in industry and recreation."
+    },
+    salesmanship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/salesmanship.png",
+        name: "Salesmanship Merit Badge",
+        description: "Sell merchandise valued over P200 and explain your methods for overcoming resistance.<br><br>Hold a sales job for three months or sell something you grew/made at a profit.<br><br>Visit a business to study their selling process and interview a successful salesman."
+    },
+    scholarship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/scholarship.png",
+        name: "Scholarship Merit Badge",
+        description: "Maintain a 1-year school attendance record with an average of 82% (no grade below 75%).<br><br>Show leadership in school activities and provide evidence of self-education outside of school."
+    },
+    sculpture: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/sculpture.png",
+        name: "Sculpture Merit Badge",
+        description: "Model in clay or soap an animal, an antique statue part, and a Greek ornament.<br><br>Reproduce the Scout Badge in clay and finish it in plaster of Paris."
+    },
+    seamanship: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/seamanship.png",
+        name: "Seamanship Merit Badge",
+        description: "Demonstrate whippping, coiling, and splicing 1-inch rope.<br><br>Show proficiency in sail cloth stitching (herring-bone/flat seams).<br><br>Box the compass to 32 points and explain buoyage systems and weather navigation."
+    },
+    signalling: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/signalling.png",
+        name: "Signalling Merit Badge",
+        description: "Send/receive Morse Code via buzzer and light/wigwag at 5 wpm.<br><br>Log 15 radio contacts over three months.<br><br>Explain the basic theories of how a radio transceiver works."
+    },
+    snorkeling: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/snorkeling.png",
+        name: "Snorkeling Merit Badge",
+        description: "Earn Swimming MB.<br><br>Demonstrate finning (150m), underwater breath-holding (20s), and clearing a submerged mask.<br><br>Recover and refit a weight belt underwater and give the 'I am OK' signal."
+    },
+    soilandwaterconservation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/soilandwaterconservation.png",
+        name: "Soil and Water Conservation Merit Badge",
+        description: "Explain soil formation and identify classifications (sand, silt, clay).<br><br>Draw the water cycle and explain the disastrous effects of water pollution.<br><br>Demonstrate waste water treatment steps and ways to heal a gully."
+    },
+    surveying: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/surveying.png",
+        name: "Surveying Merit Badge",
+        description: "Measure range lines and baselines using a tape and compass.<br><br>Draw a scaled map from field notes and determine elevations of points.<br><br>Determine the height of a distant point using surveying methods (accurate within 5%)."
+    },
+    swimming: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/swimming.png",
+        name: "Swimming Merit Badge",
+        description: "Swim 100 meters using Side-Stroke, Back Stroke, and Breast-Stroke.<br><br>Demonstrate surface dives and recovery.<br><br>Show survival floating by inflating trousers or a shirt in deep water."
+    },
+    tailoring: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/tailoring.png",
+        name: "Tailoring Merit Badge",
+        description: "Show how to operate and maintain a sewing machine.<br><br>Identify tailoring tools like the tailor's square and chalk.<br><br>Draft a pattern and sew a pair of pajamas or athletic pants.<br><br>Explain fabric preparation (preshrinking) and repair a worn-out collar or adjust trouser waistlines."
+    },
+    teamsports: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/teamsports.png",
+        name: "Team Sports Merit Badge",
+        description: "Participate in an organized team sport for one full season.<br><br>Demonstrate sportsmanship and explain the rules/etiquette of two selected sports.<br><br>Draw diagrams of playing areas and list necessary protective equipment.<br><br>Set and follow training rules while tracking physical improvement."
+    },
+    treefarming: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/treefarming.png",
+        name: "Tree Farming Merit Badge",
+        description: "Identify 15 species of trees/shrubs and their uses.<br><br>Explain the value of forests in soil fertility and water regulation.<br><br>Visit a managed forest or watershed and write a 300-word report on forest management crops."
+    },
+    weather: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/weather.png",
+        name: "Weather Merit Badge",
+        description: "Explain the formation of rain, fog, and hail.<br><br>Read weather instruments (barometer, anemometer, etc.) and build a weather vane.<br><br>Identify storm signals and track daily weather patterns for one month.<br><br>Discuss the trajectory of typhoons in the Philippines and the role of PAGASA."
+    },
+    wildlifeconservation: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/wildlifeconservation.png",
+        name: "Wildlife Conservation Merit Badge",
+        description: "Study a tropical wildlife community and list local flora/fauna.<br><br>Identify wild mammals by their tracks or signs (plaster casts).<br><br>Explain plant succession and visit a wildlife refuge to interview the manager.<br><br>Research the history of wildlife management in the Philippines."
+    },
+    woodcarving: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/woodcarving.png",
+        name: "Wood Carving Merit Badge",
+        description: "Identify six Philippine woods suitable for carving and maintain carving tools.<br><br>Draw two designs with a Philippine motif (half and full relief).<br><br>Carve a simple article in wood, such as a tray or jewel box, using low relief techniques."
+    },
+    woodwork: {
+        title: "Merit Badge Information",
+        insignia: "https://www.mbcenter.org/mbimagespng/woodwork.png",
+        name: "Wood Work Merit Badge",
+        description: "Demonstrate proper use of saws, planes, and hammers.<br><br>Create a woodworking project from a self-drafted sketch and material list.<br><br>Build a scale model of a frame structure or a cabinet with inset hinges.<br><br>Explain how timber is milled and seasoned for construction."
+    }
         };
 
         // Click handlers for clickable items
@@ -817,7 +1628,7 @@
                 const data = modalData[modalKey];
                 
                 modalTitle.textContent = data.title;
-                rankInsignia.textContent = data.insignia;
+                rankInsignia.innerHTML = data.insignia ? `<img src="${data.insignia}" alt="${data.name}">` : '';
                 rankName.textContent = data.name;
                 rankDescription.innerHTML = data.description;
                 
