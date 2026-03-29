@@ -8,6 +8,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
     <style>
+    /* Resource Cards Section */
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #e3f2fd;
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(25, 118, 210, 0.2);
+    border-color: #1976D2;
+}
+
+.resource-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover .resource-image img {
+    transform: scale(1.05);
+}
+
+.resource-card h3 {
+    font-size: 22px;
+    color: #0D47A1;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #1565C0, #0b3d7a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+/* Resource Cards Section - SIDE BY SIDE */
+.resource-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #e3f2fd;
+    flex: 1;
+    max-width: 320px; /* Fixed width for consistent sizing */
+    min-width: 280px;
+}
+
+.resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(25, 118, 210, 0.2);
+    border-color: #1976D2;
+}
+
+.resource-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.resource-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover .resource-image img {
+    transform: scale(1.05);
+}
+
+.resource-card h3 {
+    font-size: 22px;
+    color: #0D47A1;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #1565C0, #0b3d7a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive - Stack on mobile */
+@media (max-width: 1024px) {
+    .resource-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resource-card {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-cards {
+        gap: 20px;
+    }
+    
+    .resource-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .resource-card {
+        padding: 20px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .resource-card h3 {
+        font-size: 20px;
+    }
+    
+    .download-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
         * {
             margin: 0;
             padding: 0;
@@ -640,7 +850,35 @@
             <h1>Resources</h1>
             <p class="page-subtitle">Comprehensive scouting resources for MNCHS Senior Scouts - Outfit 002. Advance your skills and knowledge with our detailed guides and requirements.</p>
         </div>
-
+        <!-- Add this right after the page-subtitle closing </p> and before <div class="tabs-container"> -->
+<div class="resource-cards">
+    <div class="resource-card">
+        <div class="resource-image">
+            <img src="https://i.imgur.com/9E3olsa.png" alt="Resource 1">
+        </div>
+        <h3>Organization Membership Form (RF-1)</h3>
+        <p>Your first step in becoming a member of the organization.</p>
+        <a href="file:///C:/Users/clark/OneDrive/Desktop/BSP/BSP%20S.Y.%20'26%20-%20'27/Registration%20Forms/Organization%20Membership%20Form%20(RF-1).pdf" class="download-btn" download>Download PDF</a>
+    </div>
+    
+    <div class="resource-card">
+        <div class="resource-image">
+            <img src="https://i.imgur.com/FeThm6D.png" alt="Resource 2">
+        </div>
+        <h3>Medical Certificate Form (RF-2A)</h3>
+        <p>Your medical certificate to be presented with your RF-1.</p>
+        <a href="file:///C:/Users/clark/OneDrive/Desktop/BSP/BSP%20S.Y.%20'26%20-%20'27/Registration%20Forms/Medical%20Certificate%20Form%20(RF-2A).pdf" class="download-btn" download>Download PDF</a>
+    </div>
+    
+    <div class="resource-card">
+        <div class="resource-image">
+            <img src="https://i.imgur.com/4OWoCwo.png" alt="Resource 3">
+        </div>
+        <h3>Medical History Form (RF-2B)</h3>
+        <p>Your medical history form to be presented together with your RF-2A and attached to your RF-1.</p>
+        <a href="file:///C:/Users/clark/OneDrive/Desktop/BSP/BSP%20S.Y.%20'26%20-%20'27/Registration%20Forms/Medical%20History%20Form%20(RF-2B).pdf" class="download-btn" download>Download PDF</a>
+    </div>
+</div>
         <!-- Tabs Container -->
         <div class="tabs-container">
             <!-- Tab Buttons -->
