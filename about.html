@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body {
+        font-family: 'Arial', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    /* Top-most white header */
+    .header-white {
+        background-color: white;
+        height: 50px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .header-white-content {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .white-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .white-logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    /* HAMBURGER MENU - MOBILE ONLY */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+        gap: 3px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        padding: 80px 20px 20px;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+        box-shadow: 2px 0 20px rgba(0,0,0,0.3);
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 16px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .sidebar-nav a:hover {
+        background: rgba(255,255,255,0.25);
+        transform: translateX(10px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* OVERLAY */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 998;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Navigation buttons - DESKTOP ONLY */
+    .nav-buttons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .nav-btn {
+        background: none;
+        padding: 8px 19px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+        background-color: #1976D2;
+        color: white;
+        border-color: #1976D2;
+        transform: translateY(-1px);
+    }
+
+    /* Login button - RIGHTMOST side, separate */
+    .login-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .login-btn {
+        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        color: white !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        font-weight: 700 !important;
+        border-radius: 25px !important;
+        box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+        text-decoration: none !important;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #1565C0, #0b3d7a) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+    }
+
+    /* Blue header BELOW white header */
+    .header-blue {
+        background: linear-gradient(135deg, #0D47A1, #1976D2, #0D47A1);
+        color: white;
+        padding: 25px 20px;
+    }
+
+    .header-blue-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .blue-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .blue-logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .blue-text h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .blue-text .outfit-id {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+.hero-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.mission-card {
+    background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
+    border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+.values-card {
+    background: linear-gradient(135deg, #fff8f8, #ffe8e8);
+    border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+.about-card h2 {
+    color: #1976D2;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.values-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values-card li {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.history-highlight {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.history-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.history-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.history-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.history-text h3 {
+    color: #1976D2;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.history-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-buttons {
+            display: none;
+        }
+
+        .carousel-wrapper {
+            width: 90%;
+        }
+        
+        .header-white-content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .login-container {
+            justify-content: flex-end;
+        }
+
+        .header-blue-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .blue-logo {
+            justify-content: center;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        .counter-container {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .scouts-section, .join-section {
+            padding: 30px 20px;
+            max-width: 350px;
+        }
+
+        .scouts-count {
+            font-size: 36px;
+        }
+
+        .join-title {
+            font-size: 26px;
+        }
+
+        .join-text {
+            font-size: 15px;
+        }
+
+        .duties-section {
+            padding: 30px 15px;
+            max-width: 350px;
+            gap: 20px;
+        }
+
+        .duties-title {
+            font-size: 28px;
+        }
+
+        .duties-grid {
+            gap: 15px;
+        }
+
+        .duty-image {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .login-btn {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+        
+        .carousel-wrapper {
+            width: 95%;
+        }
+
+        .scouts-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .scouts-section, .join-section {
+            padding: 25px 15px;
+            max-width: 300px;
+        }
+
+        .duties-title {
+            font-size: 24px;
+        }
+
+        .join-title {
+            font-size: 22px;
+        }
+
+        .duty-image {
+            width: 90px;
+            height: 90px;
+        }
+
+        .sidebar {
+            width: 260px;
+            left: -260px;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- SIDEBAR - MOBILE ONLY -->
+    <div class="sidebar" id="sidebar">
+<nav class="sidebar-nav">
+    <a href="scoutingmnchs2.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="resources.html">Resources</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="history.html">History</a>
+</nav>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Top-most WHITE header -->
+    <header class="header-white">
+        <div class="header-white-content">
+            <!-- LEFT: Logo + Hamburger -->
+            <div class="left-section">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="white-logo">
+                    <img src="https://i.imgur.com/75Gavv9.png" alt="Masbate National Comprehensive High School Logo">
+                </div>
+            </div>
+            
+            <!-- CENTER: Navigation buttons (DESKTOP ONLY) -->
+            <nav class="nav-buttons">
+    <a href="scoutingmnchs2.html" class="nav-btn">Home</a>
+    <a href="about.html" class="nav-btn">About Us</a>
+    <a href="resources.html" class="nav-btn">Resources</a>
+    <a href="leadership.html" class="nav-btn">Leadership</a>
+    <a href="history.html" class="nav-btn">History</a>
+</nav>
+            
+            <!-- RIGHTMOST: Login button -->
+            <div class="login-container">
+                <a href="https://sites.google.com/view/mnchsbspregis/login-page?authuser=2" target="_blank" class="login-btn">
+                    Login
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Rest of your HTML remains exactly the same -->
+    <!-- BLUE header BELOW white header - LEFT side logo/text -->
+    <header class="header-blue">
+        <div class="header-blue-content">
+            <div class="blue-logo">
+                <img src="https://i.imgur.com/py7CNki.png" alt="Outfit 002">
+                <div class="blue-text">
+                    <h3>MNCHS Senior Scouts</h3>
+                    <div class="outfit-id">Masbate Council - Outfit 002</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; text-align: right;">
+                <a href="mailto:scoutsmnchs@gmail.com" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">scoutsmnchs@gmail.com</a>
+                <a href="tel:+639756269838" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">+63 975 626 9838</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+<main class="main-content">
+    <!-- ABOUT HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">About MNCHS Senior Scouts</h1>
+            <p class="hero-subtitle">Masbate National Comprehensive High School Senior Scouting Outfit 002 - Building character, citizenship, and skills since [year].</p>
+        </div>
+    </section>
+
+    <!-- TWO COLUMN CONTENT -->
+    <div class="about-container">
+        <!-- LEFT: Mission/Vision -->
+        <div class="about-card mission-card">
+            <h2>Our Mission</h2>
+            <p>To develop responsible citizens equipped with leadership skills, moral values, and practical knowledge through the Scouting program.</p>
+        </div>
+
+        <!-- RIGHT: Values -->
+        <div class="about-card values-card">
+            <h2>Our Values</h2>
+            <ul>
+                <li>🦅 Integrity</li>
+                <li>🤝 Service</li>
+                <li>⚡ Leadership</li>
+                <li>🌱 Growth</li>
+                <li>👥 Teamwork</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HISTORY HIGHLIGHT -->
+    <section class="history-highlight">
+        <div class="history-content">
+            <img src="https://i.imgur.com/placeholder.jpg" alt="Scouts History" class="history-image">
+            <div class="history-text">
+                <h3>25+ Years of Excellence</h3>
+                <p>Established in [year], Outfit 002 has produced countless leaders, community servants, and achievers. Our legacy continues with the Class of 2026!</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer - FIXED POSITION -->
+    <footer class="footer">
+        <p>&copy; 2026 Masbate National Comprehensive High School - Senior Scouting Outfit 002. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // SIDEBAR FUNCTIONALITY
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // Animate hamburger
+            const spans = hamburger.querySelectorAll('span');
+            if (sidebar.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+
+        // Event listeners
+        hamburger.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Close sidebar when clicking nav links
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                // Reset hamburger animation
+                const spans = hamburger.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+
+        // CAROUSEL SCRIPT (unchanged)
+        let currentSlideIndex = 0;
+        const totalSlides = 2;
+
+        function showSlide(index) {
+            const images = document.getElementById('carouselImages');
+            const dots = document.querySelectorAll('.dot');
+            
+            // Normalize index
+            currentSlideIndex = (index + totalSlides) % totalSlides;
+            
+            // Move carousel
+            images.style.transform = `translateX(-${currentSlideIndex * 50}%)`;
+            
+            // Update dots
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        function currentSlide(index) {
+            showSlide(index - 1);
+        }
+
+        // Auto-play every 4 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 4000);
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        const carouselContainer = document.querySelector('.carousel-container');
+        
+        carouselContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        carouselContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50;
+            if (startX - endX > threshold) {
+                changeSlide(1); // Swipe left
+            } else if (endX - startX > threshold) {
+                changeSlide(-1); // Swipe right
+            }
+        }
+
+        // Prevent body scroll when sidebar is open
+        document.addEventListener('DOMContentLoaded', function() {
+            sidebar.addEventListener('transitionend', function() {
+                if (sidebar.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
