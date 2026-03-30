@@ -245,7 +245,7 @@
         min-height: calc(100vh - 200px);
     }
 
-    /* LEADERSHIP SECTION - CLEAN & SYMMETRICAL */
+    /* LEADERSHIP SECTION */
     .leadership-section {
         text-align: center;
     }
@@ -268,116 +268,168 @@
         line-height: 1.6;
     }
 
-    /* TABS - PERFECT SYMMETRY */
-    .leadership-tabs {
-        display: flex;
-        justify-content: center;
-        gap: 0;
-        margin-bottom: 60px;
-        background: linear-gradient(135deg, rgba(25, 118, 210, 0.05), rgba(13, 71, 161, 0.05));
-        padding: 4px;
-        border-radius: 30px;
-        box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1);
+    /* SEARCH BAR */
+    .search-container {
         max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 60px;
+        position: relative;
     }
 
-    .tab-btn {
-        flex: 1;
-        background: transparent;
-        color: #666;
-        border: none;
-        padding: 14px 20px;
-        border-radius: 26px;
-        font-weight: 700;
-        font-size: 15px;
-        cursor: pointer;
+    .search-input {
+        width: 100%;
+        padding: 16px 20px 16px 50px;
+        border: 2px solid #e0e0e0;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        background: #fff;
         transition: all 0.3s ease;
-        white-space: nowrap;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
-    .tab-btn:hover {
-        color: #1976D2;
-        background: rgba(25, 118, 210, 0.1);
+    .search-input:focus {
+        outline: none;
+        border-color: #1976D2;
+        box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+        transform: translateY(-2px);
     }
 
-    .tab-btn.active {
-        background: linear-gradient(135deg, #1976D2, #0D47A1);
-        color: white;
-        box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+    .search-icon {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 18px;
     }
 
-    /* LEADERSHIP GRID - PERFECT ALIGNMENT */
+    /* LEADERSHIP GRID */
     .leadership-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 25px;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
-    .leadership-card {
-        background: white;
-        border-radius: 10px;
-        padding: 35px 25px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        border: 1px solid rgba(100, 2, 2, 0.363);
-        transition: all 0.3s ease;
-        text-align: center;
-        height: 140px;
-        display: flex;
+    /* SECTION HEADER */
+/* SIMPLE HORIZONTAL LINE HEADER */
+.section-header-line {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.section-title-line {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0D47A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+.section-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #1976D2, #0D47A1, transparent);
+}
+
+@media (max-width: 768px) {
+    .section-header-line {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .section-title-line {
+        font-size: 20px;
+    }
+}
+
+    .section-title {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 8px;
     }
 
-    .leadership-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        border-color: rgb(78, 2, 2);
-    }
+    /* NEW LEADERSHIP CARD LAYOUT */
+.leadership-card {
+    background: white;
+    border-radius: 15px;
+    padding: 0; /* Remove padding */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(25, 118, 210, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    overflow: hidden; /* NEW */
+    height: 140px; /* Slightly taller */
+}
 
-    /* COORDINATOR - SPECIAL CENTERED CARD */
-    .coordinator-card {
-        grid-column: 1 / -1;
-        max-width: 450px;
-        margin: 0 auto 40px;
-        background: linear-gradient(135deg, #1976D2, #0D47A1);
-        color: white;
-        height: 160px;
-    }
+.leader-photo {
+    width: 120px; /* Wider */
+    height: 100%; /* Full height */
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 0; /* No circle */
+    box-shadow: inset -10px 0 20px rgba(0,0,0,0.1); /* Inner shadow */
+    transition: all 0.3s ease;
+}
 
-    .coordinator-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 50px rgba(25, 118, 210, 0.3);
+.leader-photo:hover {
+    transform: scale(1.02);
+    box-shadow: inset -15px 0 30px rgba(25, 118, 210, 0.2), 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.leader-photo.fallback {
+    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leader-info {
+    flex: 1;
+    padding: 25px; /* Padding now only on right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.leadership-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #1976D2;
+}
+
+    .leadership-name {
+        font-size: 12px;
+        font-weight: 800;
+        color: #333;
+        margin-bottom: 6px;
+        line-height: 1.3;
     }
 
     .position-title {
-        font-size: 17px;
-        color: white;
+        font-size: 15px;
+        color: #1976D2;
         font-weight: 700;
-        margin-bottom: 12px;
-        padding: 8px 16px;
-        background: rgb(122, 0, 0);
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.3);
+        margin-bottom: 4px;
     }
 
-    .coordinator-card .position-title {
-        background: rgba(255,255,255,0.3);
-        border-color: rgba(255,255,255,0.4);
-    }
-
-    .leadership-name {
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.3;
-        letter-spacing: 0.5px;
-    }
-
-    .coordinator-card .leadership-name {
-        font-size: 20px;
+    .description {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.4;
     }
 
     .footer {
@@ -391,10 +443,21 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-        .hamburger {
-            display: flex;
-        }
+@media (max-width: 768px) {
+    .leadership-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .leader-photo {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .leader-info {
+        padding: 25px;
+        text-align: center;
+    }
 
         .nav-buttons {
             display: none;
@@ -431,13 +494,25 @@
             gap: 20px;
         }
 
-        .leadership-tabs {
-            flex-direction: column;
-            max-width: 280px;
+        .search-container {
+            max-width: 100%;
         }
 
-        .tab-btn {
-            width: 100%;
+        .leadership-card {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            padding: 30px 25px;
+        }
+
+        .leader-photo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+        }
+
+        .leader-info {
+            text-align: center;
         }
     }
 
@@ -452,9 +527,8 @@
             left: -260px;
         }
 
-        .leadership-card {
-            padding: 25px 20px;
-            height: 130px;
+        .section-title {
+            font-size: 24px;
         }
     }
 </style>
@@ -526,97 +600,188 @@
     <main class="main-content">
         <section class="leadership-section">
 
-            <!-- TABS - SYMMETRICAL & ORGANIZED -->
-            <div class="leadership-tabs">
-                <button class="tab-btn active" onclick="showTab('all')">All Leaders</button>
-                <button class="tab-btn" onclick="showTab('executives')">Executive Staff</button>
-                <button class="tab-btn" onclick="showTab('support')">Support Staff</button>
+            <!-- SEARCH BAR -->
+            <div class="search-container">
+                <div class="search-icon"></div>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search">
             </div>
 
             <!-- LEADERSHIP GRID -->
-            <div class="leadership-grid" id="leadershipGrid">
-                <!-- COORDINATOR - CENTER TOP -->
-                <div class="leadership-card coordinator-card">
-                    <div class="position-title">MNCHS BSP Coordinator</div>
-                    <div class="leadership-name">SL. MARK ANTHONY L. ESPARZA, WBH</div>
-                </div>
+           <!-- Replace the leadership grid section with this: -->
+<!-- LEADERSHIP GRID - COMPLETE -->
+<div class="leadership-grid" id="leadershipGrid">
+    <!-- 1. INSTITUTIONAL COMMAND STAFF -->
+    <div class="section-header-line">
+        <div class="section-title-line">Institutional Command Staff</div>
+        <div class="section-line"></div>
+    </div>
 
-                <!-- EXECUTIVES -->
-                <div class="leadership-card" data-category="executives">
-                    <div class="position-title">Senior Crew Leader</div>
-                    <div class="leadership-name">SS. CLARK ANGELO P. ALCANTARA</div>
-                </div>
+    <div class="leadership-card" data-name="Eduardo Laurio" data-position="Master Teacher I" data-desc="Youth Formation Division Coordinator">
+        <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/387816056_1257274735668033_3075841070931083477_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHGY0u1CRkQVIkINVa7VXF5XIUEuGu-0UxchQS4a77RTA41XciL-AsrosoVjGkJVZEoXndELKqnnjlulOMTHb2Y&_nc_ohc=Rhk8QD12ez8Q7kNvwF5lLOy&_nc_oc=Adpmktwz9gx46ax_OU-8jAkcvxTvSUzyhtHAGs0yJ_HYFxBjx1o27SssKibRKL-7mHc&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=ThVWLlhUTrja1PF8-z0Q7g&_nc_ss=7a3a8&oh=00_AfwuDLFHXJIaZBRxYC6DnXY281GCIJI9uQ9ghU3J-paxHQ&oe=69D0587B" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">EDUARDO S. LAURIO, JR.</div>
+            <div class="position-title">Master Teacher I</div>
+            <div class="description">Youth Formation Division Coordinator</div>
+        </div>
+    </div>
 
-                <div class="leadership-card" data-category="executives">
-                    <div class="position-title">Assistant Senior Crew Leader</div>
-                    <div class="leadership-name">SS. JOHN STEVE M. MARFIGA</div>
-                </div>
+    <div class="leadership-card" data-name="Mark Esparza" data-position="BSP Coordinator" data-desc="Outfit Advisor">
+        <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/602407914_25766176262976025_8023734639727111777_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeGRUdY5EnFcVkxqJINFtIQVADEK3SzAyQEAMQrdLMDJARMGqioAAXqFIsEwptQlgylz1OzkffpYTkepPRb5k_Lt&_nc_ohc=UkQqe8cdlJYQ7kNvwE8wSMU&_nc_oc=Adp2yaSsUdLAEdxGnSkvi6PDgZbUguOuY8aFO21XegsjDv62VGAErRaqpRiBxYZ3ePA&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=OhYLg5NRN8j-r3u_-knXmw&_nc_ss=7a3a8&oh=00_Afx-sevJHi2H_e90BvnM3lxBckUQJPNNLO12bMjTnzaZ8w&oe=69D06B2F" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">MARK ANTHONY L. ESPARZA</div>
+            <div class="position-title">BSP Coordinator</div>
+            <div class="description">Outfit Advisor</div>
+        </div>
+    </div>
 
-                <div class="leadership-card" data-category="executives">
-                    <div class="position-title">Scribe</div>
-                    <div class="leadership-name">SS. VIANCA ELAINE D. DE JESUS</div>
-                </div>
-                <!-- SCRIBE TEAM -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Scribe</div>
-                    <div class="leadership-name">SS. KIEL XIANIER E. CLORES</div>
-                </div>
+    <div class="leadership-card" data-name="Ronaldo Ongotan" data-position="BSP Assistant Coordinator" data-desc="Assistant Outfit Advisor">
+        <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/469263248_28094722310141098_8263198054494491782_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEnTrZqV1G1vt0HpYN6BMXxKJzh-CZGUNconOH4JkZQ19JXce7IJWczxVd_2KaIKivZ-ZCvB5T3vuomasx45Dal&_nc_ohc=a3itHTy6G6kQ7kNvwEkhk2m&_nc_oc=Adqw7GGjCl_K5kEFc_vwPU9_QRCXjzpE2VeTTei7IhQrenw3emu_1MLWPl5pqPohx3s&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=0YdnRG73qn081R2u7sdgbQ&_nc_ss=7a3a8&oh=00_AfzrRaYy-NUhmvVGTNg1TYERPDE_OItX0jLKQMZVvwVh-Q&oe=69D046BE" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">RONALDO Z. ONGOTAN</div>
+            <div class="position-title">BSP Assistant Coordinator</div>
+            <div class="description">Assistant Outfit Advisor</div>
+        </div>
+    </div>
 
-                <!-- TREASURER & QUARTERMASTER -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Treasurer</div>
-                    <div class="leadership-name">SS. CLAIRE B. ROMERO</div>
-                </div>
+    <!-- 2. OUTFIT EXECUTIVE STAFF (3 CARDS) -->
+    <div class="section-header-line">
+        <div class="section-title-line">Outfit Executive Staff</div>
+        <div class="section-line"></div>
+    </div>
 
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Treasurer</div>
-                    <div class="leadership-name">SS. PRINCE IVAN F. ESPAYOS</div>
-                </div>
+    <div class="leadership-card" data-name="Clark Alcantara" data-position="Senior Crew Leader" data-desc="Executive Officer">
+        <img src="https://i.imgur.com/6rfoOJ5.png" alt="Clark Angelo Alcantara" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">CLARK ANGELO P. ALCANTARA</div>
+            <div class="position-title">Senior Crew Leader</div>
+            <div class="description">Executive Officer</div>
+        </div>
+    </div>
 
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Quartermaster</div>
-                    <div class="leadership-name">SS. AIKI LOUISE DELA ROSA</div>
-                </div>
+    <div class="leadership-card" data-name="John Marfiga" data-position="Assistant Senior Crew Leader" data-desc="Deputy Executive">
+        <img src="https://i.imgur.com/p6eOVB7.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">JOHN STEVE M. MARFIGA</div>
+            <div class="position-title">Assistant Senior Crew Leader</div>
+            <div class="description">Deputy Executive</div>
+        </div>
+    </div>
 
-                <!-- ASSISTANT QUARTERMASTER -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Quartermaster</div>
-                    <div class="leadership-name">SS. JHANZ JEFFREY V. OLIVA</div>
-                </div>
+    <div class="leadership-card" data-name="Vianca De Jesus" data-position="Scribe" data-desc="Recording Secretary">
+        <img src="https://i.imgur.com/qf8eSN0.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">VIANCA ELAINE D. DE JESUS</div>
+            <div class="position-title">Scribe</div>
+            <div class="description">Recording Secretary</div>
+        </div>
+    </div>
 
-                <!-- PROGRAMS TEAM -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Progsman</div>
-                    <div class="leadership-name">SS. LORAINE L. BROÑOLA</div>
-                </div>
+    <!-- 3. OUTFIT SUPPORT STAFF (11 CARDS) -->
+    <div class="section-header-line">
+        <div class="section-title-line">Outfit Support Staff</div>
+        <div class="section-line"></div>
+    </div>
 
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Progsman</div>
-                    <div class="leadership-name">SS. HANZ BRENDON T. BAGALIHOG</div>
-                </div>
+    <div class="leadership-card" data-name="Kiel Clores" data-position="Assistant Scribe" data-desc="Documentation Team">
+        <img src="https://i.imgur.com/qIupWVq.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">KIEL XIANIER E. CLORES</div>
+            <div class="position-title">Assistant Scribe</div>
+            <div class="description">Documentation Team</div>
+        </div>
+    </div>
 
-                <!-- VOCATIONAL TEAM -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Vocational</div>
-                    <div class="leadership-name">SS. MICHAELA JOLI T. PUSING</div>
-                </div>
+    <div class="leadership-card" data-name="Claire Romero" data-position="Treasurer" data-desc="Financial Officer">
+        <img src="https://i.imgur.com/PvkkTg3.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">CLAIRE B. ROMERO</div>
+            <div class="position-title">Treasurer</div>
+            <div class="description">Financial Officer</div>
+        </div>
+    </div>
 
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Vocational</div>
-                    <div class="leadership-name">SS. GILVEN D. DESAMERO</div>
-                </div>
+    <div class="leadership-card" data-name="Prince Espayos" data-position="Assistant Treasurer" data-desc="Finance Support">
+        <img src="N/A" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">PRINCE IVAN F. ESPAYOS</div>
+            <div class="position-title">Assistant Treasurer</div>
+            <div class="description">Finance Support</div>
+        </div>
+    </div>
 
-                <!-- SERVICE TEAM -->
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Service</div>
-                    <div class="leadership-name">SS. FREDDIE J. PATRICIO, JR.</div>
-                </div>
+    <div class="leadership-card" data-name="Aiki Dela Rosa" data-position="Quartermaster" data-desc="Logistics Officer">
+        <img src="https://i.imgur.com/XdmNJXw.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">AIKI LOUISE DELA ROSA</div>
+            <div class="position-title">Quartermaster</div>
+            <div class="description">Logistics Officer</div>
+        </div>
+    </div>
 
-                <div class="leadership-card" data-category="support">
-                    <div class="position-title">Assistant Service</div>
-                    <div class="leadership-name">SS. VESTA EUREKA M. DISCAYA</div>
-                </div>
-            </div>
+    <div class="leadership-card" data-name="Jhanz Oliva" data-position="Assistant Quartermaster" data-desc="Supply Management">
+        <img src="https://i.imgur.com/LBQfxlV.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">JHANZ JEFFREY V. OLIVA</div>
+            <div class="position-title">Assistant Quartermaster</div>
+            <div class="description">Supply Management</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Loraine Broñola" data-position="Progsman" data-desc="Programs Coordinator">
+        <img src="https://i.imgur.com/QZejv3e.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">LORAINE L. BROÑOLA</div>
+            <div class="position-title">Progsman</div>
+            <div class="description">Programs Coordinator</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Hanz Bagalihog" data-position="Assistant Progsman" data-desc="Program Support">
+        <img src="https://i.imgur.com/EyMHzAZ.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">HANZ BRENDON T. BAGALIHOG</div>
+            <div class="position-title">Assistant Progsman</div>
+            <div class="description">Program Support</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Michaela Pusing" data-position="Vocational" data-desc="Skills Development">
+        <img src="https://i.imgur.com/EdIXqKL.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">MICHAELA JOLI T. PUSING</div>
+            <div class="position-title">Vocational</div>
+            <div class="description">Skills Development</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Gilven Desamero" data-position="Assistant Vocational" data-desc="Training Support">
+        <img src="https://i.imgur.com/22nIanT.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">GILVEN D. DESAMERO</div>
+            <div class="position-title">Assistant Vocational</div>
+            <div class="description">Training Support</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Freddie Patricio" data-position="Service" data-desc="Community Service">
+        <img src="https://i.imgur.com/1umsEaA.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">FREDDIE J. PATRICIO, JR.</div>
+            <div class="position-title">Service</div>
+            <div class="description">Community Service</div>
+        </div>
+    </div>
+
+    <div class="leadership-card" data-name="Vesta Discaya" data-position="Assistant Service" data-desc="Service Team">
+        <img src="https://i.imgur.com/0D53MCU.png" class="leader-photo">
+        <div class="leader-info">
+            <div class="leadership-name">VESTA EUREKA M. DISCAYA</div>
+            <div class="position-title">Assistant Service</div>
+            <div class="description">Service Team</div>
+        </div>
+    </div>
+</div>
+ 
         </section>
     </main>
 
@@ -661,24 +826,43 @@
             });
         });
 
-        // LEADERSHIP TABS - CLEAN FUNCTIONALITY
-        function showTab(category) {
-            const cards = document.querySelectorAll('.leadership-card[data-category]');
-            const tabs = document.querySelectorAll('.tab-btn');
+        // SEARCH FUNCTIONALITY
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.leadership-card[data-name]');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
             
-            // Update active tab
-            tabs.forEach(tab => tab.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Filter cards
             cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
+                const name = card.dataset.name.toLowerCase();
+                const position = card.dataset.position.toLowerCase();
+                const desc = card.dataset.desc.toLowerCase();
+                
+                if (name.includes(searchTerm) || 
+                    position.includes(searchTerm) || 
+                    desc.includes(searchTerm) || 
+                    searchTerm === '') {
                     card.style.display = 'flex';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
                 } else {
                     card.style.display = 'none';
                 }
             });
-        }
+        });
+
+        // Add smooth fade-in animation on load
+        window.addEventListener('load', function() {
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
     </script>
 </body>
 </html>
