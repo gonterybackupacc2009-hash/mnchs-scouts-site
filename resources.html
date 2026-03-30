@@ -9,6 +9,63 @@
     <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
     <style>
     /* Resource Cards Section */
+
+    .clickable-item {
+    background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
+    border: 2px solid #e3f2fd;
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1976D2;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Rank-specific styling */
+.rank-item {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2) !important;
+    border: 2px solid #ff9800 !important;
+    min-height: 120px;
+}
+
+.rank-item .merit-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 12px;
+    background: rgba(255, 152, 0, 0.1);
+    padding: 8px;
+    border: 2px solid rgba(255, 152, 0, 0.3);
+}
+
+.rank-item:hover {
+    background: linear-gradient(135deg, #ffcc80, #ffb74d) !important;
+    border-color: #f57c00 !important;
+    transform: translateY(-5px) scale(1.02) !important;
+}
+
+.rank-item:hover .merit-icon {
+    transform: scale(1.15) rotate(5deg);
+    background: rgba(255, 152, 0, 0.2);
+    border-color: #ff9800;
+}
+
+.clickable-item:hover .merit-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 12px rgba(25, 118, 210, 0.4));
+}
+
+.clickable-item span {
+    font-size: 16px;
+    line-height: 1.3;
+}
 .resource-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -408,7 +465,7 @@
 
     /* Blue header BELOW white header */
     .header-blue {
-        background: linear-gradient(135deg, #0D47A1, #1976D2, #0D47A1);
+        background: linear-gradient(135deg, #095eb4);
         color: white;
         padding: 20px 20px;
         padding-top: 64px;
@@ -774,6 +831,8 @@
             padding: 20px;
         }
     }
+
+    
 </style>
 </head>
 <body>
@@ -846,10 +905,6 @@
     <!-- RESOURCES MAIN CONTENT -->
     <main class="main-content">
         <!-- Page Header -->
-        <div class="page-header">
-            <h1>Resources</h1>
-            <p class="page-subtitle">Comprehensive scouting resources for MNCHS Senior Scouts - Outfit 002. Advance your skills and knowledge with our detailed guides and requirements.</p>
-        </div>
         <!-- Add this right after the page-subtitle closing </p> and before <div class="tabs-container"> -->
 <div class="resource-cards">
     <div class="resource-card">
@@ -1046,7 +1101,7 @@
 <div class="clickable-item" data-modal="scholarship">Scholarship</div>
 <div class="clickable-item" data-modal="sculpture">Sculpture</div>
 <div class="clickable-item" data-modal="seamanship">Seamanship</div>
-<div class="clickable-item" data-modal="signalling">Signalling</div>
+<div class="clickable-item" data-modal="signaling">Signaling</div>
 <div class="clickable-item" data-modal="snorkeling">Snorkeling</div>
 <div class="clickable-item" data-modal="soilandwaterconservation">Soil and Water Conservation</div>
 <div class="clickable-item" data-modal="surveying">Surveying</div>
@@ -1091,6 +1146,40 @@
     </footer>
 
     <script>
+
+       // Auto-add icons to BOTH merit badges AND ranks
+document.addEventListener('DOMContentLoaded', function() {
+    const clickableItems = document.querySelectorAll('.clickable-item[data-modal]');
+    
+    clickableItems.forEach(item => {
+        const modalKey = item.getAttribute('data-modal');
+        const textContent = item.textContent.trim();
+        
+        // Get icon URL from modalData
+        const data = modalData[modalKey];
+        const iconSrc = data.insignia;
+        
+        if (iconSrc) {
+            // Create icon element
+            const icon = document.createElement('img');
+            icon.src = iconSrc;
+            icon.alt = textContent;
+            icon.className = 'merit-icon';
+            icon.onerror = function() {
+                this.style.display = 'none'; // Hide if image fails to load
+            };
+            
+            // Create span for text
+            const span = document.createElement('span');
+            span.textContent = textContent;
+            
+            // Clear and rebuild item
+            item.innerHTML = '';
+            item.appendChild(icon);
+            item.appendChild(span);
+        }
+    });
+});
         // SIDEBAR FUNCTIONALITY
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
@@ -1177,7 +1266,7 @@ const modalData = {
                 title: "Pathfinder Rank",
                 insignia: "https://www.mbcenter.org/mbimages/pp-pathfinder.jpg",
                 name: "Advancement Information",
-                description: "<strong>Senior Scout Ideals</strong><br>Narrate your life experience wherein you were able to show examples of living up to the Scout Oath and Law, the Senior Scout Code, the Scout Motto, Senior Scout Slogan, and Mission and Vision.<br><br>Show proof of your spiritual growth and demonstrate faithfulness to your religious obligations.<br><br>Together with your Crew members in your school, volunteer to lead in at least three (3) flag-raising and flag-lowering ceremonies during Philippine Flag Day and/or Scouting Month.<br><br><strong>Social Activities</strong><br>Identify and explain with your Crew members the different functions of the Outfit Program Committees and how they help the Crew in accomplishing their advancement requirements.<br><br>Discuss with your friends, peers, and fellow Scouts the harmful effects of illegal drugs and substance abuse, including alcoholism and smoking. Explain why young people engage in these activities and how you can help avoid and prevent them.<br><br>Discuss with your peers, friends, and fellow Scouts how teenagers must behave in social parties at home, school, and communities, especially when interacting with members of the opposite sex.<br><br>Explain how to show courtesy and respect for the rights and properties of others.<br><br>Show proof that you are actively participating in sports activities with your Crew and Outfit that promote a healthy lifestyle.<br><br><strong>Vocational Activities</strong><br>Engage in simple and basic vocational and entrepreneurial activities that will help you earn and save money to support your parents.<br><br>Show proof of an increase in your 'Scout is Thrifty' savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Together with your Crew members, plan, organize, and conduct 'Scout's Good Turn' habits through school or community service projects related to environment, development, and peace.<br><br><strong>Outdoor and Indoor Activities</strong><br>Plan, organize, and conduct a 5–6 kilometers exploration with your Outfit. Explain to your fellow Scouts how to find directions with and without a compass, describe and predict weather and environmental conditions, and demonstrate safe exploration procedures.<br><br>Earn the following merit badges:<br>• Environment<br>• Weather<br>• First Aid<br>• Signalling<br>• Navigation<br>"
+                description: "<strong>Senior Scout Ideals</strong><br>Narrate your life experience wherein you were able to show examples of living up to the Scout Oath and Law, the Senior Scout Code, the Scout Motto, Senior Scout Slogan, and Mission and Vision.<br><br>Show proof of your spiritual growth and demonstrate faithfulness to your religious obligations.<br><br>Together with your Crew members in your school, volunteer to lead in at least three (3) flag-raising and flag-lowering ceremonies during Philippine Flag Day and/or Scouting Month.<br><br><strong>Social Activities</strong><br>Identify and explain with your Crew members the different functions of the Outfit Program Committees and how they help the Crew in accomplishing their advancement requirements.<br><br>Discuss with your friends, peers, and fellow Scouts the harmful effects of illegal drugs and substance abuse, including alcoholism and smoking. Explain why young people engage in these activities and how you can help avoid and prevent them.<br><br>Discuss with your peers, friends, and fellow Scouts how teenagers must behave in social parties at home, school, and communities, especially when interacting with members of the opposite sex.<br><br>Explain how to show courtesy and respect for the rights and properties of others.<br><br>Show proof that you are actively participating in sports activities with your Crew and Outfit that promote a healthy lifestyle.<br><br><strong>Vocational Activities</strong><br>Engage in simple and basic vocational and entrepreneurial activities that will help you earn and save money to support your parents.<br><br>Show proof of an increase in your 'Scout is Thrifty' savings account in your preferred bank or e-wallet provider.<br><br><strong>Service Activities</strong><br>Together with your Crew members, plan, organize, and conduct 'Scout's Good Turn' habits through school or community service projects related to environment, development, and peace.<br><br><strong>Outdoor and Indoor Activities</strong><br>Plan, organize, and conduct a 5–6 kilometers exploration with your Outfit. Explain to your fellow Scouts how to find directions with and without a compass, describe and predict weather and environmental conditions, and demonstrate safe exploration procedures.<br><br>Earn the following merit badges:<br>• Environment<br>• Weather<br>• First Aid<br>• Signaling<br>• Navigation<br>"
             },
             outdoor: {
                 title: "Outdoor Scout Rank",
@@ -1785,10 +1874,10 @@ const modalData = {
         name: "Seamanship Merit Badge",
         description: "Demonstrate whippping, coiling, and splicing 1-inch rope.<br><br>Show proficiency in sail cloth stitching (herring-bone/flat seams).<br><br>Box the compass to 32 points and explain buoyage systems and weather navigation."
     },
-    signalling: {
+    signaling: {
         title: "Merit Badge Information",
-        insignia: "https://www.mbcenter.org/mbimagespng/signalling.png",
-        name: "Signalling Merit Badge",
+        insignia: "https://www.mbcenter.org/mbimagespng/signaling.png",
+        name: "Signaling Merit Badge",
         description: "Send/receive Morse Code via buzzer and light/wigwag at 5 wpm.<br><br>Log 15 radio contacts over three months.<br><br>Explain the basic theories of how a radio transceiver works."
     },
     snorkeling: {
