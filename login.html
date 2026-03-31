@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>✦ 》 Outfit 002 - Login Center</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/py7CNki.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/py7CNki.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body {
+        font-family: 'Arial', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    
+    /* [ALL ORIGINAL HEADER/SIDEBAR/FOOTER STYLES REMAIN THE SAME - TRUNCATED FOR BREVITY] */
+    .header-white {
+        background-color: white;
+        height: 50px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .header-white-content {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .white-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .white-logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+        gap: 3px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        padding: 80px 20px 20px;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+        box-shadow: 2px 0 20px rgba(0,0,0,0.3);
+    }
+
+    .sidebar.active { left: 0; }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 16px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .sidebar-nav a:hover {
+        background: rgba(255,255,255,0.25);
+        transform: translateX(10px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 998;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .nav-btn {
+        background: none;
+        padding: 18px 19px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+        background-color: #1976D2;
+        color: white;
+        transform: translateY(-1px);
+    }
+
+    .login-container-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .login-btn-header {
+        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        color: white !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        font-weight: 700 !important;
+        border-radius: 25px !important;
+        box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+        text-decoration: none !important;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .login-btn-header:hover {
+        background: linear-gradient(135deg, #1565C0, #0b3d7a) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+    }
+
+    .header-blue {
+        background: linear-gradient(135deg, #095eb4);
+        color: white;
+        padding: 20px 20px;
+        padding-top: 64px;
+    }
+
+    .header-blue-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .blue-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .blue-logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .blue-text h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .blue-text .outfit-id {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    .main-content {
+        flex: 1;
+        padding: 20px 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: calc(100vh - 200px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* NEW MODERN LOGIN PANEL */
+    .login-panel {
+        background: linear-gradient(145deg, #ffffff, #f0f2f5);
+        padding: 60px 40px;
+        border-radius: 25px;
+        box-shadow: 
+            0 25px 50px rgba(0,0,0,0.15),
+            0 0 0 1px rgba(255,255,255,0.8) inset;
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .login-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #1976D2);
+    }
+
+    .login-panel h1 {
+        background: linear-gradient(135deg, #1976D2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .login-panel .subtitle {
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+        text-align: left;
+        position: relative;
+    }
+
+    .form-group label {
+        display: block;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 18px 20px;
+        border: 2px solid #e1e5e9;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        background: #fafbfc;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        font-weight: 500;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: #1976D2;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .error {
+        background: linear-gradient(90deg, #ffebee, #ffcdd2);
+        color: #c62828;
+        padding: 15px 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        border-left: 5px solid #c62828;
+        display: none;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(198, 40, 40, 0.15);
+    }
+
+    .success {
+        background: linear-gradient(90deg, #e8f5e8, #c8e6c9);
+        color: #2e7d32;
+        padding: 15px 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        border-left: 5px solid #2e7d32;
+        display: none;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(135deg, #0D47A1);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #1565C0);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(25, 118, 210, 0.4);
+    }
+
+    .login-btn:active {
+        transform: translateY(-1px);
+    }
+
+    .access-btn {
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .access-btn:hover {
+        background: linear-gradient(135deg, #45a049, #2e7d32);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(76, 175, 80, 0.4);
+    }
+
+    .valid-email {
+        border-color: #4CAF50 !important;
+        background: linear-gradient(145deg, #f0fff4, white) !important;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    .invalid-email {
+        border-color: #f44336 !important;
+        background: linear-gradient(145deg, #fff0f0, white) !important;
+        box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1) !important;
+        animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+    }
+
+    .form-section { display: block; }
+    .access-section { display: none; }
+
+    .footer {
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 20px;
+        color: #666;
+        border-top: 1px solid #eee;
+        margin-top: auto;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .hamburger { display: flex; }
+        .nav-buttons { display: none; }
+        .header-white-content { justify-content: space-between; }
+        .header-blue-content { flex-direction: column; text-align: center; }
+        .main-content { padding: 40px 20px; }
+        .login-panel { padding: 40px 25px; margin: 0 10px; }
+        .login-panel h1 { font-size: 2.2rem; }
+    }
+
+    @media (max-width: 480px) {
+        .login-panel { padding: 30px 20px; }
+        .login-panel h1 { font-size: 1.9rem; letter-spacing: 2px; }
+    }
+</style>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="resources.html">Resources</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="history.html">History</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- WHITE HEADER -->
+    <header class="header-white">
+        <div class="header-white-content">
+            <div class="left-section">
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="white-logo">
+                    <img src="https://i.imgur.com/75Gavv9.png" alt="MNCHS Logo">
+                </div>
+            </div>
+            
+            <nav class="nav-buttons">
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="about.html" class="nav-btn">About Us</a>
+                <a href="resources.html" class="nav-btn">Resources</a>
+                <a href="leadership.html" class="nav-btn">Leadership</a>
+                <a href="history.html" class="nav-btn">History</a>
+            </nav>
+            
+            <div class="login-container-header">
+                <a href="#" class="login-btn-header" id="headerLoginBtn">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- BLUE HEADER -->
+    <header class="header-blue">
+        <div class="header-blue-content">
+            <div class="blue-logo">
+                <img src="https://i.imgur.com/wQ4sCYd.png" alt="Masbate Council">
+                <img src="https://i.imgur.com/py7CNki.png" alt="Outfit 002">
+                <div class="blue-text">
+                    <h3>MNCHS Senior Scouts</h3>
+                    <div class="outfit-id">Masbate Council - Outfit 002</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; text-align: right;">
+                <a href="mailto:scoutsmnchs@gmail.com" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">scoutsmnchs@gmail.com</a>
+                <a href="tel:+639756269838" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">+63 975 626 9838</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NEW LOGIN PANEL -->
+    <main class="main-content">
+        <div class="login-panel">
+            <h1>Staff Login</h1>
+            <p class="subtitle">Members of the Outfit Staff Team only.</p>
+            
+            <div id="errorMsg" class="error"></div>
+            <div id="successMsg" class="success">✅ Access granted! Proceed to Scout Registration System.</div>
+            
+            <div id="formSection" class="form-section">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter authorized email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">🔐 Login</button>
+                </form>
+                
+            </div>
+            
+            <div id="accessSection" class="access-section">
+                <a href="regisportal.html" 
+                   class="access-btn" >
+                   🚀 Open Scout Registration System
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Masbate National Comprehensive High School - Senior Scouting Outfit 002. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // SIDEBAR FUNCTIONALITY (unchanged)
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            const spans = hamburger.querySelectorAll('span');
+            if (sidebar.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+
+        hamburger.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                const spans = hamburger.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
+
+        // 🔥 NEW EASY-TO-MANAGE USER ACCOUNTS SYSTEM
+        const userAccounts = {
+            // 👇 ADD NEW USERS HERE - Just follow the format: 'email': 'password'
+            'viancadejesus804@gmail.com': 'scout2024vian',
+            'gonterybackupacc2009@gmail.com': 'backupgon2024',
+            'kiel.clores26@gmail.com': 'kielscout002',
+            
+            // 📝 ADD MORE USERS LIKE THIS:
+            // 'newemail@example.com': 'newpassword123',
+            // 'another@scout.com': 'securepass456',
+        };
+
+        // LOGIN FUNCTIONALITY
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const loginForm = document.getElementById('loginForm');
+        const formSection = document.getElementById('formSection');
+        const accessSection = document.getElementById('accessSection');
+        const errorMsg = document.getElementById('errorMsg');
+        const successMsg = document.getElementById('successMsg');
+        const headerLoginBtn = document.getElementById('headerLoginBtn');
+
+        // Real-time email validation
+        emailInput.addEventListener('input', function() {
+            const email = this.value.trim().toLowerCase();
+            if (userAccounts.hasOwnProperty(email)) {
+                this.classList.add('valid-email');
+                this.classList.remove('invalid-email');
+            } else if (email) {
+                this.classList.add('invalid-email');
+                this.classList.remove('valid-email');
+            } else {
+                this.classList.remove('valid-email', 'invalid-email');
+            }
+        });
+
+        // Form submission
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim().toLowerCase();
+            const password = passwordInput.value;
+            
+            // Reset messages
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'none';
+            
+            // Check if email exists
+            if (!userAccounts.hasOwnProperty(email)) {
+                showError('❌ Email not authorized. Contact administrator.');
+                emailInput.classList.add('invalid-email');
+                return;
+            }
+            
+            // Check password
+            if (userAccounts[email] !== password) {
+                showError('❌ Incorrect password for this account.');
+                passwordInput.value = '';
+                return;
+            }
+            
+            // SUCCESS!
+            showSuccess(`✅ Welcome! Access granted for ${email}`);
+        });
+
+        // Header login button triggers form submission
+        headerLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginForm.dispatchEvent(new Event('submit'));
+        });
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            // Scroll to top of form
+            document.querySelector('.login-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showSuccess(message) {
+            successMsg.textContent = message;
+            successMsg.style.display = 'block';
+            formSection.style.display = 'none';
+            accessSection.style.display = 'block';
+            // Scroll to top
+            document.querySelector('.login-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Enter key support
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && (e.target === emailInput || e.target === passwordInput)) {
+                loginForm.dispatchEvent(new Event('submit'));
+            }
+        });
+
+        // 🎉 CONSOLE INFO FOR ADMINS
+        console.log('%c👨‍💼 ADMIN INFO:', 'color: #1976D2; font-size: 16px; font-weight: bold;');
+        console.log('📧 Authorized Emails & Passwords:');
+        Object.entries(userAccounts).forEach(([email, pass]) => {
+            console.log(`  ${email}: ${pass}`);
+        });
+        console.log('\n✏️ To add new users: Edit the "userAccounts" object above');
+    </script>
+</body>
+</html>
