@@ -389,7 +389,7 @@
 
     .duties-title {
         color: #ffffff;
-        font-size: 36px;
+        font-size: 66px;
         font-weight: 800;
         text-shadow: 0 2px 4px rgba(25, 118, 210, 0.2);
         letter-spacing: 2px;
@@ -622,10 +622,13 @@
             <div class="carousel-container">
                 <div class="carousel-images" id="carouselImages">
                     <div class="carousel-image">
-                        <img src="https://i.imgur.com/w8CNLqr.png" alt="Scouting Image 1">
+                        <img src="https://i.imgur.com/v0cr5ke.png" alt="Scouting Image 1">
                     </div>
                     <div class="carousel-image">
                         <img src="https://i.imgur.com/mUmjEFy.png" alt="Scouting Image 2">
+                    </div>
+                        <div class="carousel-image">
+                        <img src="https://i.imgur.com/w8CNLqr.png" alt="Scouting Image 3">
                     </div>
                 </div>
             </div>
@@ -634,6 +637,7 @@
             <div class="carousel-dots">
                 <span class="dot active" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
 
@@ -713,7 +717,7 @@
 
         // CAROUSEL SCRIPT (unchanged)
         let currentSlideIndex = 0;
-        const totalSlides = 2;
+        const totalSlides = 3;
 
         function showSlide(index) {
             const images = document.getElementById('carouselImages');
