@@ -444,15 +444,186 @@
     border-radius: 2px;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .updates-header h2 {
-        font-size: 28px;
-        letter-spacing: 1px;
+/* RESPONSIVE - MOBILE PERFECT */
+@media (max-width: 1200px) {
+    .counter-container {
+        gap: 30px;
+        max-width: 1100px;
     }
     
+    .join-section,
+    .req-section {
+        min-width: 340px;
+        max-width: 420px;
+        padding: 40px 35px;
+    }
+    
+    .scouts-section {
+        flex: 0 0 380px;
+        padding: 45px 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+    }
+
+    .nav-buttons {
+        display: none !important;
+    }
+
+    .header-white-content {
+        padding: 0 15px !important;
+    }
+
+    .header-blue {
+        padding: 20px 15px !important;
+        padding-top: 64px !important;
+    }
+
+    .header-blue-content {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+        padding: 0 10px !important;
+    }
+
+    .main-content {
+        padding: 20px 15px !important;
+        padding-top: 10px !important;
+    }
+
+    /* ✅ MOBILE: Stack vertically - FIXED */
+    .counter-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 0 10px !important;
+        margin: 40px auto !important;
+    }
+
+    .scouts-section,
+    .join-section,
+    .req-section {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 35px 25px !important;
+        margin: 0 !important;
+    }
+
+    .scouts-count {
+        font-size: 48px !important;
+    }
+
+    .join-title,
+    .req-title {
+        font-size: 26px !important;
+    }
+
+    /* 🔥 MOBILE UPDATES - ULTRA CLEAN */
+    .updates-section {
+        margin: 40px 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
     .updates-header {
-        margin-bottom: 20px;
+        height: 50px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .updates-header h2 {
+        font-size: 18px !important;
+        padding-left: 20px !important;
+        padding-top: 14px !important;
+        margin: 0 !important;
+    }
+
+    .updates-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 5px !important;
+        gap: 12px !important;
+        flex-direction: column !important;
+    }
+
+    .update-item {
+        height: 110px !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+        overflow: hidden !important;
+    }
+
+    .update-image {
+        width: 100px !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .update-content {
+        padding: 12px 16px !important;
+        margin: 0 !important;
+        gap: 4px !important;
+        flex: 1 !important;
+    }
+
+    .update-date {
+        font-size: 11px !important;
+    }
+
+    .update-title {
+        font-size: 14px !important;
+        line-height: 1.1 !important;
+    }
+
+    .update-description {
+        font-size: 8px !important;
+        -webkit-line-clamp: 2 !important;
+    }
+
+    .duties-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+
+    .duty-image {
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .carousel-wrapper {
+        width: 100% !important;
+        margin: 0 auto 40px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .update-item {
+        height: 100px !important;
+    }
+    
+    .update-image {
+        width: 85px !important;
+    }
+    
+    .update-content {
+        padding: 12px 14px !important;
+    }
+    
+    .duty-image {
+        width: 260px !important;
+        height: 260px !important;
+    }
+    
+    .main-content {
+        padding: 20px 10px !important;
     }
 }
 
@@ -667,15 +838,12 @@
         height: 100px !important;  /* ✅ LOCKED MOBILE HEIGHT */
         min-width: 280px;
         padding: 0 !important;
-        border-radius: 8px !important;
         overflow: hidden !important;
     }
     
     .update-image {
         width: 90px;
         height: 100%;  /* ✅ Stretches to container height */
-        border-top-left-radius: 8px !important;
-        border-bottom-left-radius: 8px !important;
     }
 
     .update-content {
