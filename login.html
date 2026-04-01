@@ -174,7 +174,6 @@
         border: none !important;
         padding: 10px 20px !important;
         font-weight: 700 !important;
-        border-radius: 25px !important;
         box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
         text-decoration: none !important;
         font-size: 14px;
@@ -243,7 +242,6 @@
     .login-panel {
         background: linear-gradient(145deg, #ffffff, #f0f2f5);
         padding: 60px 40px;
-        border-radius: 25px;
         box-shadow: 
             0 25px 50px rgba(0,0,0,0.15),
             0 0 0 1px rgba(255,255,255,0.8) inset;
@@ -302,7 +300,6 @@
         width: 100%;
         padding: 18px 20px;
         border: 2px solid #e1e5e9;
-        border-radius: 15px;
         font-size: 1.1rem;
         background: #fafbfc;
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -321,7 +318,6 @@
         background: linear-gradient(90deg, #ffebee, #ffcdd2);
         color: #c62828;
         padding: 15px 20px;
-        border-radius: 12px;
         margin-bottom: 25px;
         border-left: 5px solid #c62828;
         display: none;
@@ -333,7 +329,6 @@
         background: linear-gradient(90deg, #e8f5e8, #c8e6c9);
         color: #2e7d32;
         padding: 15px 20px;
-        border-radius: 12px;
         margin-bottom: 25px;
         border-left: 5px solid #2e7d32;
         display: none;
@@ -347,7 +342,6 @@
         background: linear-gradient(135deg, #0D47A1);
         color: white;
         border: none;
-        border-radius: 15px;
         font-size: 1.2rem;
         font-weight: 700;
         cursor: pointer;
@@ -375,7 +369,6 @@
         background: linear-gradient(135deg, #4CAF50, #2E7D32);
         color: white;
         border: none;
-        border-radius: 15px;
         font-size: 1.2rem;
         font-weight: 700;
         cursor: pointer;
@@ -507,21 +500,21 @@
             <p class="subtitle">Members of the Outfit Staff Team only.</p>
             
             <div id="errorMsg" class="error"></div>
-            <div id="successMsg" class="success">✅ Access granted! Proceed to Scout Registration System.</div>
+            <div id="successMsg" class="success">Access granted! Proceed to Scout Registration System.</div>
             
             <div id="formSection" class="form-section">
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter authorized email" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
                     </div>
                     
-                    <button type="submit" class="login-btn">🔐 Login</button>
+                    <button type="submit" class="login-btn">Login</button>
                 </form>
                 
             </div>
@@ -529,7 +522,7 @@
             <div id="accessSection" class="access-section">
                 <a href="regisportal.html" 
                    class="access-btn" >
-                   🚀 Open Scout Registration System
+                   Open Scout Registration System
                 </a>
             </div>
         </div>
@@ -622,20 +615,20 @@
             
             // Check if email exists
             if (!userAccounts.hasOwnProperty(email)) {
-                showError('❌ Email not authorized. Contact administrator.');
+                showError('Email not authorized. Contact administrator.');
                 emailInput.classList.add('invalid-email');
                 return;
             }
             
             // Check password
             if (userAccounts[email] !== password) {
-                showError('❌ Incorrect password for this account.');
+                showError('Incorrect password for this account.');
                 passwordInput.value = '';
                 return;
             }
             
             // SUCCESS!
-            showSuccess(`✅ Welcome! Access granted for ${email}`);
+            showSuccess(`Welcome! Access granted for ${email}`);
         });
 
         // Header login button triggers form submission
