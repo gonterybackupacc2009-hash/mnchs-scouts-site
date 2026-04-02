@@ -3,10 +3,8 @@
 <head>
     <title>✦ 》 Outfit 002 - Home</title>
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/py7CNki.png">
-    <link rel="icon" type="image/png" href="https://i.imgur.com/py7CNki.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
     <style>
         * {
             margin: 0;
@@ -20,8 +18,6 @@
             flex-direction: column;
             overflow-x: hidden;
         }
-
-        /* Top-most white header */
         .header-white {
             background-color: white;
             height: 50px;
@@ -36,7 +32,6 @@
             right: 0;
             z-index: 1000;
         }
-
         .header-white-content {
             max-width: 1200px;
             width: 100%;
@@ -45,26 +40,26 @@
             align-items: center;
             gap: 20px;
         }
-
         .left-section {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-
+        .nav-section {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
         .white-logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-
         .white-logo img {
             width: 40px;
             height: 40px;
             object-fit: contain;
         }
-
-        /* HAMBURGER MENU - MOBILE ONLY */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -73,7 +68,6 @@
             gap: 3px;
             z-index: 1001;
         }
-
         .hamburger span {
             width: 25px;
             height: 3px;
@@ -81,51 +75,55 @@
             border-radius: 3px;
             transition: all 0.3s ease;
         }
-
-        /* SIDEBAR */
         .sidebar {
             position: fixed;
             top: 0;
             left: -300px;
             width: 280px;
             height: 100vh;
-            background: linear-gradient(135deg, #1976D2, #0D47A1);
-            padding: 80px 20px 20px;
+            background-color: white;
+            padding: 80px 0px 0px;
             transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 999;
             box-shadow: 2px 0 20px rgba(0,0,0,0.3);
         }
-
         .sidebar.active {
             left: 0;
         }
-
         .sidebar-nav {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-
         .sidebar-nav a {
-            color: white;
+            color: rgb(0, 0, 0);
+            background-color: #ececec;
             text-decoration: none;
             padding: 15px 20px;
-            border-radius: 12px;
             font-weight: 700;
+            width: 100%;
             font-size: 16px;
-            background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
         }
-
         .sidebar-nav a:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateX(10px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: rgb(217, 217, 217);
         }
-
-        /* OVERLAY */
+        .sidebar-nav a.active {
+            background: rgb(183, 183, 183);
+            position: relative;
+        }
+        .sidebar-nav a.active::before {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
         .overlay {
             position: fixed;
             top: 0;
@@ -138,72 +136,69 @@
             transition: all 0.4s ease;
             z-index: 998;
         }
-
         .overlay.active {
             opacity: 1;
             visibility: visible;
         }
-
-        /* Navigation buttons - DESKTOP ONLY */
         .nav-buttons {
             display: flex;
             gap: 5px;
             align-items: center;
         }
-
         .nav-btn {
             background: none;
             padding: 18px 19px;
+            height: 50px;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 500;
             color: #333;
-            transition: all 0.3s ease;
             white-space: nowrap;
+            position: relative;
         }
-
         .nav-btn:hover {
-            background-color: #1976D2;
-            color: white;
-            border-color: #1976D2;
-            transform: translateY(-1px);
+            background-color: #eeeeee;
         }
-
-        /* Login button - RIGHTMOST side, separate */
+        .nav-btn.active {
+            background-color: #cbcbcb !important;
+        }
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 3px;
+            background: #01185c;
+            border-radius: 2px 2px 0 0;
+        }
         .login-container {
             display: flex;
             align-items: center;
             gap: 10px;
+            height: 100%;
         }
-
         .login-btn {
-            background: linear-gradient(135deg, #1976D2, #0D47A1);
-            color: white !important;
+            background-color: white;
+            height: 50px;
+            color: rgb(0, 0, 0) !important;
             border: none !important;
-            padding: 10px 20px !important;
+            padding: 18px 19px;
             font-weight: 700 !important;
-            border-radius: 25px !important;
-            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
             text-decoration: none !important;
             font-size: 14px;
-            transition: all 0.3s ease;
             white-space: nowrap;
         }
-
         .login-btn:hover {
-            background: linear-gradient(135deg, #1565C0, #0b3d7a) !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+            background-color: #ececec;
         }
-
-        /* Blue header BELOW white header */
         .header-blue {
-            background: linear-gradient(135deg, #095eb4);
+            background-color: #04278e;
             color: white;
             padding: 20px 20px;
             padding-top: 64px;
         }
-
         .header-blue-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -213,79 +208,80 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-
         .blue-logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-
         .blue-logo img {
             width: 50px;
             height: 50px;
             object-fit: contain;
         }
-
         .blue-text h3 {
             font-size: 20px;
             margin-bottom: 5px;
             color: white;
         }
-
         .blue-text .outfit-id {
             font-size: 16px;
             opacity: 0.9;
         }
-
-        /* IMAGE CAROUSEL */
+        .onmyhonor {
+            background-color: #010160;
+            color: white;
+            padding: 10px 10px;
+            padding-top: 10px;
+            align-items: center;
+        }
+        .onmyhonor-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            letter-spacing: 2px;
+        }
         .main-content {
             flex: 1;
-            padding: 40px 40px;
+            padding: 120px 40px 40px;
             padding-top: 10px;
             max-width: 1700px;
             margin: 0 auto;
         }
-
         .carousel-wrapper {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto 60px;
         }
-
         .carousel-container {
             position: relative;
             width: 100%;
             overflow: hidden;
             border-radius: 2px;
         }
-
         .carousel-images {
             display: flex;
             transition: transform 0.6s ease-in-out;
-            width: 300%; /* 3 images */
+            width: 300%;
         }
-
         .carousel-image {
             width: 33.333%;
             height: auto;
             flex-shrink: 0;
             display: block;
         }
-
         .carousel-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-
-        /* Navigation dots */
         .carousel-dots {
             display: flex;
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
         }
-
         .dot {
             width: 12px;
             height: 12px;
@@ -294,17 +290,14 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
         .dot.active {
             background-color: #1976D2;
             transform: scale(1.2);
         }
-
-        /* 🎯 FIXED COUNTER CONTAINER - SIDE BY SIDE */
         .counter-container {
             display: flex;
             gap: 40px;
-            align-items: stretch; /* ✅ Perfect vertical alignment */
+            align-items: stretch;
             justify-content: center;
             flex-wrap: wrap;
             max-width: 1250px;
@@ -313,34 +306,31 @@
             padding: 0 20px;
             background-color: #f5f5f5;
         }
-
-        /* ✅ FIXED JOIN & REQ SECTIONS - SIDE BY SIDE */
         .join-section,
         .req-section {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* ✅ Fixed: 'left' → 'flex-start' */
-            gap: 20px; /* ✅ Better spacing */
+            align-items: flex-start;
+            gap: 20px;
             text-align: left;
             padding: 45px 40px;
-            background: transparent;
+            background: #fbfbfb;
             color: rgb(0, 0, 0);
-            flex: 1; /* ✅ Equal width sharing */
+            flex: 1;
             min-width: 320px;
             max-width: 420px;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             overflow: hidden;
         }
-
         .join-title,
         .req-title {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 31px;
+            font-weight: 750;
+            letter-spacing: 1px;
             margin-bottom: 2px;
+            color: #101776;
         }
-
         .join-text,
         .req-text {
             font-size: 22px;
@@ -348,8 +338,6 @@
             opacity: 0.95;
             font-weight: 500;
         }
-
-        /* SCOUTS COUNTER SECTION */
         .scouts-section {
             display: flex;
             flex-direction: row;
@@ -358,20 +346,17 @@
             text-align: center;
             padding: 50px 40px;
             background: transparent;
-            flex: 0 0 420px; /* Fixed width */
+            flex: 0 0 420px;
             transition: all 0.3s ease;
         }
-
         .scouts-image {
             width: 140px;
             height: 140px;
             object-fit: contain;
         }
-
         .scouts-info {
             margin-left: 15px;
         }
-
         .scouts-count {
             display: flex;
             align-items: center;
@@ -381,7 +366,6 @@
             font-weight: 900;
             line-height: 1.2;
         }
-
         .scouts-label {
             display: flex;
             flex-direction: column;
@@ -392,8 +376,6 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
-
-        /* 🆕 SCOUT UPDATES SECTION */
         .updates-section {
             display: flex;
             flex-direction: column;
@@ -405,305 +387,104 @@
             width: 100%;
             margin: 20px 0;
         }
-
-/* 🆕 UPDATES HEADER */
-.updates-header {
-    background-color: #030650 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height:45px !important;  /* ✅ LOCKED HEIGHT */
-    display: flex !important;
-    gap: 30px !important;
-    align-items: stretch !important;
-    overflow: hidden !important;
-}
-
-.updates-header2 {
-    background-color: #030650 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: 4px !important;  /* ✅ LOCKED HEIGHT */
-    display: flex !important;
-    gap: 30px !important;
-    align-items: stretch !important;
-    overflow: hidden !important;
-}
-
-.updates-header h2 {
-    font-size: 19px;
-    padding-left: 15px;
-    padding-top: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
-    margin: 0;
-    position: relative;
-
-}
-
-/* Optional: Add underline effect */
-.updates-header h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, #1976D2, #0D47A1);
-    border-radius: 2px;
-}
-
-/* RESPONSIVE - MOBILE PERFECT */
-@media (max-width: 1200px) {
-    .counter-container {
-        gap: 30px;
-        max-width: 1100px;
-    }
-    
-    .join-section,
-    .req-section {
-        min-width: 340px;
-        max-width: 420px;
-        padding: 40px 35px;
-    }
-    
-    .scouts-section {
-        flex: 0 0 380px;
-        padding: 45px 35px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex !important;
-    }
-
-    .nav-buttons {
-        display: none !important;
-    }
-
-    .header-white-content {
-        padding: 0 15px !important;
-    }
-
-    .header-blue {
-        padding: 20px 15px !important;
-        padding-top: 64px !important;
-    }
-
-    .header-blue-content {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 20px !important;
-        padding: 0 10px !important;
-    }
-
-    .main-content {
-        padding: 20px 15px !important;
-        padding-top: 10px !important;
-    }
-
-    /* ✅ MOBILE: Stack vertically - FIXED */
-    .counter-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 30px !important;
-        padding: 0 10px !important;
-        margin: 40px auto !important;
-    }
-
-    .scouts-section,
-    .join-section,
-    .req-section {
-        max-width: 100% !important;
-        min-width: 0 !important;
-        width: 100% !important;
-        padding: 35px 25px !important;
-        margin: 0 !important;
-    }
-
-    .scouts-count {
-        font-size: 48px !important;
-    }
-
-    .join-title,
-    .req-title {
-        font-size: 26px !important;
-    }
-
-    /* 🔥 MOBILE UPDATES - ULTRA CLEAN */
-    .updates-section {
-        margin: 40px 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-
-    .updates-header {
-        height: 50px !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    .updates-header h2 {
-        font-size: 18px !important;
-        padding-left: 20px !important;
-        padding-top: 14px !important;
-        margin: 0 !important;
-    }
-
-    .updates-grid {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 5px !important;
-        gap: 12px !important;
-        flex-direction: column !important;
-    }
-
-    .update-item {
-        height: 110px !important;
-        width: 100% !important;
-        min-width: 100% !important;
-        margin: 0 !important;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
-        overflow: hidden !important;
-    }
-
-    .update-image {
-        width: 100px !important;
-        height: 100% !important;
-        object-fit: cover !important;
-    }
-
-    .update-content {
-        padding: 12px 16px !important;
-        margin: 0 !important;
-        gap: 4px !important;
-        flex: 1 !important;
-    }
-
-    .update-date {
-        font-size: 11px !important;
-        margin-left: -16px;
-    }
-
-    .update-title {
-        font-size: 14px !important;
-        line-height: 1.1 !important;
-        margin-left: -16px;
-    }
-
-    .update-description {
-        font-size: 8px !important;
-        -webkit-line-clamp: 2 !important;
-        margin-left: -16px;
-    }
-
-    .duties-grid {
-        flex-direction: column !important;
-        gap: 20px !important;
-        align-items: center !important;
-    }
-
-    .duty-image {
-        width: 280px !important;
-        height: 280px !important;
-    }
-
-    .carousel-wrapper {
-        width: 100% !important;
-        margin: 0 auto 40px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .update-item {
-        height: 100px !important;
-    }
-    
-    .update-image {
-        width: 85px !important;
-    }
-    
-    .update-content {
-        padding: 12px 14px !important;
-    }
-    
-    .duty-image {
-        width: 260px !important;
-        height: 260px !important;
-    }
-    
-    .main-content {
-        padding: 20px 10px !important;
-    }
-}
-
-.updates-grid {
-    width: 1250px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    align-items: stretch !important;
-}
-.update-item {
-    background-color: #f5f5f5 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: 210px !important;  /* ✅ LOCKED HEIGHT */
-    display: flex !important;
-    gap: 30px !important;
-    align-items: stretch !important;
-    overflow: hidden !important;
-}
-
-.update-image {
-    width: 180px;              
-    height: 100%;              
-    object-fit: cover;
-    flex-shrink: 0;
-    /* ✅ Image touches LEFT edge perfectly */
-}
-
-    .update-content {
-    margin-top: 14px;
-    margin-right: 15px;
-    margin-bottom: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;                  /* Tighter spacing */
-    flex: 1;
-}
-
-.update-date {
-    font-size: 15px;           /* Smaller */
-    color: #666;
-    text-align: left;
-}
-
-.update-title {
-    font-size: 32px;           /* Smaller */
-    font-weight: 700;
-    color: #101776;
-    line-height: 1.2;
-    text-align: left;
-}
-
-.update-description {
-    font-size: 20px;           /* Smaller */
-    color: #555;
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;     /* ✅ Limit to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-align: left;
-}
-
-        /* OUR DUTIES SECTION */
+        .updates-header {
+            background-color: #030650 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 45px !important;
+            display: flex !important;
+            gap: 30px !important;
+            align-items: stretch !important;
+            overflow: hidden !important;
+        }
+        .updates-header2 {
+            background-color: #030650 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 4px !important;
+            display: flex !important;
+            gap: 30px !important;
+            align-items: stretch !important;
+            overflow: hidden !important;
+        }
+        .updates-header h2 {
+            font-size: 19px;
+            padding-left: 15px;
+            padding-top: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin: 0;
+            position: relative;
+        }
+        .updates-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #1976D2, #0D47A1);
+            border-radius: 2px;
+        }
+        .updates-grid {
+            width: 1250px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+            align-items: center !important;
+        }
+        .update-item {
+            background-color: #f5f5f5 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 210px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 30px !important;
+            align-items: stretch !important;
+            overflow: hidden !important;
+        }
+        .update-image {
+            width: 180px;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .update-content {
+            margin-top: 14px;
+            margin-right: 15px;
+            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
+        .update-date {
+            font-size: 15px;
+            color: #666;
+            text-align: left;
+        }
+        .update-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #101776;
+            line-height: 1.2;
+            text-align: left;
+        }
+        .update-description {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: left;
+        }
         .duties-section {
             display: flex;
             flex-direction: column;
@@ -715,14 +496,12 @@
             width: 100%;
             margin: 80px 0;
         }
-
         .duties-grid {
             display: flex;
             gap: 30px;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .duty-image {
             width: 300px;
             height: 300px;
@@ -730,180 +509,183 @@
             transition: all 0.4s ease;
             cursor: pointer;
         }
-
         .duty-image:hover {
             transform: translateY(-10px) scale(1.05);
         }
-
-        /* Footer */
         .footer {
             background-color: #f8f9fa;
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             color: #666;
             border-top: 1px solid #eee;
             margin-top: auto;
             width: 100%;
         }
-
-        /* RESPONSIVE - MOBILE PERFECT */
         @media (max-width: 1200px) {
             .counter-container {
                 gap: 30px;
                 max-width: 1100px;
             }
-            
             .join-section,
             .req-section {
                 min-width: 340px;
                 max-width: 420px;
                 padding: 40px 35px;
             }
-            
             .scouts-section {
                 flex: 0 0 380px;
                 padding: 45px 35px;
             }
-
-            .updates-grid {
-                gap: 30px;
-            }
-
-            .update-item {
-                min-width: 320px;
-                max-width: 380px;
-            }
         }
-
         @media (max-width: 768px) {
             .hamburger {
-                display: flex;
+                display: flex !important;
             }
-
             .nav-buttons {
-                display: none;
+                display: none !important;
             }
-
             .header-white-content {
-                flex-direction: row;
-                justify-content: space-between;
+                padding: 0 15px !important;
             }
-
-            .login-container {
-                justify-content: flex-end;
+            .header-blue {
+                padding: 20px 15px !important;
+                padding-top: 64px !important;
             }
-
             .header-blue-content {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: column !important;
+                text-align: center !important;
+                gap: 20px !important;
+                padding: 0 10px !important;
             }
-
-            .blue-logo {
-                justify-content: center;
-            }
-
             .main-content {
-                padding: 40px 20px;
+                padding: 140px 20px 40px !important;
             }
-
-            /* ✅ MOBILE: Stack vertically */
             .counter-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 35px;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+                padding: 0 10px !important;
+                margin: 40px auto !important;
             }
-
             .scouts-section,
             .join-section,
             .req-section {
-                max-width: 100%;
-                min-width: 0;
-                padding: 35px 25px;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                width: 100% !important;
+                padding: 35px 25px !important;
+                margin: 0 !important;
             }
-
             .scouts-count {
-                font-size: 48px;
+                font-size: 48px !important;
             }
-
             .join-title,
             .req-title {
-                font-size: 26px;
+                font-size: 26px !important;
             }
-
             .updates-section {
-                margin: 60px 0;
-                padding: 50px 15px;
+                margin: 40px 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
             }
-
-                .updates-grid {
-        gap: 15px;
-        padding: 0 10px;
-    }
-    
-    .updates-grid {
-        gap: 15px;
-        padding: 0 10px;
-    }
-    
-    .update-item {
-        height: 100px !important;  /* ✅ LOCKED MOBILE HEIGHT */
-        min-width: 280px;
-        padding: 0 !important;
-        overflow: hidden !important;
-    }
-    
-    .update-image {
-        width: 90px;
-        height: 100%;  /* ✅ Stretches to container height */
-    }
-
-    .update-content {
-        padding: 12px !important;  /* ✅ Add padding INSIDE content */
-    }
-
+            .updates-header {
+                height: 50px !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+            .updates-header h2 {
+                font-size: 18px !important;
+                padding-left: 20px !important;
+                padding-top: 14px !important;
+                margin: 0 !important;
+            }
+            .updates-grid {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 5px !important;
+                gap: 12px !important;
+                flex-direction: column !important;
+            }
+            .update-item {
+                height: 110px !important;
+                width: 100% !important;
+                min-width: 100% !important;
+                margin: 0 !important;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+                overflow: hidden !important;
+            }
+            .update-image {
+                width: 100px !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+            .update-content {
+                padding: 12px 16px !important;
+                margin: 0 !important;
+                gap: 4px !important;
+                flex: 1 !important;
+            }
+            .update-date {
+                font-size: 11px !important;
+                margin-left: -16px;
+            }
+            .update-title {
+                font-size: 14px !important;
+                line-height: 1.1 !important;
+                margin-left: -16px;
+            }
+            .update-description {
+                font-size: 8px !important;
+                -webkit-line-clamp: 2 !important;
+                margin-left: -16px;
+            }
             .duties-grid {
-                gap: 20px;
+                flex-direction: column !important;
+                gap: 20px !important;
+                align-items: center !important;
             }
-
             .duty-image {
-                width: 250px;
-                height: 250px;
+                width: 280px !important;
+                height: 280px !important;
+            }
+            .carousel-wrapper {
+                width: 100% !important;
+                margin: 0 auto 40px !important;
             }
         }
-
         @media (max-width: 480px) {
+            .update-item {
+                height: 100px !important;
+            }
+            .update-image {
+                width: 85px !important;
+            }
+            .update-content {
+                padding: 12px 14px !important;
+            }
+            .duty-image {
+                width: 260px !important;
+                height: 260px !important;
+            }
+            .main-content {
+                padding: 140px 10px 40px !important;
+            }
             .login-btn {
                 padding: 8px 16px;
                 font-size: 13px;
             }
-
-            .carousel-wrapper {
-                width: 95%;
-            }
-
             .scouts-image {
                 width: 110px;
                 height: 110px;
             }
-
             .scouts-count {
                 font-size: 42px;
             }
-
             .join-title,
             .req-title {
                 font-size: 22px;
             }
-
-            .update-item {
-                padding: 25px 20px;
-            }
-
-            .duty-image {
-                width: 200px;
-                height: 200px;
-            }
-
             .sidebar {
                 width: 260px;
                 left: -260px;
@@ -912,24 +694,19 @@
     </style>
 </head>
 <body>
-    <!-- SIDEBAR - MOBILE ONLY -->
     <div class="sidebar" id="sidebar">
         <nav class="sidebar-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="resources.html">Resources</a>
-            <a href="leadership.html">Leadership</a>
-            <a href="history.html">History</a>
+            <a href="index.html" data-page="home" class="active">Home</a>
+            <a href="about.html" data-page="about">About Us</a>
+            <a href="resources.html" data-page="resources">Resources</a>
+            <a href="leadership.html" data-page="leadership">Leadership</a>
+            <a href="history.html" data-page="history">History</a>
         </nav>
     </div>
-
-    <!-- OVERLAY -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Top-most WHITE header -->
     <header class="header-white">
         <div class="header-white-content">
-            <!-- LEFT: Logo + Hamburger -->
             <div class="left-section">
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -939,25 +716,22 @@
                 <div class="white-logo">
                     <img src="https://i.imgur.com/75Gavv9.png" alt="Masbate National Comprehensive High School Logo">
                 </div>
+                <div class="nav-section">
+                    <nav class="nav-buttons">
+                        <a href="index.html" class="nav-btn active" data-page="home">Home</a>
+                        <a href="about.html" class="nav-btn" data-page="about">About Us</a>
+                        <a href="resources.html" class="nav-btn" data-page="resources">Resources</a>
+                        <a href="leadership.html" class="nav-btn" data-page="leadership">Leadership</a>
+                        <a href="history.html" class="nav-btn" data-page="history">History</a>
+                    </nav>
+                </div>
             </div>
-            
-            <!-- CENTER: Navigation buttons (DESKTOP ONLY) -->
-            <nav class="nav-buttons">
-                <a href="index.html" class="nav-btn">Home</a>
-                <a href="about.html" class="nav-btn">About Us</a>
-                <a href="resources.html" class="nav-btn">Resources</a>
-                <a href="leadership.html" class="nav-btn">Leadership</a>
-                <a href="history.html" class="nav-btn">History</a>
-            </nav>
-            
-            <!-- RIGHTMOST: Login button -->
             <div class="login-container">
                 <a href="login.html" class="login-btn">Login</a>
             </div>
         </div>
     </header>
 
-    <!-- BLUE header BELOW white header -->
     <header class="header-blue">
         <div class="header-blue-content">
             <div class="blue-logo">
@@ -975,9 +749,13 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <header class="onmyhonor">
+        <div class="onmyhonor-content">
+            <p>"On my honor, I will do my best."</p>
+        </div>
+    </header>
+
     <main class="main-content">
-        <!-- IMAGE CAROUSEL -->
         <div class="carousel-wrapper">
             <div class="carousel-container">
                 <div class="carousel-images" id="carouselImages">
@@ -999,18 +777,13 @@
             </div>
         </div>
 
-
-
-        <!-- 🆕 SCOUT UPDATES SECTION -->
         <section class="updates-section">
             <div class="updates-grid">
-                    <div class="updates-header">
-        <h2>Scouting Updates</h2>
-    </div>
-
-                <!-- Update Item 1 -->
+                <div class="updates-header">
+                    <h2>Scouting Updates</h2>
+                </div>
                 <div class="update-item">
-                    <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/652680904_26129777930024984_6170840475357646257_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE_j1pg2oKUb7pSJWOZbABKUjLVfxUV6F9SMtV_FRXoX8LwaiX11Gh2njPLU4pD6b__UDwk42jRO3WGfLX9geoz&_nc_ohc=u04mKnjQcS4Q7kNvwEXt70a&_nc_oc=Ado-xycPXyVTgJgm3kC_K8l3mY4mfuOw_mN65HULhm7P7l47SgqxPzsTS_2BC36RUIU&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_ss=7a32e&oh=03_Q7cD4wHMHEqLb1jfutFa20umH5p0Pwpu8jsygWXnU85c3GweMw&oe=69F059CC" alt="Update 1" class="update-image">
+                         <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/652680904_26129777930024984_6170840475357646257_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE_j1pg2oKUb7pSJWOZbABKUjLVfxUV6F9SMtV_FRXoX8LwaiX11Gh2njPLU4pD6b__UDwk42jRO3WGfLX9geoz&_nc_ohc=u04mKnjQcS4Q7kNvwEXt70a&_nc_oc=Ado-xycPXyVTgJgm3kC_K8l3mY4mfuOw_mN65HULhm7P7l47SgqxPzsTS_2BC36RUIU&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_ss=7a32e&oh=03_Q7cD4wHMHEqLb1jfutFa20umH5p0Pwpu8jsygWXnU85c3GweMw&oe=69F059CC" alt="Update 1" class="update-image">
                     <div class="update-content">
                         <div class="update-date">March 26, 2026</div>
                         <div class="update-title">BSP awarded as an Outstanding Organization</div>
@@ -1019,8 +792,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Update Item 2 -->
                 <div class="update-item">
                     <img src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/647609050_122126665347056291_4472907002722928719_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGlteyFlfGNKLqi-k5GijauDcMHpnl-ExsNwwemeX4TGyABAP8BXEHkfzqjF9FxQrSwLLtBcRvmcj2Gbzuas2XK&_nc_ohc=5rMIjMJY7BQQ7kNvwGZac2x&_nc_oc=AdogpHvKHjyLkJNVR8qwVpLuMA8RTdzE9Jkxb-upKzHVxbNZIXTTxSHkl26bNjyikfE&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=dGXTzB5DskRXfdpO_7-q3w&_nc_ss=7a3a8&oh=00_Af2bnKRDbUm0o3vnaTaj7RfEK9d8rtMscYpEFCLssHhzqg&oe=69D2D364" alt="Update 2" class="update-image">
                     <div class="update-content">
@@ -1031,8 +802,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Update Item 3 -->
                 <div class="update-item">
                     <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/658151457_1439352614870985_3883063428828824783_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGpHPB2omZEO4hmz4YRTfnUuPYgPmOy5wu49iA-Y7LnC6t_4eC_Mq3lT7S4lgRypF0SKtIV4TRjIKtdKB7Vw_rf&_nc_ohc=RTTyYUF3N_8Q7kNvwGUoVWG&_nc_oc=AdrLH-qUJJnU2w2DCBZvZRP9Yj4qhSL7ivzalCwuEVhd4iyZvW4Fdw4LgNsTGy4s_LY&_nc_zt=23&_nc_ht=scontent.fmnl13-2.fna&_nc_gid=RjJapwFdO6ifUkxu3I8LdA&_nc_ss=7a3a8&oh=00_Af1hKKm7uamt7c44pJtuEej4p3LqZSN_f1-M7zSBWhr3lg&oe=69D2EDED" alt="Update 3" class="update-image">
                     <div class="update-content">
@@ -1043,31 +812,24 @@
                         </div>
                     </div>
                 </div>
-                            <div class="updates-grid">
-                    <div class="updates-header2">
-    </div>
+                <div class="updates-header2"></div>
             </div>
         </section>
-        <!-- 🎯 COUNTER SECTIONS - PERFECTLY SIDE BY SIDE -->
+
         <div class="counter-container">
-            <!-- SCOUTS COUNTER (CENTER) -->
             <section class="scouts-section">
                 <img src="https://i.imgur.com/SVw9xv4.png" alt="Scouts Icon" class="scouts-image">
-                <div class = "scouts-info">
-                <div class="scouts-count">66</div>
-                <div class="scouts-label">Registered Scouts</div>
+                <div class="scouts-info">
+                    <div class="scouts-count">66</div>
+                    <div class="scouts-label">Registered Scouts</div>
                 </div>
             </section>
-
-            <!-- JOIN SECTION (LEFT) -->
             <section class="join-section">
                 <div class="join-title">WANT TO JOIN?</div>
                 <div class="join-text">
                     Contact any Outfit Officer or head over to your campus recruitment booth for to acquire your organization membership form, medical history form, and medical certificate form!
                 </div>
             </section>
-
-            <!-- REQUIREMENTS SECTION (RIGHT) -->
             <section class="req-section">
                 <div class="req-title">REQUIREMENTS</div>
                 <div class="req-text">
@@ -1076,7 +838,6 @@
             </section>
         </div>
 
-        <!-- OUR DUTIES SECTION -->
         <section class="duties-section">
             <div class="duties-grid">
                 <img src="https://i.imgur.com/jFA2Pgf.png" alt="Duty 1" class="duty-image">
@@ -1086,13 +847,35 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Masbate National Comprehensive High School - Senior Scouting Outfit 002. All rights reserved.</p>
     </footer>
 
     <script>
-        // SIDEBAR FUNCTIONALITY
+        function setActiveNav() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const pageMap = {
+                'index.html': 'home',
+                'about.html': 'about',
+                'resources.html': 'resources',
+                'leadership.html': 'leadership',
+                'history.html': 'history'
+            };
+            const currentDataPage = pageMap[currentPage] || 'home';
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.page === currentDataPage) {
+                    btn.classList.add('active');
+                }
+            });
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === currentDataPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
@@ -1100,8 +883,6 @@
         function toggleSidebar() {
             sidebar.classList.toggle('active');
             overlay.classList.toggle('active');
-            
-            // Animate hamburger
             const spans = hamburger.querySelectorAll('span');
             if (sidebar.classList.contains('active')) {
                 spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
@@ -1114,16 +895,13 @@
             }
         }
 
-        // Event listeners
         hamburger.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', toggleSidebar);
 
-        // Close sidebar when clicking nav links
         document.querySelectorAll('.sidebar-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 sidebar.classList.remove('active');
                 overlay.classList.remove('active');
-                // Reset hamburger animation
                 const spans = hamburger.querySelectorAll('span');
                 spans[0].style.transform = 'none';
                 spans[1].style.opacity = '1';
@@ -1131,21 +909,17 @@
             });
         });
 
-        // CAROUSEL SCRIPT
+        setActiveNav();
+        window.addEventListener('popstate', setActiveNav);
+
         let currentSlideIndex = 0;
         const totalSlides = 3;
 
         function showSlide(index) {
             const images = document.getElementById('carouselImages');
             const dots = document.querySelectorAll('.dot');
-            
-            // Normalize index
             currentSlideIndex = (index + totalSlides) % totalSlides;
-            
-            // Move carousel
             images.style.transform = `translateX(-${currentSlideIndex * 33.333}%)`;
-            
-            // Update dots
             dots.forEach(dot => dot.classList.remove('active'));
             dots[currentSlideIndex].classList.add('active');
         }
@@ -1158,15 +932,12 @@
             showSlide(index - 1);
         }
 
-        // Auto-play every 4 seconds
         setInterval(() => {
             changeSlide(1);
         }, 4000);
 
-        // Touch/swipe support for mobile
         let startX = 0;
         let endX = 0;
-
         const carouselContainer = document.querySelector('.carousel-container');
         
         carouselContainer.addEventListener('touchstart', (e) => {
@@ -1181,24 +952,20 @@
         function handleSwipe() {
             const threshold = 50;
             if (startX - endX > threshold) {
-                changeSlide(1); // Swipe left
+                changeSlide(1);
             } else if (endX - startX > threshold) {
-                changeSlide(-1); // Swipe right
+                changeSlide(-1);
             }
         }
 
-        // Prevent body scroll when sidebar is open
-        document.addEventListener('DOMContentLoaded', function() {
-            sidebar.addEventListener('transitionend', function() {
-                if (sidebar.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
+        sidebar.addEventListener('transitionend', function() {
+            if (sidebar.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
 
-        // Smooth animations on load
         window.addEventListener('load', () => {
             document.body.style.opacity = '0';
             document.body.style.transition = 'opacity 0.6s ease';

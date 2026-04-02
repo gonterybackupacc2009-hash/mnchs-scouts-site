@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>✦ 》 Outfit 002 - About</title>
-    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/py7CNki.png">
-    <link rel="icon" type="image/png" href="https://i.imgur.com/py7CNki.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masbate National Comprehensive High School - Senior Scouting Outfit 002</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/py7CNki.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/py7CNki.png">
     <style>
         * {
             margin: 0;
@@ -22,7 +21,6 @@
             overflow-x: hidden;
         }
 
-        /* Top-most white header */
         .header-white {
             background-color: white;
             height: 50px;
@@ -53,6 +51,12 @@
             gap: 15px;
         }
 
+        .nav-section {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         .white-logo {
             display: flex;
             align-items: center;
@@ -65,7 +69,6 @@
             object-fit: contain;
         }
 
-        /* HAMBURGER MENU - MOBILE ONLY */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -83,15 +86,14 @@
             transition: all 0.3s ease;
         }
 
-        /* SIDEBAR */
         .sidebar {
             position: fixed;
             top: 0;
             left: -300px;
             width: 280px;
             height: 100vh;
-            background: linear-gradient(135deg, #1976D2, #0D47A1);
-            padding: 80px 20px 20px;
+            background-color: white;
+            padding: 80px 0px 0px;
             transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 999;
             box-shadow: 2px 0 20px rgba(0,0,0,0.3);
@@ -108,25 +110,38 @@
         }
 
         .sidebar-nav a {
-            color: white;
+            color: rgb(0, 0, 0);
+            background-color: #ececec;
             text-decoration: none;
             padding: 15px 20px;
-            border-radius: 12px;
             font-weight: 700;
+            width: 100%;
             font-size: 16px;
-            background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
         }
 
         .sidebar-nav a:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateX(10px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: rgb(217, 217, 217);
         }
 
-        /* OVERLAY */
+        .sidebar-nav a.active {
+            background: rgb(183, 183, 183);
+            position: relative;
+        }
+
+        .sidebar-nav a.active::before {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
         .overlay {
             position: fixed;
             top: 0;
@@ -145,7 +160,6 @@
             visibility: visible;
         }
 
-        /* Navigation buttons - DESKTOP ONLY */
         .nav-buttons {
             display: flex;
             gap: 5px;
@@ -155,51 +169,60 @@
         .nav-btn {
             background: none;
             padding: 18px 19px;
+            height: 50px;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 500;
             color: #333;
-            transition: all 0.3s ease;
             white-space: nowrap;
+            position: relative;
         }
 
         .nav-btn:hover {
-            background-color: #1976D2;
-            color: white;
-            border-color: #1976D2;
-            transform: translateY(-1px);
+            background-color: #eeeeee;
         }
 
-        /* Login button - RIGHTMOST side */
+        .nav-btn.active {
+            background-color: #cbcbcb !important;
+        }
+
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 3px;
+            background: #01185c;
+            border-radius: 2px 2px 0 0;
+        }
+
         .login-container {
             display: flex;
             align-items: center;
             gap: 10px;
+            height: 100%;
         }
 
         .login-btn {
-            background: linear-gradient(135deg, #1976D2, #0D47A1);
-            color: white !important;
+            background-color: white;
+            height: 50px;
+            color: rgb(0, 0, 0) !important;
             border: none !important;
-            padding: 10px 20px !important;
+            padding: 18px 19px;
             font-weight: 700 !important;
-            border-radius: 25px !important;
-            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
             text-decoration: none !important;
             font-size: 14px;
-            transition: all 0.3s ease;
             white-space: nowrap;
         }
 
         .login-btn:hover {
-            background: linear-gradient(135deg, #1565C0, #0b3d7a) !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
+            background-color: #ececec;
         }
 
-        /* Blue header BELOW white header */
         .header-blue {
-            background: linear-gradient(135deg, #095eb4);
+            background-color: #04278e;
             color: white;
             padding: 20px 20px;
             padding-top: 64px;
@@ -238,7 +261,19 @@
             opacity: 0.9;
         }
 
-        /* NEW LAYOUT SECTIONS */
+        .onmyhonor {
+            background-color: #010160;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .onmyhonor-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .content-section {
             max-width: 1200px;
             margin: 60px auto;
@@ -295,7 +330,6 @@
             width: 100%;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
@@ -334,7 +368,6 @@
                 height: 200px;
                 width: 100%;
             }
-
         }
 
         @media (max-width: 480px) {
@@ -359,7 +392,6 @@
     </style>
 </head>
 <body>
-    <!-- SIDEBAR - MOBILE ONLY -->
     <div class="sidebar" id="sidebar">
         <nav class="sidebar-nav">
             <a href="index.html">Home</a>
@@ -370,10 +402,8 @@
         </nav>
     </div>
 
-    <!-- OVERLAY -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Top-most WHITE header -->
     <header class="header-white">
         <div class="header-white-content">
             <div class="left-section">
@@ -382,18 +412,21 @@
                     <span></span>
                     <span></span>
                 </div>
+                
                 <div class="white-logo">
                     <img src="https://i.imgur.com/75Gavv9.png" alt="Masbate National Comprehensive High School Logo">
                 </div>
+                
+                <div class="nav-section">
+                    <nav class="nav-buttons">
+                        <a href="index.html" class="nav-btn" data-page="home">Home</a>
+                        <a href="about.html" class="nav-btn active" data-page="about">About Us</a>
+                        <a href="resources.html" class="nav-btn" data-page="resources">Resources</a>
+                        <a href="leadership.html" class="nav-btn" data-page="leadership">Leadership</a>
+                        <a href="history.html" class="nav-btn" data-page="history">History</a>
+                    </nav>
+                </div>
             </div>
-            
-            <nav class="nav-buttons">
-                <a href="index.html" class="nav-btn">Home</a>
-                <a href="about.html" class="nav-btn">About Us</a>
-                <a href="resources.html" class="nav-btn">Resources</a>
-                <a href="leadership.html" class="nav-btn">Leadership</a>
-                <a href="history.html" class="nav-btn">History</a>
-            </nav>
             
             <div class="login-container">
                 <a href="login.html" class="login-btn">Login</a>
@@ -401,7 +434,6 @@
         </div>
     </header>
 
-    <!-- BLUE header -->
     <header class="header-blue">
         <div class="header-blue-content">
             <div class="blue-logo">
@@ -419,9 +451,13 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <header class="onmyhonor">
+        <div class="onmyhonor-content">
+            <p>"On my honor, I will do my best."</p>
+        </div>
+    </header>
+
     <main>
-        <!-- BSP MISSION SECTION - LEFT TEXT, RIGHT IMAGE -->
         <section class="content-section">
             <div class="content-text">
                 <h2>BSP MISSION 2025</h2>
@@ -430,7 +466,6 @@
             <img src="https://i.imgur.com/L9eBHx0.png" class="content-image">
         </section>
 
-        <!-- BSP VISION SECTION - LEFT IMAGE, RIGHT TEXT -->
         <section class="content-section reverse">
             <div class="content-text">
                 <h2>BSP VISION 2025</h2>
@@ -438,17 +473,13 @@
             </div>
             <img src="https://i.imgur.com/VM2uK7U.png" class="content-image">
         </section>
-
-
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Masbate National Comprehensive High School - Senior Scouting Outfit 002. All rights reserved.</p>
     </footer>
 
     <script>
-        // SIDEBAR FUNCTIONALITY
         const hamburger = document.getElementById('hamburger');
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
@@ -472,7 +503,6 @@
         hamburger.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', toggleSidebar);
 
-        // Close sidebar when clicking nav links
         document.querySelectorAll('.sidebar-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 sidebar.classList.remove('active');
@@ -483,27 +513,6 @@
                 spans[2].style.transform = 'none';
             });
         });
-
-        // HISTORY CAROUSEL
-        let currentHistorySlide = 0;
-        const totalHistorySlides = 3;
-
-        function historySlide(n) {
-            const images = document.getElementById('historyImages');
-            const dots = document.querySelectorAll('.history-dot');
-            
-            currentHistorySlide = (n - 1 + totalHistorySlides) % totalHistorySlides;
-            images.style.transform = `translateX(-${currentHistorySlide * 33.333}%)`;
-            
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[currentHistorySlide].classList.add('active');
-        }
-
-        // Auto play
-        setInterval(() => {
-            currentHistorySlide = (currentHistorySlide + 1) % totalHistorySlides;
-            historySlide(currentHistorySlide + 1);
-        }, 4000);
     </script>
 </body>
 </html>
