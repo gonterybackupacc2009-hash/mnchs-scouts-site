@@ -133,7 +133,12 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
+        .emailphone {
+            text-align: right;
+            line-height: 25px;
+            display: flex;
+            flex-direction: column;
+        }
 .download-btn:hover {
     background: linear-gradient(135deg, #1565C0, #0b3d7a);
     transform: translateY(-2px);
@@ -238,7 +243,14 @@
     .resource-cards {
         gap: 20px;
     }
-    
+                .emailphone {
+            text-align: center;
+            line-height: 25px;
+            margin-right: 14%;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
     .resource-image {
         width: 180px;
         height: 180px;
@@ -928,9 +940,9 @@
         <div class="outfit-id">Masbate Council - Outfit 002</div>
     </div>
 </div>
-            <div style="display: flex; flex-direction: column; gap: 10px; text-align: right;">
-                <a href="mailto:scoutsmnchs@gmail.com" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">scoutsmnchs@gmail.com</a>
-                <a href="tel:+639756269838" style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">+63 975 626 9838</a>
+            <div class="emailphone">
+                <a style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">scoutsmnchs@gmail.com</a>
+                <a style="color: rgba(255,255,255,0.9); text-decoration: none; font-size: 14px;">+63 975 626 9838</a>
             </div>
         </div>
     </header>
