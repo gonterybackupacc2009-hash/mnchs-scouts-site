@@ -346,23 +346,48 @@
             flex-direction: row;
             gap: 15px;
         }
-        .header-white-content {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .login-container {
-            justify-content: flex-end;
-        }
-
-        .header-blue-content {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .blue-logo {
-            justify-content: center;
-        }
+    .header-white-content {
+        padding: 0 15px !important;
+    }
+    .header-blue {
+        padding: 20px 15px !important;
+        padding-top: 64px !important;
+    }
+    .header-blue-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 0 10px !important;
+    }
+    .blue-logo {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+    .blue-logo img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    .blue-text {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .blue-text h3 {
+        font-size: 18px !important;
+        margin: 0 0 2px 0 !important;
+    }
+    .blue-text .outfit-id {
+        font-size: 14px !important;
+    }
+    .emailphone {
+        display: none !important;  /* HIDDEN ON MOBILE */
+    }
 
         .main-content {
             padding: 40px 20px;

@@ -588,10 +588,10 @@
                 padding: 45px 35px;
             }
         }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex !important;
-            }
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+    }
     .registersec {
         padding: 30px 15px !important;
         gap: 15px !important;
@@ -599,8 +599,8 @@
     
     .propaganda {
         width: 95% !important;
-        max-width: 500px !important;     /* Scales down on mobile */
-        aspect-ratio: 16/11 !important;   /* Maintains perfect ratio */
+        max-width: 500px !important;
+        aspect-ratio: 16/11 !important;
     }
     
     .registerbtn {
@@ -608,140 +608,152 @@
         max-width: 350px !important;
         font-size: 28px !important;
     }
-            .nav-buttons {
-                display: none !important;
-            }
-            .header-white-content {
-                padding: 0 15px !important;
-            }
-            .header-blue {
-                padding: 20px 15px !important;
-                padding-top: 64px !important;
-            }
-            .header-blue-content {
-                display: flex;
-                flex-direction: row-reverse !important;
-                text-align: center !important;
-                gap: 20px !important;
-                padding: 0 10px !important;
-            }
-            .blue-logo {
-                display: flex;
-                flex-direction: row !important;
-                gap: 10px !important;
-                padding: 0 10px !important;
-                margin-right: 50px;
-                text-align: left;
-            }
-            .emailphone {
-            text-align: center;
-            line-height: 25px;
-            margin-right: 14%;
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-        }
-            .main-content {
-                padding: 20px 20px 40px !important;
-            }
-            .counter-container {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 30px !important;
-                padding: 0 10px !important;
-                margin: 40px auto !important;
-            }
-            .scouts-section,
-            .join-section,
-            .req-section {
-                max-width: 100% !important;
-                min-width: 0 !important;
-                width: 100% !important;
-                padding: 35px 25px !important;
-                margin: 0 !important;
-            }
-            .scouts-count {
-                font-size: 48px !important;
-            }
-            .join-title,
-            .req-title {
-                font-size: 26px !important;
-            }
-            .updates-section {
-                margin: 40px 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            .updates-header {
-                height: 50px !important;
-                width: 100% !important;
-                margin: 0 !important;
-            }
-            .updates-header h2 {
-                font-size: 18px !important;
-                padding-left: 20px !important;
-                padding-top: 14px !important;
-                margin: 0 !important;
-            }
-            .updates-grid {
-                width: 100% !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 5px !important;
-                gap: 12px !important;
-                flex-direction: column !important;
-            }
-            .update-item {
-                height: 110px !important;
-                width: 100% !important;
-                min-width: 100% !important;
-                margin: 0 !important;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
-                overflow: hidden !important;
-            }
-            .update-image {
-                width: 100px !important;
-                height: 100% !important;
-                object-fit: cover !important;
-            }
-            .update-content {
-                padding: 12px 16px !important;
-                margin: 0 !important;
-                gap: 4px !important;
-                flex: 1 !important;
-            }
-            .update-date {
-                font-size: 11px !important;
-                margin-left: -16px;
-            }
-            .update-title {
-                font-size: 14px !important;
-                line-height: 1.1 !important;
-                margin-left: -16px;
-            }
-            .update-description {
-                font-size: 8px !important;
-                -webkit-line-clamp: 2 !important;
-                margin-left: -16px;
-            }
-            .duties-grid {
-                flex-direction: column !important;
-                gap: 20px !important;
-                align-items: center !important;
-            }
-            .duty-image {
-                width: 280px !important;
-                height: 280px !important;
-            }
-            .propaganda {
-                width: 100% !important;
-                margin: 0 auto 40px !important;
-            }
-            .carousel-wrapper {
-                width: 100% !important;
-                margin: 0 auto 40px !important;
-            }
-        }
+    .nav-buttons {
+        display: none !important;
+    }
+    .header-white-content {
+        padding: 0 15px !important;
+    }
+    .header-blue {
+        padding: 20px 15px !important;
+        padding-top: 64px !important;
+    }
+    .header-blue-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 0 10px !important;
+    }
+    .blue-logo {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+    .blue-logo img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    .blue-text {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .blue-text h3 {
+        font-size: 18px !important;
+        margin: 0 0 2px 0 !important;
+    }
+    .blue-text .outfit-id {
+        font-size: 14px !important;
+    }
+    .emailphone {
+        display: none !important;  /* HIDDEN ON MOBILE */
+    }
+    .main-content {
+        padding: 20px 20px 40px !important;
+    }
+    .counter-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 0 10px !important;
+        margin: 40px auto !important;
+    }
+    .scouts-section,
+    .join-section,
+    .req-section {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 35px 25px !important;
+        margin: 0 !important;
+    }
+    .scouts-count {
+        font-size: 48px !important;
+    }
+    .join-title,
+    .req-title {
+        font-size: 26px !important;
+    }
+    .updates-section {
+        margin: 40px 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    .updates-header {
+        height: 50px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .updates-header h2 {
+        font-size: 18px !important;
+        padding-left: 20px !important;
+        padding-top: 14px !important;
+        margin: 0 !important;
+    }
+    .updates-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 5px !important;
+        gap: 12px !important;
+        flex-direction: column !important;
+    }
+    .update-item {
+        height: 110px !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+        overflow: hidden !important;
+    }
+    .update-image {
+        width: 100px !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    .update-content {
+        padding: 12px 16px !important;
+        margin: 0 !important;
+        gap: 4px !important;
+        flex: 1 !important;
+    }
+    .update-date {
+        font-size: 11px !important;
+        margin-left: -16px;
+    }
+    .update-title {
+        font-size: 14px !important;
+        line-height: 1.1 !important;
+        margin-left: -16px;
+    }
+    .update-description {
+        font-size: 8px !important;
+        -webkit-line-clamp: 2 !important;
+        margin-left: -16px;
+    }
+    .duties-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+    .duty-image {
+        width: 280px !important;
+        height: 280px !important;
+    }
+    .propaganda {
+        width: 100% !important;
+        margin: 0 auto 40px !important;
+    }
+    .carousel-wrapper {
+        width: 100% !important;
+        margin: 0 auto 40px !important;
+    }
+}
         @media (max-width: 480px) {
             .update-item {
                 height: 100px !important;
