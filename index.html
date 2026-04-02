@@ -524,13 +524,28 @@
     align-items: center;
     background-color: white;
     width: 100%;
-    height: 60px;
-    margin: 40px 0;
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.propaganda {
+    background-color: #010160;
+    background-image: url('https://i.imgur.com/3gSpjay.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 890px;      /* Max width constraint */
+    aspect-ratio: 16/11;    /* Perfect aspect ratio - maintains proportions */
+    position: relative;
+    overflow: hidden;
 }
 
 .registerbtn {
     background-color: #010160;
-    width: 100%;
+    width: 90%;
+    max-width: 400px;
     height: 60px;
     padding-top: 8px;
     text-align: center;
@@ -541,12 +556,13 @@
     cursor: pointer;
     font-weight: 600;
     display: block;
-    border-radius: 4px;
 }
 
 .registerbtn:hover {
     background-color: #04278e;
 }
+
+
         .footer {
             background-color: #f8f9fa;
             text-align: center;
@@ -576,6 +592,22 @@
             .hamburger {
                 display: flex !important;
             }
+    .registersec {
+        padding: 30px 15px !important;
+        gap: 15px !important;
+    }
+    
+    .propaganda {
+        width: 95% !important;
+        max-width: 500px !important;     /* Scales down on mobile */
+        aspect-ratio: 16/11 !important;   /* Maintains perfect ratio */
+    }
+    
+    .registerbtn {
+        width: 95% !important;
+        max-width: 350px !important;
+        font-size: 28px !important;
+    }
             .nav-buttons {
                 display: none !important;
             }
@@ -701,6 +733,10 @@
                 width: 280px !important;
                 height: 280px !important;
             }
+            .propaganda {
+                width: 100% !important;
+                margin: 0 auto 40px !important;
+            }
             .carousel-wrapper {
                 width: 100% !important;
                 margin: 0 auto 40px !important;
@@ -742,6 +778,23 @@
                 width: 260px;
                 left: -260px;
             }
+    .registersec {
+        padding: 20px 10px !important;
+        gap: 12px !important;
+    }
+    
+    .propaganda {
+        width: 98% !important;
+        max-width: 400px !important;     /* Even smaller on phones */
+        aspect-ratio: 16/11 !important;   /* Perfect ratio maintained */
+        border-radius: 4px !important;
+    }
+    
+    .registerbtn {
+        width: 98% !important;
+        font-size: 24px !important;
+        height: 55px !important;
+    }
         }
     </style>
 </head>
@@ -780,6 +833,7 @@
             </div>
             <div class="login-container">
                 <a href="login.html" class="login-btn">Login</a>
+                <a href="regisportal.html" class="login-btn">Register</a>
             </div>
         </div>
     </header>
@@ -891,7 +945,10 @@
         </div>
 
 <section class="registersec">
-    <a href="regisportal.html" class="registerbtn">Register</a>
+    <div class="propaganda">
+        <!-- Image displays perfectly - no <img> tag needed -->
+    </div>
+    <a href="regisportal.html" class="registerbtn">Register Now</a>
 </section>
 
         <section class="duties-section">
