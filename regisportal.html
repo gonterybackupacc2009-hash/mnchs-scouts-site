@@ -19,7 +19,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #111111;
+            background: #ffffff;
             min-height: 100vh;
             padding: 10px 0;
             color: #333;
@@ -49,230 +49,285 @@
         }
 
         /* HEADER & FOOTER STYLES */
-        /* Top-most white header */
-    .header-white {
-    background-color: white;
-    height: 50px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    position: fixed;        /* ← ADD THIS LINE */
-    top: 0;                 /* ← ADD THIS LINE */
-    left: 0;                /* ← ADD THIS LINE */
-    right: 0;               /* ← ADD THIS LINE */
-    z-index: 1000;          /* Already there - perfect! */
-}
+/* Top-most white header */
+        .header-white {
+            background-color: white;
+            height: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .emailphone {
+            text-align: right;
+            line-height: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-white-content {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .header-white-content {
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-    }
+        /* LEFT SECTION - Logo + Nav Buttons + Hamburger */
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    .left-section {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+        .nav-section {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
-    .white-logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+        .white-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    .white-logo img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-    }
+        .white-logo img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
 
-    /* HAMBURGER MENU - MOBILE ONLY */
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        padding: 5px;
-        gap: 3px;
-        z-index: 1001;
-    }
+        /* HAMBURGER MENU - MOBILE ONLY */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            gap: 3px;
+            z-index: 1001;
+        }
 
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-    }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
 
-    /* SIDEBAR */
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: -300px;
-        width: 280px;
-        height: 100vh;
-        background: linear-gradient(135deg, #1976D2, #0D47A1);
-        padding: 80px 20px 20px;
-        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        z-index: 999;
-        box-shadow: 2px 0 20px rgba(0,0,0,0.3);
-    }
+        /* SIDEBAR */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100vh;
+            background-color: white;
+            padding: 80px 0px 0px;
+            transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 999;
+            box-shadow: 2px 0 20px rgba(0,0,0,0.3);
+        }
 
-    .sidebar.active {
-        left: 0;
-    }
+        .sidebar.active {
+            left: 0;
+        }
 
-    .sidebar-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    .sidebar-nav a {
-        color: white;
-        text-decoration: none;
-        padding: 15px 20px;
-        border-radius: 12px;
-        font-weight: 700;
-        font-size: 16px;
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255,255,255,0.2);
-    }
+        .sidebar-nav a {
+            color: rgb(0, 0, 0);
+            background-color: #ececec;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 700;
+            width: 100%;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-    .sidebar-nav a:hover {
-        background: rgba(255,255,255,0.25);
-        transform: translateX(10px);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+        .sidebar-nav a:hover {
+            background: rgb(217, 217, 217);
+        }
 
-    /* OVERLAY */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s ease;
-        z-index: 998;
-    }
+        /* ACTIVE SIDEBAR LINK */
+        .sidebar-nav a.active {
+            background: rgb(183, 183, 183);
+            position: relative;
+        }
 
-    .overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
+        .sidebar-nav a.active::before {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
 
-    /* Navigation buttons - DESKTOP ONLY */
-    .nav-buttons {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-    }
+        /* OVERLAY */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 998;
+        }
 
-    .nav-btn {
-        background: none;
-        padding: 18px 19px;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 700;
-        color: #333;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    .nav-btn:hover {
-        background-color: #1976D2;
-        color: white;
-        border-color: #1976D2;
-        transform: translateY(-1px);
-    }
+        /* Navigation buttons */
+        .nav-buttons {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
 
-    /* Login button - RIGHTMOST side, separate */
-    .login-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+        .nav-btn {
+            background: none;
+            padding: 18px 19px;
+            height: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            white-space: nowrap;
+            position: relative;
+        }
 
-    .login-btn {
-        background: linear-gradient(135deg, #1976D2, #0D47A1);
-        color: white !important;
-        border: none !important;
-        padding: 10px 20px !important;
-        font-weight: 700 !important;
-        border-radius: 25px !important;
-        box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
-        text-decoration: none !important;
-        font-size: 14px;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
+        .nav-btn:hover {
+            background-color: #eeeeee;
+        }
 
-    .login-btn:hover {
-        background: linear-gradient(135deg, #1565C0, #0b3d7a) !important;
-        transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4) !important;
-    }
+        /* ACTIVE NAV BUTTON - DARK GREY */
+        .nav-btn.active {
+            background-color: #cbcbcb !important;
+        }
 
-    /* Blue header BELOW white header */
-    .header-blue {
-        background: linear-gradient(135deg, #095eb4);
-        color: white;
-        padding: 20px 20px;
-        padding-top: 55px;
-    }
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 3px;
+            background: #01185c;
+            border-radius: 2px 2px 0 0;
+        }
 
-    .header-blue-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-        line-height: 19px;
-    }
+        /* Login button - RIGHTMOST side */
+        .login-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 100%;
+        }
 
-    .blue-logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+        .login-btn {
+            background-color: white;
+            height: 50px;
+            color: rgb(0, 0, 0) !important;
+            border: none !important;
+            padding: 18px 19px;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            font-size: 14px;
+            white-space: nowrap;
+        }
 
-    .blue-logo img {
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-    }
-    
+        .login-btn:hover {
+            background-color: #ececec;
+        }
 
-    .blue-text h3 {
-        font-size: 20px;
-        margin-bottom: 5px;
-        color: white;
-    }
+        /* Blue header BELOW white header */
+        .header-blue {
+            background-color: #04278e;
+            color: white;
+            padding: 20px 20px;
+            padding-top: 64px;
+        }
 
-    .blue-text .outfit-id {
-        font-size: 16px;
-        opacity: 0.9;
-    }
+        .header-blue-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .blue-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .blue-logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .blue-text h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .blue-text .outfit-id {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* On My Honor Header */
+        .onmyhonor {
+            background-color: #010160;
+            color: white;
+            padding: 10px 10px;
+            padding-top: 10px;
+            align-items: center;
+        }
+
+        .onmyhonor-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            letter-spacing: 2px;
+        }
 
         /* PORTAL CONTENT STYLES */
         .portal-container {
             max-width: 1200px;
             margin: 40px auto 0;
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 16px;
+            margin-bottom: 40px;
+            background: rgba(245, 245, 245, 0.98);
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
             overflow: hidden;
             backdrop-filter: blur(15px);
@@ -281,7 +336,7 @@
 
         /* PORTAL HEADER */
         .portal-header {
-            background: linear-gradient(#140086, #0000ca, #140086);
+            background: linear-gradient(#140086);
             color: white;
             padding: 35px 40px;
             text-align: center;
@@ -300,11 +355,6 @@
             object-position: center;
             transition: all 0.3s ease;
             flex-shrink: 0;
-        }
-
-        .portal-logo:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
         }
 
         .portal-content {
@@ -334,7 +384,7 @@
         }
 
         .portal-left, .portal-right {
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            background: rgba(234, 234, 234, 0.98);
             padding: 30px;
         }
 
@@ -771,7 +821,6 @@
     <!-- Top-most WHITE header -->
     <header class="header-white">
         <div class="header-white-content">
-            <!-- LEFT: Logo + Hamburger -->
             <div class="left-section">
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -781,22 +830,18 @@
                 <div class="white-logo">
                     <img src="https://i.imgur.com/75Gavv9.png" alt="Masbate National Comprehensive High School Logo">
                 </div>
+                <div class="nav-section">
+                    <nav class="nav-buttons">
+                        <a href="index.html" class="nav-btn" data-page="home">Home</a>
+                        <a href="about.html" class="nav-btn" data-page="about">About Us</a>
+                        <a href="resources.html" class="nav-btn" data-page="resources">Resources</a>
+                        <a href="leadership.html" class="nav-btn" data-page="leadership">Leadership</a>
+                        <a href="history.html" class="nav-btn" data-page="history">History</a>
+                    </nav>
+                </div>
             </div>
-            
-            <!-- CENTER: Navigation buttons (DESKTOP ONLY) -->
-            <nav class="nav-buttons">
-                <a href="index.html" class="nav-btn">Home</a>
-                <a href="about.html" class="nav-btn">About Us</a>
-                <a href="resources.html" class="nav-btn">Resources</a>
-                <a href="leadership.html" class="nav-btn">Leadership</a>
-                <a href="history.html" class="nav-btn">History</a>
-            </nav>
-            
-            <!-- RIGHTMOST: Login button -->
             <div class="login-container">
-                <a href="login.html" class="login-btn">
-                    Login
-                </a>
+                <a href="login.html" class="login-btn">Login</a>
             </div>
         </div>
     </header>
