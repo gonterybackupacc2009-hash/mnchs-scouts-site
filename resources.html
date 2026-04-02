@@ -49,66 +49,7 @@
     font-size: 16px;
     line-height: 1.3;
 }
-.resource-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
 
-.resource-card {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid #e3f2fd;
-}
-
-
-.resource-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px;
-    border-radius: 1px;
-    overflow: hidden;
-}
-
-.resource-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-
-.resource-card h3 {
-    font-size: 22px;
-    color: #0D47A1;
-    margin-bottom: 12px;
-    font-weight: 800;
-}
-
-.resource-card p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.download-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #1976D2, #0D47A1);
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
         .emailphone {
             text-align: right;
             line-height: 25px;
@@ -126,13 +67,26 @@
     flex-wrap: wrap;
 }
 
+        .resource-card-header {
+            background-color: #030650 !important;
+            padding-left: 25px !important;
+            font-size: 21px;
+            width: 87% !important;
+            height: 45px !important;
+            display: flex !important;
+            gap: 30px !important;
+            align-items: center !important;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            overflow: hidden !important;
+        }
+
 .resource-card {
-    background: white;
-    border-radius: 20px;
+    background: #f5f5f5;
     padding: 25px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 4px solid #095eb4;
     flex: 1;
     max-width: 320px; /* Fixed width for consistent sizing */
     min-width: 280px;
@@ -162,7 +116,7 @@
 }
 
 .resource-card p {
-    color: #666;
+    color: #3b3b3b;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -170,23 +124,19 @@
 
 .download-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #1976D2, #0D47A1);
+    background-color: #010160;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 25px;
     font-weight: 700;
     font-size: 16px;
-    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .download-btn:hover {
-    background: linear-gradient(135deg, #1565C0, #0b3d7a);
-    transform: translateY(-2px);
+    background-color: #04278e;
     color: white;
-    text-decoration: none;
 }
 
 /* Responsive - Stack on mobile */
@@ -551,14 +501,13 @@
 
     .tabs-container {
         background: white;
-        border-radius: 20px;
         overflow: hidden;
         margin-bottom: 40px;
     }
 
     .tab-buttons {
         display: flex;
-        background: linear-gradient(135deg, #1976D2, #0D47A1);
+        background: #040464
     }
 
     .tab-btn {
@@ -570,7 +519,6 @@
         font-size: 18px;
         font-weight: 700;
         cursor: pointer;
-        transition: all 0.3s ease;
         text-align: center;
     }
 
@@ -934,7 +882,11 @@
     <main class="main-content">
         <!-- Page Header -->
         <!-- Add this right after the page-subtitle closing </p> and before <div class="tabs-container"> -->
+
 <div class="resource-cards">
+            <div class="resource-card-header">
+                <p>Registration Forms</p>
+            </div>
     <div class="resource-card">
         <div class="resource-image">
             <img src="https://i.imgur.com/9E3olsa.png" alt="Resource 1">
@@ -973,7 +925,7 @@
             <!-- Tab 1: Advancement Information -->
             <div class="tab-content active" id="advancement">
                 <div style="text-align: center; margin-bottom: 30px;">
-                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">SENIOR SCOUTING ADVANCEMENT</h2>
+                    <h2 style="color: #04027a; font-size: 28px; margin-bottom: 10px;">SENIOR SCOUTING ADVANCEMENT</h2>
                     <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Click on each rank to view detailed requirements and advancement criteria.</p>
                 </div>
                 
@@ -990,7 +942,7 @@
             <!-- Tab 2: Necessary Skills -->
             <div class="tab-content" id="skills">
                 <div style="text-align: center; margin-bottom: 30px;">
-                    <h2 style="color: #0D47A1; font-size: 28px; margin-bottom: 10px;">LIST OF MERIT BADGES</h2>
+                    <h2 style="color: #04027a; font-size: 28px; margin-bottom: 10px;">LIST OF MERIT BADGES</h2>
                     <p style="color: #666; font-size: 16px; max-width: 600px; margin: 0 auto;">Master these fundamental skills required for all senior scouts.</p>
                     <p style="color: #e00707; font-size: 16px; max-width: 600px; margin: 0 auto;">*Visit the Merit Badge Center for more detailed information about merit badges.</p>
                 </div>
