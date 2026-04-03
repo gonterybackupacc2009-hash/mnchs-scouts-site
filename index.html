@@ -375,6 +375,35 @@
             height: fit-content;
             margin-top: 21px;
         }
+.side-container .side-contentscouts {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: white;
+    
+    /* Override parent padding - extend to true edges */
+    margin-left: -25px;
+    width: calc(100% + 50px); /* Compensate for both left/right margins */
+    margin-bottom: -25px;
+}
+
+.side-container .side-contentscouts img {
+    width: 100%;
+    max-width: 100px;  /* Smaller image */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
         .side-content h3 {
             font-size: 20px;
             font-weight: 700;
@@ -671,6 +700,33 @@
 .registerbtn:hover {
     background-color: #04278e;
 }
+        .ph-time-container {
+            background: white;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 300px;
+            margin: 1px auto;
+            border-left: 4px solid #03157d;
+        }
+        
+        .ph-time-container h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .ph-time {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #010160;
+        }
+        .ph-flag {
+            width: 64px;
+            height: 40px;
+            margin-top: 12px;
+        }
 
         .footer {
             background-color: #f8f9fa;
@@ -832,7 +888,7 @@
                 gap: 15px !important;
             }
             .update-item {
-                height: 120px !important;
+                height: 140px !important;
                 gap: 20px !important;
                 margin: 0 !important;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
@@ -847,14 +903,14 @@
                 gap: 6px !important;
             }
             .update-date {
-                font-size: 12px !important;
+                font-size: 9px !important;
             }
             .update-title {
-                font-size: 16px !important;
+                font-size: 14px !important;
                 line-height: 1.2 !important;
             }
             .update-description {
-                font-size: 14px !important;
+                font-size: 10px !important;
                 -webkit-line-clamp: 3 !important;
             }
             .updates-header2 {
@@ -1099,6 +1155,14 @@
                 <li><a href="about.html">BSP Mission & Vision</a></li>
             </ul>
         </div>
+<div class="side-contentscouts" style="background-color: white !important;">
+    <a href="https://scouts.gov.ph" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Boy_Scouts_of_the_Philippines.svg" 
+             alt="Visit Scouts.gov.ph" 
+             class="image-btn">
+        <br><span></span>
+    </a>
+</div>
     </div>
             <section class="updates-section">
             <div class="updates-grid">
@@ -1147,6 +1211,13 @@
                 <div class="event-date">66</div>
                 <div class="event-title">Registered Scouts</div>
             </div>
+    <div class="ph-time-container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/1280px-Flag_of_the_Philippines.svg.png" alt="Philippines Flag" class="ph-flag" loading="lazy">
+            <h3 class="header-text">Current Time</h3>
+        </div>
+        <div class="ph-time" id="phTime">Loading...</div>
+    </div>
         </div>
 
 
@@ -1201,6 +1272,26 @@
     </footer>
 
     <script>
+        function updatePhilippinesTime() {
+            const now = new Date();
+            
+            // Get Philippines time (UTC+8)
+            const phTime = new Date(now.toLocaleString("en-US", {timeZone: "Asia/Manila"}));
+            
+            // Format time
+            const timeString = phTime.toLocaleTimeString("en-US", {
+                hour12: true,  // 24-hour format
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
+            
+            document.getElementById("phTime").textContent = timeString;
+        }
+        
+        // Update time immediately and every second
+        updatePhilippinesTime();
+        setInterval(updatePhilippinesTime, 1000);
         function setActiveNav() {
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             const pageMap = {
