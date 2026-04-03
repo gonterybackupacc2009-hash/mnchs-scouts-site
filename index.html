@@ -44,11 +44,13 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            flex: 1;
         }
         .nav-section {
             display: flex;
             align-items: center;
             gap: 5px;
+            flex: 1;
         }
         .white-logo {
             display: flex;
@@ -92,7 +94,7 @@
         }
         .sidebar-nav {
             display: flex;
-            flex-direction: column;
+            flex-direction:  column;
             gap: 15px;
         }
         .sidebar-nav a {
@@ -226,9 +228,7 @@
         .blue-text .outfit-id {
             font-size: 16px;
             opacity: 0.9;
-
         }
-
         .emailphone {
             text-align: right;
             line-height: 25px;
@@ -302,28 +302,30 @@
         }
         .counter-container {
             display: flex;
-            gap: 40px;
+            gap: 10px;
             align-items: stretch;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: 1250px;
-            width: 100%;
+            max-width: 1920px;
+            width: 80%;
             margin: 60px auto;
             padding: 0 20px;
             background-color: #f5f5f5;
+            margin-top: 5px;
         }
         .join-section,
         .req-section {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 20px;
+            gap: 10px;
             text-align: left;
             padding: 45px 40px;
             background: #fbfbfb;
             color: rgb(0, 0, 0);
             flex: 1;
-            min-width: 320px;
+            min-width: 250px;
+            margin-left: -60px;
             max-width: 420px;
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
@@ -348,16 +350,121 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 25px;
+            gap: 10px;
             text-align: center;
             padding: 50px 40px;
             background: transparent;
             flex: 0 0 420px;
             transition: all 0.3s ease;
         }
+        /* NEW ROW CONTAINER */
+        .updates-row {
+            display: flex;
+            gap: 20px;
+            max-width: 1502px;
+            width: 80%;
+            margin: 0px auto;
+            margin-left: 0px;
+        }
+
+        /* SIDE CONTAINERS */
+        .side-container {
+            flex: 0 0 250px; /* Fixed width */
+            background: #e8e8e8;
+            padding: 25px;
+            height: fit-content;
+            margin-top: 21px;
+        }
+        .side-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #101776;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #070366;
+        }
+
+        .side-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-content li {
+            margin-bottom: 2px;
+        }
+
+        .side-content a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            display: block;
+            padding: 12px 0;
+            background-color: white;
+            border-left: 5px solid #013272;
+            margin-bottom: 12px;
+            padding-left: 15px;
+        }
+
+        .side-content a:hover {
+            color: #1976D2;
+        }
+
+        /* EVENTS STYLING */
+        .event-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #03157d;
+            transition: all 0.3s ease;
+        }
+
+        .event-date {
+            font-size: 18px;
+            font-weight: 700;
+            color: #01095c;
+            min-width: 45px;
+        }
+
+        .event-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* UPDATE YOUR EXISTING UPDATES SECTION */
+        .updates-section {
+            flex: 1; /* Takes remaining space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            padding: 0;
+            max-width: none; /* Remove max-width constraint */
+            width: 100%;
+            margin: 0; /* Remove auto margins */
+        }
+        .scouts-section-header {
+            background-color: #010160;
+            color: white;
+            padding: 12px;
+            align-items: center;
+            max-width: 1920px;
+            height: 45px;
+            width: 80%;
+            margin: 0 auto;
+            font-weight: 700;
+            font-size: 19px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
         .scouts-image {
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             object-fit: contain;
         }
         .scouts-info {
@@ -390,8 +497,8 @@
             text-align: center;
             padding: 0px 0px;
             max-width: 1920px;
-            width: 100%;
-            margin: 20px 0;
+            width: 80%;
+            margin: 20px auto;
         }
         .updates-header {
             background-color: #010160 !important;
@@ -399,14 +506,15 @@
             width: 100% !important;
             height: 45px !important;
             display: flex !important;
-            gap: 30px !important;
             align-items: stretch !important;
             overflow: hidden !important;
         }
         .updates-header2 {
             background-color: #010160 !important;
             padding: 0 !important;
-            width: 100% !important;
+            width: 66% !important;
+            margin: 0 auto;
+            margin-bottom: 14px;
             height: 4px !important;
             display: flex !important;
             gap: 30px !important;
@@ -501,6 +609,8 @@
             max-width: 1920px;
             width: 100%;
             margin: 80px 0;
+            margin-bottom: -40px;
+            margin-top: -20px;
         }
         .duties-grid {
             display: flex;
@@ -515,7 +625,7 @@
             transition: all 0.4s ease;
             cursor: pointer;
         }
-        .duty-image:hover {
+       .duty-image:hover {
             transform: translateY(-10px) scale(1.05);
         }
 .registersec {
@@ -562,7 +672,6 @@
     background-color: #04278e;
 }
 
-
         .footer {
             background-color: #f8f9fa;
             text-align: center;
@@ -572,6 +681,8 @@
             margin-top: auto;
             width: 100%;
         }
+
+        /* MOBILE OPTIMIZATION - IMPROVED */
         @media (max-width: 1200px) {
             .counter-container {
                 gap: 30px;
@@ -588,80 +699,72 @@
                 padding: 45px 35px;
             }
         }
+
         @media (max-width: 768px) {
+            /* Header improvements */
             .hamburger {
                 display: flex !important;
             }
-    .registersec {
-        padding: 30px 15px !important;
-        gap: 15px !important;
-    }
-    
-    .propaganda {
-        width: 95% !important;
-        max-width: 500px !important;     /* Scales down on mobile */
-        aspect-ratio: 16/11 !important;   /* Maintains perfect ratio */
-    }
-    
-    .registerbtn {
-        width: 95% !important;
-        max-width: 350px !important;
-        font-size: 28px !important;
-    }
             .nav-buttons {
                 display: none !important;
             }
-    .header-white-content {
-        padding: 0 15px !important;
-    }
-    .header-blue {
-        padding: 20px 15px !important;
-        padding-top: 64px !important;
-    }
-    .header-blue-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important;
-        padding: 0 10px !important;
-    }
-    .blue-logo {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 12px !important;
-        margin: 0 !important;
-        flex-shrink: 0 !important;
-    }
-    .blue-logo img {
-        width: 42px !important;
-        height: 42px !important;
-    }
-    .blue-text {
-        display: block !important;
-        text-align: center !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-    .blue-text h3 {
-        font-size: 18px !important;
-        margin: 0 0 2px 0 !important;
-    }
-    .blue-text .outfit-id {
-        font-size: 14px !important;
-    }
-    .emailphone {
-        display: none !important;  /* HIDDEN ON MOBILE */
-    }
-            .main-content {
-                padding: 20px 20px 40px !important;
+            .header-white-content {
+                padding: 0 15px;
+                justify-content: space-between;
             }
+            .left-section {
+                gap: 10px;
+            }
+            .login-container {
+                gap: 5px;
+            }
+            .login-btn {
+                font-size: 13px !important;
+                padding: 18px 15px !important;
+            }
+
+            /* Blue header improvements */
+            .header-blue {
+                padding: 20px 15px !important;
+                padding-top: 64px !important;
+            }
+            .header-blue-content {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 15px !important;
+                text-align: center;
+            }
+            .blue-logo {
+                gap: 12px !important;
+            }
+            .blue-logo img {
+                width: 42px !important;
+                height: 42px !important;
+            }
+            .blue-text h3 {
+                font-size: 18px !important;
+                margin: 0 0 2px 0 !important;
+            }
+            .blue-text .outfit-id {
+                font-size: 14px !important;
+            }
+            .emailphone {
+                display: none !important;
+            }
+
+            /* Main content spacing */
+            .main-content {
+                padding: 120px 15px 40px !important;
+            }
+
+            /* Counter container - perfect mobile stack */
             .counter-container {
                 flex-direction: column !important;
                 align-items: center !important;
-                gap: 30px !important;
-                padding: 0 10px !important;
-                margin: 40px auto !important;
+                gap: 25px !important;
+                width: 100% !important;
+                padding: 30px 20px !important;
+                margin: 40px auto 20px !important;
             }
             .scouts-section,
             .join-section,
@@ -671,6 +774,12 @@
                 width: 100% !important;
                 padding: 35px 25px !important;
                 margin: 0 !important;
+                margin-left: 0 !important;
+            }
+            .scouts-section {
+                flex-direction: row !important;
+                text-align: left !important;
+                padding: 40px 30px !important;
             }
             .scouts-count {
                 font-size: 48px !important;
@@ -679,130 +788,216 @@
             .req-title {
                 font-size: 26px !important;
             }
-            .updates-section {
-                margin: 40px 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            .updates-header {
-                height: 50px !important;
-                width: 100% !important;
-                margin: 0 !important;
-            }
-            .updates-header h2 {
+            .join-text,
+            .req-text {
                 font-size: 18px !important;
-                padding-left: 20px !important;
-                padding-top: 14px !important;
-                margin: 0 !important;
             }
-            .updates-grid {
+
+            /* Updates row - perfect mobile layout */
+            .updates-row {
+                flex-direction: column !important;
                 width: 100% !important;
                 max-width: 100% !important;
                 margin: 0 !important;
-                padding: 0 5px !important;
-                gap: 12px !important;
-                flex-direction: column !important;
+                gap: 25px !important;
+                padding: 0 10px;
+            }
+            
+            /* Hide side containers completely on mobile */
+            .side-container {
+                display: none !important;
+            }
+            
+            .updates-section {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                order: 1;
+            }
+
+            /* Updates header and grid */
+            .updates-header {
+                height: 25px !important;
+                width: 100% !important;
+                margin: 20px 0 10px 0 !important;
+            }
+            .updates-header h2 {
+                font-size: 12px !important;
+                padding-left: 20px !important;
+                padding-top: 5px !important;
+            }
+            .updates-grid {
+                width: 100% !important;
+                padding: 0 10px !important;
+                gap: 15px !important;
             }
             .update-item {
-                height: 110px !important;
-                width: 100% !important;
-                min-width: 100% !important;
+                height: 120px !important;
+                gap: 20px !important;
                 margin: 0 !important;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
-                overflow: hidden !important;
             }
             .update-image {
-                width: 100px !important;
+                width: 110px !important;
                 height: 100% !important;
-                object-fit: cover !important;
             }
             .update-content {
-                padding: 12px 16px !important;
                 margin: 0 !important;
-                gap: 4px !important;
-                flex: 1 !important;
+                padding: 15px 20px 15px 0 !important;
+                gap: 6px !important;
             }
             .update-date {
-                font-size: 11px !important;
-                margin-left: -16px;
+                font-size: 12px !important;
             }
             .update-title {
-                font-size: 14px !important;
-                line-height: 1.1 !important;
-                margin-left: -16px;
+                font-size: 16px !important;
+                line-height: 1.2 !important;
             }
             .update-description {
-                font-size: 8px !important;
-                -webkit-line-clamp: 2 !important;
-                margin-left: -16px;
+                font-size: 14px !important;
+                -webkit-line-clamp: 3 !important;
             }
+            .updates-header2 {
+                margin-top: 15px;
+                width: 100% !important;
+            }
+
+            /* Scouts header */
+            .scouts-section-header {
+                width: 100% !important;
+                margin: 20px auto 10px !important;
+                height: 25px;
+                font-size: 12px !important;
+                padding-left: 20px !important;
+                padding-top: 5px !important;
+            }
+
+            /* Duties section */
             .duties-grid {
                 flex-direction: column !important;
-                gap: 20px !important;
+                gap: 25px !important;
                 align-items: center !important;
             }
             .duty-image {
                 width: 280px !important;
                 height: 280px !important;
             }
+
+            /* Register section */
+            .registersec {
+                padding: 40px 20px !important;
+                gap: 20px !important;
+            }
             .propaganda {
                 width: 100% !important;
-                margin: 0 auto 40px !important;
+                max-width: 500px !important;
             }
+            .registerbtn {
+                width: 95% !important;
+                max-width: 380px !important;
+                font-size: 28px !important;
+            }
+
+            /* Carousel */
             .carousel-wrapper {
                 width: 100% !important;
-                margin: 0 auto 40px !important;
+                margin: -80px auto 30px !important;
             }
         }
+
         @media (max-width: 480px) {
+            /* Extra small screen optimizations */
+            .main-content {
+                padding: 120px 10px 30px !important;
+            }
+            
+            .login-btn {
+                font-size: 12px !important;
+                padding: 18px 12px !important;
+            }
+
+            .counter-container {
+                padding: 25px 15px !important;
+                gap: 20px !important;
+            }
+            .scouts-section {
+                padding: 30px 20px !important;
+            }
+            .join-section,
+            .req-section {
+                padding: 30px 20px !important;
+            }
+            .scouts-count {
+                font-size: 42px !important;
+            }
+            .join-title,
+            .req-title {
+                font-size: 22px !important;
+            }
+            .join-text,
+            .req-text {
+                font-size: 16px !important;
+            }
+
             .update-item {
-                height: 100px !important;
+                height: 110px !important;
+                gap: 15px !important;
+                width: 100%;
             }
             .update-image {
-                width: 85px !important;
+                width: 95px !important;
             }
             .update-content {
-                padding: 12px 14px !important;
+                padding: 12px 15px 12px 0 !important;
             }
+            .update-title {
+                font-size: 13px !important;
+            }
+            .update-description {
+                font-size: 9px !important;
+            }
+
             .duty-image {
                 width: 260px !important;
                 height: 260px !important;
             }
-            .main-content {
-                padding: 140px 10px 40px !important;
+
+            .registersec {
+                padding: 30px 15px !important;
+                gap: 15px !important;
             }
+            .propaganda {
+                width: 98% !important;
+                max-width: 400px !important;
+            }
+            .registerbtn {
+                width: 98% !important;
+                font-size: 24px !important;
+                height: 55px !important;
+            }
+
             .scouts-image {
-                width: 110px;
-                height: 110px;
+                width: 100px !important;
+                height: 100px !important;
             }
-            .scouts-count {
-                font-size: 42px;
-            }
-            .join-title,
-            .req-title {
-                font-size: 22px;
-            }
+
             .sidebar {
                 width: 260px;
                 left: -260px;
             }
-    .registersec {
-        padding: 20px 10px !important;
-        gap: 12px !important;
-    }
-    
-    .propaganda {
-        width: 98% !important;
-        max-width: 400px !important;     /* Even smaller on phones */
-        aspect-ratio: 16/11 !important;   /* Perfect ratio maintained */
-        border-radius: 4px !important;
-    }
-    
-    .registerbtn {
-        width: 98% !important;
-        font-size: 24px !important;
-        height: 55px !important;
-    }
+        }
+
+        /* Prevent horizontal scroll on mobile */
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            .counter-container,
+            .join-section,
+            .req-section {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
         }
     </style>
 </head>
@@ -890,12 +1085,23 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-
-        <section class="updates-section">
-            <div class="updates-grid">
                 <div class="updates-header">
                     <h2>Scouting Updates</h2>
                 </div>
+        <section class="updates-row">
+                <div class="side-container left-side">
+        <div class="side-content">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="regisportal.html">Register</a></li>
+                <li><a href="resources.html">Advancement Information</a></li>
+                <li><a href="resources.html">Merit Badge Guide</a></li>
+                <li><a href="about.html">BSP Mission & Vision</a></li>
+            </ul>
+        </div>
+    </div>
+            <section class="updates-section">
+            <div class="updates-grid">
                 <div class="update-item">
                          <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t1.15752-9/652680904_26129777930024984_6170840475357646257_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE_j1pg2oKUb7pSJWOZbABKUjLVfxUV6F9SMtV_FRXoX8LwaiX11Gh2njPLU4pD6b__UDwk42jRO3WGfLX9geoz&_nc_ohc=u04mKnjQcS4Q7kNvwEXt70a&_nc_oc=Ado-xycPXyVTgJgm3kC_K8l3mY4mfuOw_mN65HULhm7P7l47SgqxPzsTS_2BC36RUIU&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_ss=7a32e&oh=03_Q7cD4wHMHEqLb1jfutFa20umH5p0Pwpu8jsygWXnU85c3GweMw&oe=69F059CC" alt="Update 1" class="update-image">
                     <div class="update-content">
@@ -926,11 +1132,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="updates-header2"></div>
+            </section>
+                    <div class="side-container right-side">
+        <div class="side-content">
+            <h3>Upcoming Events</h3>
+            <div class="event-item">
+                <div class="event-date">Apr 10</div>
+                <div class="event-title">Rodeo Service Week</div>
             </div>
-        </section>
+        </div>
+                <div class="side-content">
+            <h3>Statistics</h3>
+            <div class="event-item">
+                <div class="event-date">66</div>
+                <div class="event-title">Registered Scouts</div>
+            </div>
+        </div>
 
+
+        </section>
+                        <div class="updates-header2">
+                    <h2>Scouting Updates</h2>
+                </div>
+                <div class="scouts-section-header">
+                    Join Us Today!
+                </div>
         <div class="counter-container">
+
             <section class="scouts-section">
                 <img src="https://i.imgur.com/SVw9xv4.png" alt="Scouts Icon" class="scouts-image">
                 <div class="scouts-info">
